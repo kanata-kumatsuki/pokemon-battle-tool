@@ -9,7 +9,6 @@ import {
   itemsForPokemon,
   englishNatures,
   englishAbility,
-  supportedSeason,
   usageSourcePokemon,
   learnableMoves,
   type Build,
@@ -21,7 +20,11 @@ import {
   type SideState,
   type BattleField,
 } from "./battle.ts";
-import { usageCompatible, type UsageSnapshot } from "./usage.ts";
+import {
+  usageCompatible,
+  type UsageSeasonContext,
+  type UsageSnapshot,
+} from "./usage.ts";
 export type KnownInfo = {
   ability: boolean;
   item: boolean;
@@ -47,11 +50,13 @@ export function assumptions(
   build: Build,
   known: KnownInfo,
   usage?: UsageSnapshot,
+  seasonContext?: UsageSeasonContext,
 ): Assumption[] {
   const p = getPokemon(build.pokemonId),
     usagePokemon = usageSourcePokemon(p.id),
     usable =
-      usageCompatible(usage) && usage?.speciesId === usagePokemon?.speciesId
+      usageCompatible(usage, seasonContext) &&
+      usage?.speciesId === usagePokemon?.speciesId
         ? usage
         : undefined;
   const rows = usable?.rows ?? [];
@@ -204,6 +209,7 @@ export function predictActions(input: {
   known: KnownInfo;
   usage?: UsageSnapshot;
   season?: string;
+  seasonContext?: UsageSeasonContext;
   opponents: OpponentSlot[];
 }) {
   const {
@@ -218,8 +224,9 @@ export function predictActions(input: {
     opponents,
   } = input;
   if (
-    (usage && !usageCompatible(usage)) ||
-    (input.season && input.season !== supportedSeason)
+    (usage && !usageCompatible(usage, input.seasonContext)) ||
+    (input.season &&
+      (!input.seasonContext || input.seasonContext.season !== input.season))
   )
     return {
       candidates: [],
@@ -248,7 +255,7 @@ export function predictActions(input: {
         : []),
     ]),
   ].filter((n) => legal.includes(n));
-  const variants = assumptions(defense, known, usage);
+  const variants = assumptions(defense, known, usage, input.seasonContext);
   const enemy = variants[0].build;
   const candidates: Candidate[] = [];
   const warnings: string[] = [];

@@ -20,6 +20,7 @@ export function ItemSelect({
   const { options, hasUsage, usePercent } = itemOptions(
     pokemon,
     data.entry?.data,
+    data.index?.data,
   );
   const unavailable = !options.some((item) => item.name === value);
   const hint = unavailable

@@ -32,6 +32,12 @@ import { unknownInfo, type KnownInfo, type OpponentSlot } from "./predictions";
 import { HomePage } from "./HomePage";
 import "./home.css";
 import { SpeedPage } from "./SpeedPage";
+import { FirstUseGuide } from "./FirstUseGuide";
+import {
+  FIRST_USE_GUIDE_STORAGE_KEY,
+  markFirstUseGuideSeen,
+  shouldShowFirstUseGuide,
+} from "./first-use-guide-state";
 import { ItemSelect } from "./ItemSelect";
 import { PointInput } from "./PointInput";
 import {
@@ -44,11 +50,16 @@ import {
   DefaultBuildSelectionGate,
   resolvePopularBuildSelection,
 } from "./build-defaults";
-import { loadUsage, loadUsageIndex } from "./usage";
+import {
+  canApplyStarterParty,
+  resolveStarterPartySelection,
+  type SkippedStarterMega,
+  type StarterPartyPick,
+} from "./starter-party";
+import { loadUsage, loadUsageIndex, usageCompatible } from "./usage";
 import {
   addHistory,
   movePairs,
-  supportedSeason,
   artwork,
   pokemonAppearance,
   resolveBattleBuild,
@@ -89,6 +100,7 @@ type IconName =
   | "search"
   | "edit"
   | "refresh";
+type AppPage = "home" | "battle" | "party" | "speed";
 type BuildSelectionTarget =
   | "attack"
   | "defense"
@@ -390,6 +402,8 @@ function Picker({
   excludedIds = [],
   onClear,
   noHistory = false,
+  quickParty,
+  onQuickPartySelect,
 }: {
   onSelect: (build: Build, source: "pokemon" | "history") => void;
   close: () => void;
@@ -399,6 +413,8 @@ function Picker({
   excludedIds?: number[];
   onClear?: () => void;
   noHistory?: boolean;
+  quickParty?: SavedData["parties"][number];
+  onQuickPartySelect?: (build: Build) => void;
 }) {
   const [query, setQuery] = useState("");
   const normalize = (s: string) =>
@@ -411,8 +427,47 @@ function Picker({
         p.number.includes(query)) &&
       !excludedIds.includes(p.id),
   );
+  const quickPartyMembers = quickParty?.members.flatMap((build, index) => {
+    if (!build) return [];
+    return pokemon.some((entry) => entry.id === build.pokemonId)
+      ? [{ build, index }]
+      : [];
+  });
   return (
     <Modal title={title} close={close} wide>
+      {quickParty && (
+        <section className="picker-party" aria-label="現在のパーティ">
+          <div className="picker-party-heading">
+            <span>現在のパーティ</span>
+            <strong>{quickParty.name}</strong>
+          </div>
+          {quickPartyMembers?.length ? (
+            <div className="picker-party-grid">
+              {quickPartyMembers.map(({ build, index }) => {
+                const name = pokemonAppearance(
+                  build.pokemonId,
+                  build.item,
+                ).name;
+                return (
+                  <button
+                    className="picker-party-item"
+                    key={index}
+                    title={`${name}の保存済みの型を適用`}
+                    aria-label={`${index + 1}枠目 ${name}の保存済みの型を適用`}
+                    onClick={() => onQuickPartySelect?.(build)}
+                  >
+                    <small>{index + 1}</small>
+                    <Picture id={build.pokemonId} item={build.item} />
+                    <span>{name}</span>
+                  </button>
+                );
+              })}
+            </div>
+          ) : (
+            <p className="picker-party-empty">登録されたポケモンはありません</p>
+          )}
+        </section>
+      )}
       <label className="search-input">
         <Icon name="search" />
         <input
@@ -495,6 +550,7 @@ function Picker({
 type CardProps = {
   side: "attack" | "defense";
   build: Build;
+  selected: boolean;
   setBuild: (b: Build) => void;
   history: Build[];
   pick: () => void;
@@ -521,10 +577,48 @@ function PokemonCard({
   setHp,
   sideState,
   onSideChange,
+  selected,
 }: CardProps) {
+  const attack = side === "attack";
+  if (!selected)
+    return (
+      <section
+        className={`pokemon-card ${side} pokemon-card-unselected`}
+        aria-label={attack ? "攻撃側の設定" : "受け側の設定"}
+      >
+        <div className="side-heading">
+          <span>
+            <Icon name={attack ? "target" : "shield"} size={16} />
+            {attack ? "攻撃側" : "受け側"}
+            <small>{attack ? "ATTACKER" : "DEFENDER"}</small>
+          </span>
+        </div>
+        <div className="pokemon-unselected">
+          <p>{attack ? "攻撃側" : "受け側"}は未選択です</p>
+          <button
+            className="pokemon-name"
+            data-guide-target={attack ? "attack-picker" : undefined}
+            onClick={pick}
+          >
+            <span>
+              <small>対戦に使うポケモンを選ぶ</small>
+              <strong>ポケモンを選択</strong>
+            </span>
+            <span className="name-change">
+              <Icon name="plus" size={18} />
+            </span>
+          </button>
+        </div>
+        <RankControls
+          label={attack ? "攻撃側" : "受け側"}
+          value={sideState}
+          onChange={onSideChange}
+          dataGuideTarget={attack ? "rank-controls" : undefined}
+        />
+      </section>
+    );
   const effectiveBuild = resolveBattleBuild(build);
   const p = getPokemon(effectiveBuild.pokemonId);
-  const attack = side === "attack";
   const sum = build.points.reduce((a, b) => a + b, 0);
   function updatePoints(index: number, value: number) {
     const rest = sum - build.points[index];
@@ -548,7 +642,11 @@ function PokemonCard({
           <small>{attack ? "ATTACKER" : "DEFENDER"}</small>
         </span>
       </div>
-      <button className="pokemon-name" onClick={pick}>
+      <button
+        className="pokemon-name"
+        onClick={pick}
+        data-guide-target={attack ? "attack-picker" : undefined}
+      >
         <span>
           <small>No. {p.number}</small>
           <strong>{p.name}</strong>
@@ -721,6 +819,7 @@ function PokemonCard({
         label={attack ? "攻撃側" : "受け側"}
         value={sideState}
         onChange={onSideChange}
+        dataGuideTarget={attack ? "rank-controls" : undefined}
       />
       <div className="history-strip">
         <span className="history-label">
@@ -757,18 +856,40 @@ const STORAGE_KEY = "battle-note-ui-v1";
 function readInitial() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return { data: initialData(), error: "" };
+    const guideMarker = localStorage.getItem(FIRST_USE_GUIDE_STORAGE_KEY);
+    const showFirstUseGuide = shouldShowFirstUseGuide(raw, guideMarker);
+    if (raw === null)
+      return {
+        data: initialData(),
+        error: "",
+        firstUse: true,
+        hasSavedData: false,
+        showFirstUseGuide,
+      };
     const value: unknown = JSON.parse(raw);
     const normalized = normalizeSavedData(value);
-    if (normalized) return { data: normalized, error: "" };
+    if (normalized)
+      return {
+        data: normalized,
+        error: "",
+        firstUse: false,
+        hasSavedData: true,
+        showFirstUseGuide,
+      };
     return {
       data: initialData(),
       error: "保存データを読み込めませんでした。初期データを表示しています。",
+      firstUse: false,
+      hasSavedData: false,
+      showFirstUseGuide,
     };
   } catch {
     return {
       data: initialData(),
       error: "端末の保存データを読み込めませんでした。",
+      firstUse: false,
+      hasSavedData: false,
+      showFirstUseGuide: false,
     };
   }
 }
@@ -777,9 +898,35 @@ export default function App() {
   const [saved, setSaved] = useState(initial.data);
   const [storageError, setStorageError] = useState(initial.error);
   const [persistenceAllowed, setPersistenceAllowed] = useState(!initial.error);
+  const [hasPersistedData, setHasPersistedData] = useState(
+    initial.hasSavedData,
+  );
+  const [starterPartyStatus, setStarterPartyStatus] = useState<
+    | "idle"
+    | "loading"
+    | "ready"
+    | "unsaved"
+    | "failed"
+    | "skipped"
+    | "stored"
+    | "edited"
+    | "saved"
+  >(initial.firstUse ? "idle" : "stored");
+  const [starterPartyPicks, setStarterPartyPicks] = useState<
+    StarterPartyPick[]
+  >([]);
+  const [skippedStarterMegas, setSkippedStarterMegas] = useState<
+    SkippedStarterMega[]
+  >([]);
   const [attack, setAttack] = useState<Build>(() => makeBuild(445));
   const [defense, setDefenseState] = useState<Build>(() => makeBuild(1000));
+  const [attackSelected, setAttackSelected] = useState(false);
+  const [defenseSelected, setDefenseSelected] = useState(false);
+  const hasMatchup = attackSelected && defenseSelected;
   const defaultBuildSelection = useRef(new DefaultBuildSelectionGate());
+  const starterPartySelection = useRef(new DefaultBuildSelectionGate());
+  const starterPartyTouched = useRef(false);
+  const starterStorageConflict = useRef(false);
   const [defaultBuildPending, setDefaultBuildPending] = useState(false);
   const opponentBuilds = useRef<Record<number, Build>>({});
   function cancelDefaultSelection(target?: string) {
@@ -788,9 +935,23 @@ export default function App() {
     setToast((current) => (current === "採用データを確認中…" ? "" : current));
     return true;
   }
+  function markStarterPartyTouched() {
+    starterPartyTouched.current = true;
+    starterPartySelection.current.cancel("starter:party");
+    setStarterPartyPicks([]);
+    setSkippedStarterMegas([]);
+    setStarterPartyStatus((status) =>
+      status === "ready" || status === "unsaved" || status === "edited"
+        ? "edited"
+        : status === "stored" || status === "saved" || status === "failed"
+          ? status
+          : "skipped",
+    );
+  }
   function setDefense(next: Build) {
     cancelDefaultSelection("battle:defense");
-    opponentBuilds.current[defense.pokemonId] = structuredClone(defense);
+    if (defenseSelected)
+      opponentBuilds.current[defense.pokemonId] = structuredClone(defense);
     const previous = opponentBuilds.current[next.pokemonId],
       observed = knownBySpecies[next.pokemonId];
     if (next.pokemonId !== defense.pokemonId && previous && observed) {
@@ -799,6 +960,7 @@ export default function App() {
         if (observed[key]) Object.assign(restored, { [key]: previous[key] });
       setDefenseState(restored);
     } else setDefenseState(next);
+    setDefenseSelected(true);
   }
   const [move, setMove] = useState("じしん");
   const [hp, setHp] = useState(100);
@@ -806,9 +968,7 @@ export default function App() {
   const [weather, setWeather] = useState("なし");
   const [terrain, setTerrain] = useState("なし");
   const [trickRoom, setTrickRoom] = useState(false);
-  const [page, setPage] = useState<"home" | "battle" | "party" | "speed">(
-    "home",
-  );
+  const [page, setPage] = useState<AppPage>("home");
   const [partyIndex, setPartyIndex] = useState(0);
   const [partyTarget, setPartyTarget] = useState<"attack" | "defense">(
     "attack",
@@ -818,6 +978,8 @@ export default function App() {
   const [partyDrafts, setPartyDrafts] = useState(() =>
     structuredClone(initial.data.parties),
   );
+  const partyDraftsRef = useRef(partyDrafts);
+  partyDraftsRef.current = partyDrafts;
   const [picker, setPicker] = useState<
     "attack" | "defense" | { member: number; party: number } | null
   >(null);
@@ -829,6 +991,10 @@ export default function App() {
     build: Build;
   } | null>(null);
   const [help, setHelp] = useState(false);
+  const [guideOpen, setGuideOpen] = useState(initial.showFirstUseGuide);
+  const guideOriginPage = useRef<AppPage>("home");
+  const guideOriginScroll = useRef(0);
+  const guideReturnFocus = useRef<HTMLElement | null>(null);
   const [palette, setPalette] = useState(false);
   const [toast, setToast] = useState("");
   const pendingPersistenceToast = useRef("");
@@ -836,6 +1002,7 @@ export default function App() {
   const [pendingImport, setPendingImport] = useState<SavedData | null>(null);
   const fileInput = useRef<HTMLInputElement>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const guideButtonRef = useRef<HTMLButtonElement>(null);
   const resultRef = useRef<HTMLElement>(null);
   const [resultObservation, setResultObservation] = useState({
     ready: false,
@@ -905,6 +1072,39 @@ export default function App() {
   const partyDirtyStates = partyDrafts.map((draft, index) =>
     partyHasChanges(draft, saved.parties[index]),
   );
+  const partySaveLabels = partyDirtyStates.map((dirty) =>
+    dirty ? "未保存" : hasPersistedData ? "保存済み" : "サンプル・未保存",
+  );
+  const starterPartyStatusMessage = {
+    idle: "初回利用では採用順位を確認して6体を選びます。",
+    loading: "採用順位を確認して、スタンダードパーティを用意しています。",
+    ready: "採用順位から6体を選びました。育成型や持ち物は編集できます。",
+    edited: "パーティを編集中です。変更は保存ボタンから保存できます。",
+    saved: "パーティを保存しました。編集を続けられます。",
+    unsaved:
+      "採用順位から6体を選びましたが、端末には保存できませんでした。編集内容を書き出して保管してください。",
+    failed:
+      "採用順位を取得できないためサンプルを表示しています。次回起動時に再試行します。",
+    skipped: "パーティへの操作を優先し、自動選出を取り消しました。",
+    stored: "保存済みのパーティを読み込みました。",
+  }[starterPartyStatus];
+  const starterRankingSummary = starterPartyPicks.length
+    ? `採用順位：${starterPartyPicks
+        .map(
+          (pick) =>
+            `${pick.rank}位 ${pick.name}${pick.mega ? `（${pick.megaSource === "stone" ? pick.item : "直接メガ"}）` : ""}`,
+        )
+        .join("、")}${
+        skippedStarterMegas.length
+          ? `。${skippedStarterMegas
+              .map(
+                (pick) =>
+                  `${pick.rank}位 ${pick.name}${pick.megaSource === "stone" ? `（${pick.item}）` : "（直接メガ）"}を3体目以降のメガ候補として除外`,
+              )
+              .join("、")}`
+          : ""
+      }`
+    : "";
   const dirtyPartyIndexes = partyDirtyStates.flatMap((dirty, index) =>
     dirty ? [index] : [],
   );
@@ -938,7 +1138,7 @@ export default function App() {
       : {
           ...slot,
           observedBuild:
-            slot.id === defense.pokemonId
+            defenseSelected && slot.id === defense.pokemonId
               ? defense
               : (opponentBuilds.current[slot.id] ?? makeBuild(slot.id)),
           known: knownBySpecies[slot.id] ?? unknownInfo(),
@@ -957,7 +1157,8 @@ export default function App() {
     recoveryMode,
   };
   const calculation = useMemo(() => {
-    if (page !== "battle") return { damage: null, repeatedKO: null, error: "" };
+    if (page !== "battle" || !hasMatchup)
+      return { damage: null, repeatedKO: null, error: "" };
     try {
       const damage = damageFor(
         attack,
@@ -987,6 +1188,9 @@ export default function App() {
     }
   }, [
     page,
+    hasMatchup,
+    attackSelected,
+    defenseSelected,
     attack,
     defense,
     move,
@@ -1003,9 +1207,14 @@ export default function App() {
     recoveryMode,
   ]);
   const showStickySummary =
-    page === "battle" && resultObservation.ready && !resultObservation.visible;
+    page === "battle" &&
+    hasMatchup &&
+    resultObservation.ready &&
+    !resultObservation.visible;
   const usageData = useBattleUsage(
-    usageSourcePokemon(defense.pokemonId)?.speciesId,
+    defenseSelected
+      ? usageSourcePokemon(defense.pokemonId)?.speciesId
+      : undefined,
   );
   const usage = usageData.entry?.data;
   useEffect(() => {
@@ -1022,6 +1231,7 @@ export default function App() {
       pendingPersistenceToast.current = "";
       return;
     }
+    if (saved === initial.data) return;
 
     // Keep unreadable user data intact, including after calculations or edits.
     // Only an explicitly confirmed backup import authorizes replacing it.
@@ -1042,12 +1252,106 @@ export default function App() {
     pendingPersistenceToast.current = "";
     if (result.ok) {
       setStorageError("");
+      setHasPersistedData(true);
       if (successToast) setToast(successToast);
       return;
     }
 
     reportPersistenceFailure(result.reason);
-  }, [saved, persistenceAllowed]);
+  }, [saved, persistenceAllowed, initial.data]);
+  useEffect(() => {
+    if (!initial.showFirstUseGuide) return;
+    try {
+      markFirstUseGuideSeen(localStorage);
+    } catch {
+      // If browser storage is unavailable, this guide cannot be remembered.
+    }
+  }, [initial]);
+  useEffect(() => {
+    if (!initial.firstUse) return;
+    if (starterPartyTouched.current) {
+      setStarterPartyStatus("skipped");
+      return;
+    }
+    const ticket = starterPartySelection.current.begin("starter:party");
+    setStarterPartyStatus("loading");
+    void resolveStarterPartySelection(
+      starterPartySelection.current,
+      ticket,
+      () => loadUsageIndex(),
+      loadUsage,
+    ).then((result) => {
+      if (!result) return;
+      if (!result.ok) {
+        setStarterPartyStatus("failed");
+        setToast(
+          "採用順位から6体を確保できませんでした。サンプルを表示し、次回起動時に再試行します。",
+        );
+        return;
+      }
+
+      let storageValue: string | null;
+      try {
+        storageValue = localStorage.getItem(STORAGE_KEY);
+      } catch {
+        setPersistenceAllowed(false);
+        setStarterPartyStatus("skipped");
+        setStorageError(
+          "保存状態を確認できないため、初回選出を適用しませんでした。",
+        );
+        return;
+      }
+      const currentParty = partyDraftsRef.current[0];
+      if (
+        !currentParty ||
+        !canApplyStarterParty({
+          firstUse: initial.firstUse,
+          storageValue,
+          userEdited: starterPartyTouched.current,
+          draft: currentParty,
+          initial: initial.data.parties[0],
+        })
+      ) {
+        if (storageValue !== null) {
+          starterStorageConflict.current = true;
+          setPersistenceAllowed(false);
+          setHasPersistedData(true);
+          setStorageError(
+            "保存データがすでに作成されたため、現在の画面からの上書きを停止しました。再読み込みしてください。",
+          );
+          setStarterPartyStatus("stored");
+        } else {
+          setStarterPartyStatus("skipped");
+        }
+        return;
+      }
+
+      const next: SavedData = {
+        ...initial.data,
+        parties: [result.party, ...initial.data.parties.slice(1)],
+      };
+      const persisted = commitSavedData(next, true);
+      if (!persisted && starterStorageConflict.current) {
+        setStarterPartyStatus("stored");
+        return;
+      }
+
+      const nextDrafts = structuredClone(partyDraftsRef.current);
+      nextDrafts[0] = result.party;
+      partyDraftsRef.current = nextDrafts;
+      setPartyDrafts(nextDrafts);
+      setStarterPartyPicks(result.picks);
+      setSkippedStarterMegas(result.skippedMegas);
+      setStarterPartyStatus(persisted ? "ready" : "unsaved");
+      if (persisted) {
+        const megaCount = result.picks.filter((pick) => pick.mega).length;
+        setToast(`採用順位上位から6体を選出しました（メガ${megaCount}体）。`);
+      }
+    });
+    return () => {
+      starterPartySelection.current.cancel("starter:party");
+    };
+  }, [initial]);
   useEffect(() => {
     if (!toast || toast === "採用データを確認中…") return;
     const t = setTimeout(() => setToast(""), 4200);
@@ -1066,7 +1370,7 @@ export default function App() {
   }
   function applyBuildSelection(target: BuildSelectionTarget, build: Build) {
     if (target === "attack") {
-      setAttack(build);
+      updateAttack(build);
       setMove(build.moves[0] ?? "");
     } else if (target === "defense") {
       setDefense(build);
@@ -1166,15 +1470,25 @@ export default function App() {
     }
     applyPopularSelection(build, target, !explicitTarget);
   }
+  function chooseSavedPartyBuild(build: Build) {
+    const target = pickerTarget();
+    if (!target) return;
+    cancelDefaultSelection();
+    setPickerStatus("");
+    applyBuildSelection(target, structuredClone(build));
+    setPicker(null);
+  }
   function updateAttack(build: Build) {
     cancelDefaultSelection("battle:attack");
     setAttack(build);
+    setAttackSelected(true);
   }
   function updateOpponentMove(name: string) {
     cancelDefaultSelection("battle:defense");
     setOpponentMove(name);
   }
   function openPicker(target: NonNullable<typeof picker>) {
+    if (typeof target !== "string") markStarterPartyTouched();
     cancelDefaultSelection();
     setPickerStatus("");
     setPreviewPicker(null);
@@ -1201,6 +1515,7 @@ export default function App() {
     setPreviewPicker(null);
   }
   function changePartyIndex(index: number) {
+    markStarterPartyTouched();
     cancelDefaultSelection();
     setPartyIndex(index);
   }
@@ -1210,6 +1525,8 @@ export default function App() {
     opponentBuilds.current = {};
     setAttack(makeBuild(445));
     setDefenseState(makeBuild(1000));
+    setAttackSelected(false);
+    setDefenseSelected(false);
     setMove("じしん");
     setHp(100);
     setScreen(false);
@@ -1290,15 +1607,21 @@ export default function App() {
     setStorageError(message);
     setToast(message);
   }
-  function commitSavedData(next: SavedData): boolean {
+  function commitSavedData(next: SavedData, requireEmpty = false): boolean {
     let result: ReturnType<typeof writeSavedData>;
     try {
-      result = writeSavedData(
-        localStorage,
-        STORAGE_KEY,
-        next,
-        persistenceAllowed,
-      );
+      const storage = localStorage;
+      if (requireEmpty && storage.getItem(STORAGE_KEY) !== null) {
+        starterStorageConflict.current = true;
+        setPersistenceAllowed(false);
+        setHasPersistedData(true);
+        setStorageError(
+          "保存データがすでに作成されたため、現在の画面からの上書きを停止しました。再読み込みしてください。",
+        );
+        setToast("保存データが見つかったため初回選出を適用しませんでした。");
+        return false;
+      }
+      result = writeSavedData(storage, STORAGE_KEY, next, persistenceAllowed);
     } catch {
       result = { ok: false, reason: "failed" };
     }
@@ -1311,9 +1634,11 @@ export default function App() {
     pendingPersistenceToast.current = "";
     setSaved(next);
     setStorageError("");
+    setHasPersistedData(true);
     return true;
   }
   function saveCurrentParty() {
+    markStarterPartyTouched();
     setPartySaveAttempt(partyIndex);
     if (partyItemWarning) return;
     if (!party.name.trim()) {
@@ -1328,10 +1653,12 @@ export default function App() {
     };
     if (commitSavedData(next)) {
       setPartySaveAttempt(null);
+      setStarterPartyStatus("saved");
       setToast(`${party.name}を保存しました`);
     }
   }
   function saveAllPartyDraftsAndExport() {
+    markStarterPartyTouched();
     setPartyExportAttempted(true);
     const errors = partySaveErrors(partyDrafts, dirtyPartyIndexes);
     if (errors.length) {
@@ -1349,6 +1676,7 @@ export default function App() {
     if (!commitSavedData(next)) return;
     setPartyExportAttempted(false);
     setPartySaveAttempt(null);
+    setStarterPartyStatus("saved");
     if (downloadBackup(next)) {
       setToast("未保存のパーティを保存して、バックアップを書き出しました");
     } else {
@@ -1359,6 +1687,7 @@ export default function App() {
   }
   async function importFile(file?: File) {
     if (!file) return;
+    markStarterPartyTouched();
     cancelDefaultSelection();
     setPickerStatus("");
     if (file.size > 1024 * 1024) {
@@ -1379,11 +1708,37 @@ export default function App() {
       );
     }
   }
-  function navigate(next: "home" | "battle" | "party" | "speed") {
+  function navigate(next: AppPage) {
     cancelDefaultSelection();
     setPickerStatus("");
     setPage(next);
     window.scrollTo({ top: 0, behavior: "auto" });
+  }
+  function navigateForGuide(next: AppPage) {
+    setPage(next);
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }
+  function openGuide() {
+    guideOriginPage.current = page;
+    guideOriginScroll.current = window.scrollY;
+    guideReturnFocus.current =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : null;
+    setGuideOpen(true);
+  }
+  function closeGuide() {
+    const originPage = guideOriginPage.current;
+    const originScroll = guideOriginScroll.current;
+    setGuideOpen(false);
+    setPage(originPage);
+    window.requestAnimationFrame(() => {
+      window.scrollTo({ top: originScroll, behavior: "auto" });
+      const returnFocus = guideReturnFocus.current;
+      guideReturnFocus.current = null;
+      if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
+      else guideButtonRef.current?.focus({ preventScroll: true });
+    });
   }
   function showSpeed() {
     navigate("speed");
@@ -1446,9 +1801,10 @@ export default function App() {
             </button>
           </nav>
           <button
+            ref={guideButtonRef}
             className="help-button"
             aria-label="使い方"
-            onClick={() => setHelp(true)}
+            onClick={openGuide}
           >
             <Icon name="info" size={18} />
             <span>使い方</span>
@@ -1527,7 +1883,7 @@ export default function App() {
           </div>
         )}
         {page === "home" ? (
-          <HomePage navigate={navigate} onHelp={() => setHelp(true)} />
+          <HomePage navigate={navigate} onHelp={openGuide} />
         ) : page === "battle" ? (
           <>
             <div className="field-toolbar">
@@ -1628,7 +1984,7 @@ export default function App() {
                         onClick={() => {
                           cancelDefaultSelection();
                           if (partyTarget === "attack") {
-                            setAttack(structuredClone(b));
+                            updateAttack(structuredClone(b));
                             setMove(b.moves[0] ?? "");
                           } else {
                             setDefense(structuredClone(b));
@@ -1666,6 +2022,7 @@ export default function App() {
                   <PokemonCard
                     side="attack"
                     build={attack}
+                    selected={attackSelected}
                     setBuild={updateAttack}
                     history={saved.attackHistory}
                     pick={() => openPicker("attack")}
@@ -1682,10 +2039,13 @@ export default function App() {
                     className="swap-button"
                     onClick={() => {
                       cancelDefaultSelection();
-                      opponentBuilds.current[defense.pokemonId] =
-                        structuredClone(defense);
+                      if (defenseSelected)
+                        opponentBuilds.current[defense.pokemonId] =
+                          structuredClone(defense);
                       setAttack(defense);
                       setDefenseState(attack);
+                      setAttackSelected(defenseSelected);
+                      setDefenseSelected(attackSelected);
                       setMove(defense.moves[0] ?? "");
                       setAttackSide(defenseSide);
                       setDefenseExtra(attackSide);
@@ -1700,6 +2060,7 @@ export default function App() {
                   <PokemonCard
                     side="defense"
                     build={defense}
+                    selected={defenseSelected}
                     setBuild={setDefense}
                     history={saved.defenseHistory}
                     pick={() => openPicker("defense")}
@@ -1773,12 +2134,18 @@ export default function App() {
                       ダメージの目安
                     </h2>
                   </div>
-                  <DamageView
-                    damage={calculation.damage}
-                    error={calculation.error}
-                    recoveryMode={recoveryMode}
-                    onRecoveryModeChange={setRecoveryMode}
-                  />
+                  {hasMatchup ? (
+                    <DamageView
+                      damage={calculation.damage}
+                      error={calculation.error}
+                      recoveryMode={recoveryMode}
+                      onRecoveryModeChange={setRecoveryMode}
+                    />
+                  ) : (
+                    <p className="live-alert">
+                      ダメージを見るには、攻撃側と受け側のポケモンを選んでください。
+                    </p>
+                  )}
                 </section>
                 <details className="live-details">
                   <summary>HP・状態異常</summary>
@@ -1828,31 +2195,35 @@ export default function App() {
                     </label>
                   </div>
                 </details>
-                <OpponentInfo
-                  build={defense}
-                  known={known}
-                  onKnown={(k) => {
-                    cancelDefaultSelection("battle:defense");
-                    setKnownBySpecies((current) => ({
-                      ...current,
-                      [defense.pokemonId]: k,
-                    }));
-                  }}
-                  opponents={opponents}
-                  onOpponents={setOpponents}
-                  onPickSlot={openOpponentPreviewPicker}
-                />
-                <AssumptionsView
-                  {...matchup}
-                  known={known}
-                  usage={
-                    usageData.index?.data?.season &&
-                    usageData.index.data.season !== supportedSeason
-                      ? undefined
-                      : usage
-                  }
-                  onApply={setDefense}
-                />
+                {defenseSelected && (
+                  <OpponentInfo
+                    build={defense}
+                    known={known}
+                    onKnown={(k) => {
+                      cancelDefaultSelection("battle:defense");
+                      setKnownBySpecies((current) => ({
+                        ...current,
+                        [defense.pokemonId]: k,
+                      }));
+                    }}
+                    opponents={opponents}
+                    onOpponents={setOpponents}
+                    onPickSlot={openOpponentPreviewPicker}
+                  />
+                )}
+                {hasMatchup && (
+                  <AssumptionsView
+                    {...matchup}
+                    known={known}
+                    usage={
+                      usageCompatible(usage, usageData.index?.data)
+                        ? usage
+                        : undefined
+                    }
+                    seasonContext={usageData.index?.data}
+                    onApply={setDefense}
+                  />
+                )}
               </div>
               <aside className="insights-column">
                 <section className="speed-card">
@@ -1864,11 +2235,17 @@ export default function App() {
                       すばやさ比較
                     </h2>
                   </div>
-                  <SpeedView
-                    {...matchup}
-                    opponentMove={opponentMove}
-                    setOpponentMove={setOpponentMove}
-                  />
+                  {hasMatchup ? (
+                    <SpeedView
+                      {...matchup}
+                      opponentMove={opponentMove}
+                      setOpponentMove={setOpponentMove}
+                    />
+                  ) : (
+                    <p className="sidebar-empty">
+                      攻撃側と受け側を選ぶと、対面のすばやさを比較できます。
+                    </p>
+                  )}
                   <button className="speed-card-link" onClick={showSpeed}>
                     全ポケモンとすばやさを比較
                     <Icon name="arrow" size={15} />
@@ -1880,27 +2257,36 @@ export default function App() {
                     <h2>相手の行動候補</h2>
                     <p>警戒したい一手を、根拠とともに。</p>
                   </div>
-                  <PredictionView
-                    {...matchup}
-                    known={known}
-                    usage={usage}
-                    season={usageData.index?.data?.season}
-                    opponents={predictionOpponents}
-                  />
+                  {hasMatchup ? (
+                    <PredictionView
+                      {...matchup}
+                      known={known}
+                      usage={usage}
+                      season={usageData.index?.data?.season}
+                      seasonContext={usageData.index?.data}
+                      opponents={predictionOpponents}
+                    />
+                  ) : (
+                    <p className="sidebar-empty">
+                      攻撃側と受け側を選ぶと、相手の行動候補を表示します。
+                    </p>
+                  )}
                 </section>
-                <UsagePanel
-                  data={usageData}
-                  build={defense}
-                  onSelect={(id) => choose(makeBuild(id), "pokemon", "defense")}
-                />
+                {defenseSelected && (
+                  <UsagePanel
+                    data={usageData}
+                    build={defense}
+                    onSelect={(id) =>
+                      choose(makeBuild(id), "pokemon", "defense")
+                    }
+                  />
+                )}
               </aside>
             </div>
           </>
-        ) : page === "speed" ? (
-          <SpeedPage attack={attack} defense={defense} />
-        ) : (
+        ) : page === "speed" ? null : (
           <>
-            <div className="party-toolbar">
+            <div className="party-toolbar" data-guide-target="party-settings">
               <div
                 className="party-tabs"
                 role="tablist"
@@ -1911,16 +2297,16 @@ export default function App() {
                     role="tab"
                     aria-selected={i === partyIndex}
                     key={i}
-                    className={`${i === partyIndex ? "selected" : ""} ${partyDirtyStates[i] ? "has-unsaved" : ""}`}
-                    aria-label={`パーティ${i + 1} ${p.name}、${partyDirtyStates[i] ? "未保存" : "保存済み"}、${p.members.filter(Boolean).length}体`}
+                    className={`${i === partyIndex ? "selected" : ""} ${partySaveLabels[i] !== "保存済み" ? "has-unsaved" : ""}`}
+                    aria-label={`パーティ${i + 1} ${p.name}、${partySaveLabels[i]}、${p.members.filter(Boolean).length}体`}
                     onClick={() => changePartyIndex(i)}
                   >
                     <span>0{i + 1}</span>
                     <span className="party-tab-name">{p.name}</span>
                     <small
-                      className={`party-dirty-status ${partyDirtyStates[i] ? "is-dirty" : "is-saved"}`}
+                      className={`party-dirty-status ${partySaveLabels[i] !== "保存済み" ? "is-dirty" : "is-saved"}`}
                     >
-                      {partyDirtyStates[i] ? "未保存" : "保存済み"}
+                      {partySaveLabels[i]}
                     </small>
                     <small>{p.members.filter(Boolean).length}/6</small>
                   </button>
@@ -1970,15 +2356,16 @@ export default function App() {
                       aria-label="パーティ名"
                       maxLength={24}
                       value={party.name}
-                      onChange={(e) =>
+                      onChange={(e) => {
+                        markStarterPartyTouched();
                         setPartyDrafts((d) =>
                           d.map((p, i) =>
                             i === partyIndex
                               ? { ...p, name: e.target.value }
                               : p,
                           ),
-                        )
-                      }
+                        );
+                      }}
                     />
                   </label>
                   <p>
@@ -1990,7 +2377,9 @@ export default function App() {
                   >
                     {partyDirty
                       ? "このパーティには未保存の変更があります。"
-                      : "このパーティの変更は保存済みです。"}
+                      : hasPersistedData
+                        ? "このパーティの変更は保存済みです。"
+                        : "このサンプルは端末に未保存です。"}
                   </p>
                 </div>
                 <span className="party-count">
@@ -2032,7 +2421,8 @@ export default function App() {
                           <ItemSelect
                             pokemon={getPokemon(b.pokemonId)}
                             value={b.item}
-                            onChange={(item) =>
+                            onChange={(item) => {
+                              markStarterPartyTouched();
                               setPartyDrafts((d) =>
                                 d.map((p, j) =>
                                   j === partyIndex
@@ -2044,19 +2434,20 @@ export default function App() {
                                       }
                                     : p,
                                 ),
-                              )
-                            }
+                              );
+                            }}
                           />
                         </label>
                         <button
                           className="member-details member-edit-build"
-                          onClick={() =>
+                          onClick={() => {
+                            markStarterPartyTouched();
                             setEditingMember({
                               party: partyIndex,
                               member: i,
                               build: b,
-                            })
-                          }
+                            });
+                          }}
                           aria-label={`${getPokemon(b.pokemonId).name}の育成型を編集`}
                         >
                           <span>
@@ -2075,7 +2466,7 @@ export default function App() {
                           className="text-button load-member"
                           onClick={() => {
                             cancelDefaultSelection();
-                            setAttack(structuredClone(b));
+                            updateAttack(structuredClone(b));
                             setMove(b.moves[0] ?? "");
                             navigate("battle");
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -2087,6 +2478,7 @@ export default function App() {
                         <button
                           className="remove-member"
                           onClick={() => {
+                            markStarterPartyTouched();
                             cancelDefaultSelection();
                             setPartyDrafts((d) =>
                               d.map((p, j) =>
@@ -2143,10 +2535,14 @@ export default function App() {
             <div className="party-tip">
               <Icon name="bolt" size={21} />
               <div>
-                <strong>自分だけの3つのチーム。</strong>
-                <p>
-                  初期パーティは編集できるサンプルです。空き枠のあるパーティも途中保存できます。
-                </p>
+                <strong>スタンダードパーティ</strong>
+                <p>{starterPartyStatusMessage}</p>
+                {starterRankingSummary && (
+                  <p className="party-ranking-summary">
+                    {starterRankingSummary}
+                  </p>
+                )}
+                <p>空き枠のあるパーティも途中保存できます。</p>
               </div>
               <button
                 className="text-button"
@@ -2158,6 +2554,14 @@ export default function App() {
             </div>
           </>
         )}
+        <div hidden={page !== "speed"}>
+          <SpeedPage
+            attack={attackSelected ? attack : null}
+            defense={defenseSelected ? defense : null}
+            active={page === "speed"}
+            allowAutoLoad={!guideOpen}
+          />
+        </div>
       </main>
       <footer className="site-footer">
         <div>
@@ -2173,6 +2577,13 @@ export default function App() {
           <span>非公式ファンツール</span>
         </div>
       </footer>
+      {guideOpen && (
+        <FirstUseGuide
+          page={page}
+          onNavigate={navigateForGuide}
+          onClose={closeGuide}
+        />
+      )}
       <input
         ref={fileInput}
         type="file"
@@ -2195,6 +2606,12 @@ export default function App() {
                 ? saved.defenseHistory
                 : []
           }
+          quickParty={
+            picker === "attack" || picker === "defense"
+              ? saved.parties[partyIndex]
+              : undefined
+          }
+          onQuickPartySelect={chooseSavedPartyBuild}
         />
       )}
       {previewPicker !== null && (
@@ -2278,7 +2695,7 @@ export default function App() {
               <li>
                 <strong>採用データを確認</strong>
                 <span>
-                  非公式の採用データを日本時間で1日1回確認します。取得に失敗した場合は、前回のデータを使います。
+                  非公式の採用データを日本時間で1日1回確認します。今シーズンの項目が不足する場合は前シーズンを参照し、取得に失敗した場合は保存済みデータを使います。
                 </span>
               </li>
             </ul>
@@ -2287,7 +2704,7 @@ export default function App() {
               行動候補は採用率・ダメージ・行動順に基づくルール評価です。採用率は行動確率ではありません。入力した控えは判明情報を反映して個別に評価します。相手の全6体と選出3体がまだ確定していない場合、こちらの技で相手のHPが半分以上削られそうなときや、ねむり・こおりで動きにくいときに限り、交代先を推測せず「交代（交代先は不明）」も候補にします。型は独立した採用率から組み立てた仮定で、実際の組み合わせを保証しません。
             </p>
             <p>
-              命中判定やターン終了時の効果を含む対戦シミュレーターではありません。ばけのかわ等、未計算の効果がある場合は注意と判定保留を表示します。未検証の新シーズンの統計は予測へ自動適用しません。
+              命中判定やターン終了時の効果を含む対戦シミュレーターではありません。ばけのかわ等、未計算の効果がある場合は注意と判定保留を表示します。統計は提供元一覧で確認した今シーズンと前シーズンを参照します。計算カタログに未登録の技・特性・もちものは自動候補から除外します。
             </p>
             <p className="credits">
               ポケモン画像：
@@ -2412,7 +2829,12 @@ export default function App() {
                   pendingPersistenceToast.current =
                     "バックアップを読み込みました";
                   setSaved(pendingImport);
-                  setPartyDrafts(structuredClone(pendingImport.parties));
+                  const importedParties = structuredClone(
+                    pendingImport.parties,
+                  );
+                  partyDraftsRef.current = importedParties;
+                  setPartyDrafts(importedParties);
+                  setStarterPartyStatus("saved");
                   setPendingImport(null);
                 }}
               >

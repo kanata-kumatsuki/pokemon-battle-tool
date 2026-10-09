@@ -17,6 +17,7 @@ import {
   itemCatalog,
   englishNatures,
   statShort,
+  supportedSeason,
   type Build,
 } from "./data";
 import {
@@ -26,7 +27,12 @@ import {
   type BattleField,
   type DamageResult,
 } from "./battle";
-import { japanDay, usageCompatible, type UsageSnapshot } from "./usage";
+import {
+  japanDay,
+  usageCompatible,
+  type UsageSeasonContext,
+  type UsageSnapshot,
+} from "./usage";
 import {
   assumptions,
   predictActions,
@@ -132,13 +138,15 @@ export function RankControls({
   label,
   value,
   onChange,
+  dataGuideTarget,
 }: {
   label: string;
   value: SideState;
   onChange: (s: SideState) => void;
+  dataGuideTarget?: string;
 }) {
   return (
-    <div className="card-ranks">
+    <div className="card-ranks" data-guide-target={dataGuideTarget}>
       <h3>能力ランク</h3>
       <div className="live-ranks">
         {[1, 2, 3, 4, 5].map((i) => (
@@ -701,10 +709,16 @@ export function AssumptionsView(
   props: MatchupProps & {
     known: KnownInfo;
     usage?: UsageSnapshot;
+    seasonContext?: UsageSeasonContext;
     onApply: (b: Build) => void;
   },
 ) {
-  const variants = assumptions(props.defense, props.known, props.usage);
+  const variants = assumptions(
+    props.defense,
+    props.known,
+    props.usage,
+    props.seasonContext,
+  );
   const [detailsOpen, setDetailsOpen] = useState(
     () =>
       typeof window === "undefined" ||
@@ -816,6 +830,7 @@ export function PredictionView(
     known: KnownInfo;
     usage?: UsageSnapshot;
     season?: string;
+    seasonContext?: UsageSeasonContext;
     opponents: OpponentSlot[];
   },
 ) {
@@ -903,6 +918,7 @@ export function UsagePanel({
     selectedPokemon.mega &&
     usagePokemon &&
     usagePokemon.id !== selectedPokemon.id;
+  const seasonContext = data.index?.data;
   return (
     <section className="live-panel usage-panel">
       <div className="section-heading">
@@ -956,6 +972,12 @@ export function UsagePanel({
           （日本時間）
         </p>
       )}
+      {seasonContext && seasonContext.season !== supportedSeason && (
+        <p>
+          計算カタログは{supportedSeason}
+          です。未登録の技・特性・もちものは候補から除外します。
+        </p>
+      )}
       {usage && usage.date < japanDay() && (
         <p className="live-alert">提供元のデータは本日より前の日付です。</p>
       )}
@@ -969,8 +991,7 @@ export function UsagePanel({
           {data.entry.error}
         </p>
       )}
-      {((usage && !usageCompatible(usage)) ||
-        (data.index?.data && !usageCompatible(data.index.data))) && (
+      {usage && !usageCompatible(usage, seasonContext) && (
         <p role="alert" className="live-alert">
           このシーズンには未対応です。統計は表示しますが自動予測への適用を停止しています。
         </p>

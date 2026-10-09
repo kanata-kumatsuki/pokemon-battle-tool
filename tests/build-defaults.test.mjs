@@ -28,6 +28,8 @@ const loadM6Index = async () => ({
   data: {
     date: "2026-09-24",
     season: "M6",
+    previousSeason: null,
+    availableSeasons: ["M6"],
     pokemon: [{ id: "gholdengo", name: "Gholdengo", rank: 1 }],
   },
   checkedAt: "2026-09-24T00:00:00.000Z",
@@ -487,6 +489,8 @@ test("async resolver uses validated stale cache after a 404 and blocks an unsupp
         data: {
           date: "2026-09-25",
           season: "M7",
+          previousSeason: null,
+          availableSeasons: ["M7"],
           pokemon: [{ id: "gholdengo", name: "Gholdengo", rank: 1 }],
         },
         checkedAt: "2026-09-25T00:00:00.000Z",
@@ -496,8 +500,94 @@ test("async resolver uses validated stale cache after a 404 and blocks an unsupp
   );
   assert.equal(newerSeason.source, "usual");
   assert.equal(newerSeason.reason, "season");
-  assert.equal(newerSeason.season, "M7");
+  assert.equal(newerSeason.season, "M6");
   assert.equal(newerSeason.build.nature, makeBuild(1000).nature);
+});
+
+test("previous supported season remains usable when the index moves to a new season", async () => {
+  const gate = new DefaultBuildSelectionGate();
+  const result = await resolvePopularBuildSelection(
+    gate,
+    gate.begin("battle:attack"),
+    1000,
+    async () => ({
+      data: validUsage("gholdengo", [
+        { category: "stat_alignment", name: "Timid", rank: 1, percent: 90 },
+      ]),
+      checkedAt: "2026-09-24T00:00:00.000Z",
+      attemptDay: "2026-09-25",
+      error: "M7の統計がありません。前シーズンM6を表示しています。",
+    }),
+    {
+      loadIndex: async () => ({
+        data: {
+          date: "2026-09-25",
+          season: "M7",
+          previousSeason: "M6",
+          availableSeasons: ["M7", "M6", "M5"],
+          pokemon: [{ id: "gholdengo", name: "Gholdengo", rank: 1 }],
+        },
+        checkedAt: "2026-09-25T00:00:00.000Z",
+        attemptDay: "2026-09-25",
+      }),
+    },
+  );
+
+  assert.equal(result.source, "usage");
+  assert.equal(result.season, "M6");
+  assert.equal(result.build.nature, "おくびょう");
+  assert.match(result.cacheError, /前シーズンM6/);
+});
+
+test("current API season is usable only when its index context is valid", async () => {
+  const gate = new DefaultBuildSelectionGate();
+  const index = {
+    data: {
+      date: "2026-10-09",
+      season: "M7",
+      previousSeason: "M6",
+      availableSeasons: ["M7", "M6", "M5"],
+      pokemon: [{ id: "gholdengo", name: "Gholdengo", rank: 1 }],
+    },
+    checkedAt: "2026-10-09T00:00:00.000Z",
+    attemptDay: "2026-10-09",
+  };
+  const current = await resolvePopularBuildSelection(
+    gate,
+    gate.begin("battle:attack"),
+    1000,
+    async () => ({
+      data: validUsage(
+        "gholdengo",
+        [{ category: "stat_alignment", name: "Timid", rank: 1, percent: 90 }],
+        "M7",
+      ),
+      checkedAt: "2026-10-09T00:00:00.000Z",
+      attemptDay: "2026-10-09",
+    }),
+    { loadIndex: async () => index },
+  );
+  assert.equal(current.source, "usage");
+  assert.equal(current.season, "M7");
+  assert.equal(current.build.nature, "おくびょう");
+
+  const older = await resolvePopularBuildSelection(
+    gate,
+    gate.begin("battle:attack"),
+    1000,
+    async () => ({
+      data: validUsage(
+        "gholdengo",
+        [{ category: "stat_alignment", name: "Timid", rank: 1, percent: 90 }],
+        "M5",
+      ),
+      checkedAt: "2026-10-09T00:00:00.000Z",
+      attemptDay: "2026-10-09",
+    }),
+    { loadIndex: async () => index },
+  );
+  assert.equal(older.source, "usual");
+  assert.equal(older.reason, "season");
 });
 
 test("uncached request failures return the usual build and expose the failure", async () => {

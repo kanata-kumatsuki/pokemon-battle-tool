@@ -72,13 +72,21 @@ function configFromBuild(build: Build): SpeedConfig {
 export function SpeedPage({
   attack,
   defense,
+  active = true,
+  allowAutoLoad = true,
 }: {
-  attack: Build;
-  defense: Build;
+  attack: Build | null;
+  defense: Build | null;
+  active?: boolean;
+  allowAutoLoad?: boolean;
 }) {
-  const [selectedId, setSelectedId] = useState(() => findSpecies(attack).id);
+  const [selectedId, setSelectedId] = useState(() =>
+    attack ? findSpecies(attack).id : "",
+  );
   const [config, setConfig] = useState<SpeedConfig>(() =>
-    configFromBuild(attack),
+    attack
+      ? configFromBuild(attack)
+      : { points: 0, nature: "neutral", scarf: false, stage: 0 },
   );
   const [pickerSearch, setPickerSearch] = useState("");
   const [preset, setPreset] = useState<SpeedPresetFilter>("all");
@@ -89,17 +97,21 @@ export function SpeedPage({
   const selectedRow = useRef<HTMLTableRowElement>(null);
   const tableScroll = useRef<HTMLDivElement>(null);
   const firstOpen = useRef(true);
-  const selected = roster.find((p) => p.id === selectedId)!;
+  const selected = roster.find((p) => p.id === selectedId) ?? roster[0];
   const effectiveConfig = resolveSpeedConfig(selected, config);
   const ownAbilities = availableSpeedAbilities(selected);
-  const speed = calculateSpeed(selected.baseSpeed, effectiveConfig);
+  const speed = selectedId
+    ? calculateSpeed(selected.baseSpeed, effectiveConfig)
+    : 0;
   const opponentDescription = `${preset === "all" ? "すべての配分" : speedPresets[preset].label} / ランク${opponentStage === "all" ? "±0・＋1・＋2" : opponentStage > 0 ? `＋${opponentStage}` : "±0"}${opponentAbility !== "none" ? ` / ${speedAbilities[opponentAbility].name}発動` : ""}`;
   const entries = useMemo(
     () =>
-      compareSpeedBuilds(roster, selectedId, speed, preset, {
-        stage: opponentStage,
-        ability: opponentAbility,
-      }),
+      selectedId
+        ? compareSpeedBuilds(roster, selectedId, speed, preset, {
+            stage: opponentStage,
+            ability: opponentAbility,
+          })
+        : [],
     [selectedId, speed, preset, opponentStage, opponentAbility],
   );
   const faster = entries.filter((p) => p.difference > 0);
@@ -155,6 +167,7 @@ export function SpeedPage({
       b.speed - a.speed || Number(b.own) - Number(a.own) || a.number - b.number,
   );
   useLayoutEffect(() => {
+    if (!active || !selectedId) return;
     const row = selectedRow.current;
     const container = tableScroll.current;
     if (!row || !container) return;
@@ -175,6 +188,7 @@ export function SpeedPage({
     observer.observe(container.querySelector("table")!);
     return () => observer.disconnect();
   }, [
+    active,
     selectedId,
     speed,
     preset,
@@ -183,6 +197,11 @@ export function SpeedPage({
     search,
     filter,
   ]);
+  useLayoutEffect(() => {
+    if (!active || !allowAutoLoad || selectedId || !attack) return;
+    setSelectedId(findSpecies(attack).id);
+    setConfig(configFromBuild(attack));
+  }, [active, allowAutoLoad, attack, selectedId]);
   function useBuild(build: Build) {
     setSelectedId(findSpecies(build).id);
     setConfig(configFromBuild(build));
@@ -195,17 +214,108 @@ export function SpeedPage({
     });
     selectedRow.current?.focus({ preventScroll: true });
   }
+  if (!selectedId)
+    return (
+      <div className="speed-page">
+        <div className="speed-workspace">
+          <section
+            className="speed-setup"
+            aria-labelledby="speed-setup-title"
+            data-guide-target="speed-setup"
+          >
+            <div className="speed-panel-heading">
+              <span className="speed-step">01</span>
+              <h2 id="speed-setup-title">比較するポケモン</h2>
+            </div>
+            <div className="speed-import">
+              <button
+                disabled={!attack}
+                onClick={() => attack && useBuild(attack)}
+              >
+                攻撃側から読込
+              </button>
+              <button
+                disabled={!defense}
+                onClick={() => defense && useBuild(defense)}
+              >
+                受け側から読込
+              </button>
+            </div>
+            <label className="speed-label">
+              ポケモンを検索
+              <input
+                type="search"
+                placeholder="名前・図鑑番号"
+                value={pickerSearch}
+                onChange={(e) => setPickerSearch(e.target.value)}
+              />
+            </label>
+            <label className="speed-label">
+              ポケモンを選択
+              <select
+                value=""
+                onChange={(e) => {
+                  setSelectedId(e.target.value);
+                  setConfig({
+                    points: 0,
+                    nature: "neutral",
+                    scarf: false,
+                    stage: 0,
+                  });
+                }}
+              >
+                <option value="">ポケモンを選択してください</option>
+                {options.map((p) => (
+                  <option key={p.id} value={p.id}>
+                    {p.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            {options.length === 0 && (
+              <p className="speed-muted" role="status">
+                該当するポケモンがいません。
+              </p>
+            )}
+            <p className="speed-muted">
+              ポケモンを選ぶと、すばやさの分布と近い相手を表示します。
+            </p>
+          </section>
+          <section className="speed-position" aria-live="polite">
+            <div className="speed-panel-heading">
+              <span className="speed-step">02</span>
+              <h2>すばやさ比較</h2>
+            </div>
+            <p>比較するポケモンを選んでください。</p>
+          </section>
+        </div>
+      </div>
+    );
   return (
     <div className="speed-page">
       <div className="speed-workspace">
-        <section className="speed-setup" aria-labelledby="speed-setup-title">
+        <section
+          className="speed-setup"
+          aria-labelledby="speed-setup-title"
+          data-guide-target="speed-setup"
+        >
           <div className="speed-panel-heading">
             <span className="speed-step">01</span>
             <h2 id="speed-setup-title">比較するポケモン</h2>
           </div>
           <div className="speed-import">
-            <button onClick={() => useBuild(attack)}>攻撃側から読込</button>
-            <button onClick={() => useBuild(defense)}>受け側から読込</button>
+            <button
+              disabled={!attack}
+              onClick={() => attack && useBuild(attack)}
+            >
+              攻撃側から読込
+            </button>
+            <button
+              disabled={!defense}
+              onClick={() => defense && useBuild(defense)}
+            >
+              受け側から読込
+            </button>
           </div>
           <label className="speed-label">
             ポケモンを検索
@@ -225,6 +335,9 @@ export function SpeedPage({
                 setConfig((c) => ({ ...c, scarf: false, ability: "none" }));
               }}
             >
+              {!selectedId && (
+                <option value="">ポケモンを選択してください</option>
+              )}
               {!options.some((p) => p.id === selectedId) && (
                 <option value={selectedId}>{selected.name}（選択中）</option>
               )}

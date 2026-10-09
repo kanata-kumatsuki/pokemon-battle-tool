@@ -237,6 +237,34 @@
   border-top: 1px solid #edf1f7;
   font-size: 12px;
 }
+.pokemon-card-unselected .pokemon-unselected {
+  display: grid;
+  gap: 8px;
+  min-height: 112px;
+  align-content: center;
+  padding: 14px 16px;
+  background: #fbfcfe;
+}
+.pokemon-card-unselected .pokemon-unselected p {
+  margin: 0;
+  color: #68758a;
+  font-size: 11px;
+  text-align: center;
+}
+.pokemon-card-unselected .pokemon-name {
+  min-height: 66px;
+  padding: 12px 14px;
+  border: 1px dashed #b8c5d8;
+  border-radius: 10px;
+  background: #fff;
+}
+.pokemon-card-unselected .pokemon-name strong {
+  color: #245bdb;
+  font-size: 16px;
+}
+.pokemon-card-unselected .card-ranks {
+  border-top: 1px solid #edf1f7;
+}
 .card-ranks h3 {
   margin: 0 0 10px;
   font-size: 12px;

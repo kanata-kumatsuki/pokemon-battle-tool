@@ -16,7 +16,14 @@ export type UsageSnapshot = {
 export type UsageIndex = {
   date: string;
   season: string;
+  previousSeason: string | null;
+  availableSeasons: string[];
   pokemon: { id: string; name: string; rank: number | null }[];
+};
+export type UsageSeasonContext = {
+  season: string;
+  previousSeason: string | null;
+  availableSeasons: string[];
 };
 export type CacheEntry<T> = {
   data?: T;
@@ -141,6 +148,28 @@ export function parseIndex(value: unknown): UsageIndex {
     .map((v) => ({ season: v.split("/")[0], date: date(v.split("/")[1]) }))
     .sort((a, b) => b.date.localeCompare(a.date));
   if (!folders.length) throw new Error("一覧にデータ日付がありません");
+  const folderSeasons = [...new Set(folders.map((folder) => folder.season))];
+  const declaredSeasons = Array.isArray(r.seasons)
+    ? [
+        ...new Set(
+          r.seasons.filter(
+            (season): season is string =>
+              typeof season === "string" && /^M\d+$/.test(season),
+          ),
+        ),
+      ]
+    : [];
+  const seasonOrder = declaredSeasons.length ? declaredSeasons : folderSeasons;
+  const defaultSeason =
+    typeof r.defaultSeason === "string" && /^M\d+$/.test(r.defaultSeason)
+      ? r.defaultSeason
+      : undefined;
+  const season = defaultSeason ?? seasonOrder[0] ?? folders[0].season;
+  const seasonIndex = seasonOrder.indexOf(season);
+  if (seasonIndex < 0)
+    throw new Error("一覧の既定シーズンがシーズン一覧にありません");
+  const availableSeasons = seasonOrder.slice(seasonIndex);
+  const previousSeason = availableSeasons[1] ?? null;
   const pokemon = r.pokemon
     .map(record)
     .filter(
@@ -164,14 +193,58 @@ export function parseIndex(value: unknown): UsageIndex {
     });
   if (!pokemon.length) throw new Error("シングルの一覧がありません");
   return {
-    ...folders[0],
+    season,
+    date: (folders.find((folder) => folder.season === season) ?? folders[0])
+      .date,
+    previousSeason,
+    availableSeasons,
     pokemon: pokemon.sort(
       (a, b) => (a.rank ?? Infinity) - (b.rank ?? Infinity),
     ),
   };
 }
-export function usageCompatible(data: { season: string } | undefined) {
-  return !!data && data.season === supportedSeason;
+export function usageCompatible(
+  data: { season: string } | undefined,
+  context?: UsageSeasonContext,
+) {
+  if (!data || !/^M\d+$/.test(data.season)) return false;
+  if (!context) return data.season === supportedSeason;
+  if (!/^M\d+$/.test(context.season)) return false;
+  if (
+    !Array.isArray(context.availableSeasons) ||
+    context.availableSeasons[0] !== context.season ||
+    context.availableSeasons[1] !== (context.previousSeason ?? undefined) ||
+    new Set(context.availableSeasons).size !==
+      context.availableSeasons.length ||
+    !context.availableSeasons.every((season) => /^M\d+$/.test(season))
+  )
+    return false;
+  return (
+    data.season === context.season ||
+    (context.previousSeason !== null && data.season === context.previousSeason)
+  );
+}
+export const usageCategories = [
+  "move",
+  "ability",
+  "held_item",
+  "stat_alignment",
+  "stat_points",
+] as const;
+export const usageCategoryLabels: Record<
+  (typeof usageCategories)[number],
+  string
+> = {
+  move: "わざ",
+  ability: "特性",
+  held_item: "もちもの",
+  stat_alignment: "性格",
+  stat_points: "能力配分",
+};
+export function missingUsageCategories(data: UsageSnapshot) {
+  return usageCategories.filter(
+    (category) => !data.rows.some((row) => row.category === category),
+  );
 }
 export function cacheIsDue(
   entry: { attemptDay: string } | undefined,
@@ -269,6 +342,8 @@ export function validSnapshot(value: unknown, id: string) {
     const v = record(value);
     if (
       v.speciesId !== id ||
+      typeof v.season !== "string" ||
+      !/^M\d+$/.test(v.season) ||
       typeof v.date !== "string" ||
       !/^\d{4}-\d{2}-\d{2}$/.test(v.date) ||
       !Array.isArray(v.rows)
@@ -319,6 +394,18 @@ export function validIndex(value: unknown) {
     validIsoDate(v.date) &&
     typeof v.season === "string" &&
     /^M\d+$/.test(v.season) &&
+    Array.isArray(v.availableSeasons) &&
+    v.availableSeasons.length > 0 &&
+    v.availableSeasons[0] === v.season &&
+    v.availableSeasons.every(
+      (season: unknown) => typeof season === "string" && /^M\d+$/.test(season),
+    ) &&
+    new Set(v.availableSeasons).size === v.availableSeasons.length &&
+    (v.previousSeason === null ||
+      (typeof v.previousSeason === "string" &&
+        /^M\d+$/.test(v.previousSeason) &&
+        v.previousSeason === v.availableSeasons[1])) &&
+    (v.previousSeason === null ? v.availableSeasons.length === 1 : true) &&
     Array.isArray(v.pokemon) &&
     v.pokemon.length > 0 &&
     v.pokemon.every((x) => {
@@ -340,17 +427,178 @@ function validIsoDate(value: unknown): value is string {
     parsed.toISOString().slice(0, 10) === value
   );
 }
-export const loadUsageIndex = (force = false) =>
+type RefreshOptions = {
+  now?: Date;
+  fetcher?: typeof fetch;
+  storage?: CacheStorage;
+};
+
+export const loadUsageIndex = (force = false, options: RefreshOptions = {}) =>
   refreshResource(
     "battle-note-usage-index-v1",
     `${API_ORIGIN}/api`,
     parseIndex,
-    { force, validateCache: validIndex },
+    { ...options, force, validateCache: validIndex },
   );
-export const loadUsage = (id: string, force = false) =>
-  refreshResource(
-    `battle-note-usage-${id}-v1`,
-    `${API_ORIGIN}/api/battle/Singles/${encodeURIComponent(id)}?days=1`,
-    (v) => parseUsage(v, id),
-    { force, validateCache: (v) => validSnapshot(v, id) },
-  );
+type UsageLoadOptions = RefreshOptions & {
+  index?: CacheEntry<UsageIndex>;
+};
+
+function parseUsageForSeason(value: unknown, id: string, season: string) {
+  const snapshot = parseUsage(value, id);
+  if (snapshot.season !== season)
+    throw new Error("提供元のシーズンが指定と一致しません");
+  return snapshot;
+}
+
+function seasonIssue(entry: CacheEntry<UsageSnapshot>, missing: string[]) {
+  if (!entry.data) return entry.error ?? "統計データがありません。";
+  if (missing.length)
+    return `不足項目：${missing
+      .map(
+        (category) =>
+          usageCategoryLabels[category as keyof typeof usageCategoryLabels],
+      )
+      .join("、")}。`;
+  return entry.error ?? "";
+}
+
+function cachedSeasonEntry(value: unknown, id: string, season: string) {
+  const cached = record(value);
+  if (
+    typeof cached.checkedAt !== "string" ||
+    typeof cached.attemptDay !== "string" ||
+    (cached.data !== undefined &&
+      (!validSnapshot(cached.data, id) ||
+        record(cached.data).season !== season))
+  )
+    return undefined;
+  return cached as CacheEntry<UsageSnapshot>;
+}
+
+export async function loadUsage(
+  id: string,
+  force = false,
+  options: UsageLoadOptions = {},
+): Promise<CacheEntry<UsageSnapshot>> {
+  const now = options.now ?? new Date();
+  const indexEntry = options.index ?? (await loadUsageIndex(force, options));
+  const index = indexEntry.data;
+  if (!index || !validIndex(index))
+    return {
+      checkedAt: "",
+      attemptDay: japanDay(now),
+      error:
+        indexEntry.error ??
+        "利用できるシーズン情報がありません。手動で再試行できます。",
+    };
+
+  const loadSeason = (season: string) => {
+    const key = `battle-note-usage-${id}-${season}-v2`;
+    const store = options.storage ?? storage();
+    let existing = cachedSeasonEntry(memory.get(key), id, season);
+    if (!existing) {
+      try {
+        const raw = store?.getItem(key);
+        if (raw) existing = cachedSeasonEntry(JSON.parse(raw), id, season);
+      } catch {
+        /* Ignore an invalid current cache and fetch the indexed season. */
+      }
+    }
+    if (existing) {
+      memory.set(key, existing);
+    } else {
+      let legacy: unknown = memory.get(`battle-note-usage-${id}-v1`);
+      try {
+        const raw = store?.getItem(`battle-note-usage-${id}-v1`);
+        if (raw) legacy = JSON.parse(raw);
+      } catch {
+        /* Ignore an invalid legacy cache and fetch the indexed season. */
+      }
+      const cached = cachedSeasonEntry(legacy, id, season);
+      if (cached?.data) {
+        memory.set(key, cached);
+        try {
+          store?.setItem(key, JSON.stringify(cached));
+        } catch {
+          /* Keep the migrated entry in memory when storage is unavailable. */
+        }
+      }
+    }
+    return refreshResource<UsageSnapshot>(
+      key,
+      `${API_ORIGIN}/api/battle/Singles/${encodeURIComponent(id)}?season=${encodeURIComponent(season)}&days=1`,
+      (value) => parseUsageForSeason(value, id, season),
+      {
+        ...options,
+        now,
+        force,
+        validateCache: (value) =>
+          validSnapshot(value, id) && record(value).season === season,
+      },
+    );
+  };
+
+  const current = await loadSeason(index.season);
+  const currentMissing = current.data
+    ? missingUsageCategories(current.data)
+    : [...usageCategories];
+  if (current.data && !currentMissing.length) return current;
+
+  const previous = index.previousSeason
+    ? await loadSeason(index.previousSeason)
+    : undefined;
+  const previousMissing = previous?.data
+    ? missingUsageCategories(previous.data)
+    : [...usageCategories];
+  const currentCoverage = usageCategories.length - currentMissing.length;
+  const previousCoverage = usageCategories.length - previousMissing.length;
+  const usePrevious =
+    !!previous?.data && (!current.data || previousCoverage > currentCoverage);
+  const selected = usePrevious ? previous! : current;
+  const selectedMissing = usePrevious ? previousMissing : currentMissing;
+  const reason = seasonIssue(current, currentMissing);
+  if (!selected.data)
+    return {
+      ...current,
+      error: [
+        reason,
+        index.previousSeason && previous?.error
+          ? `前シーズン${index.previousSeason}も取得できませんでした: ${previous.error}`
+          : "",
+      ]
+        .filter(Boolean)
+        .join(" "),
+    };
+
+  const fallbackNote = usePrevious
+    ? `今シーズン${index.season}の統計が不足しているため、前シーズン${index.previousSeason}を表示中です。`
+    : `今シーズン${index.season}の統計に不足があります。`;
+  const previousAvailability = index.previousSeason
+    ? ""
+    : "前シーズンのデータは一覧にありません。";
+  const partialNote = selectedMissing.length
+    ? `不足項目：${selectedMissing
+        .map(
+          (category) =>
+            usageCategoryLabels[category as keyof typeof usageCategoryLabels],
+        )
+        .join("、")}。`
+    : "";
+  const selectedUpdateIssue = selected.error
+    ? "表示中のシーズンの更新に失敗し、保存済みデータを表示しています。"
+    : "";
+  return {
+    ...selected,
+    attemptDay: current.attemptDay,
+    error: [
+      fallbackNote,
+      !current.data ? reason : "",
+      previousAvailability,
+      partialNote,
+      selectedUpdateIssue,
+    ]
+      .filter(Boolean)
+      .join(" "),
+  };
+}

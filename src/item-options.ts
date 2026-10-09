@@ -1,12 +1,23 @@
 import { itemsForPokemon, japaneseItem, type Pokemon } from "./data.ts";
-import { usageCompatible, type UsageSnapshot, type UsageRow } from "./usage.ts";
+import {
+  usageCompatible,
+  type UsageSeasonContext,
+  type UsageSnapshot,
+  type UsageRow,
+} from "./usage.ts";
 
 const japaneseNames = new Intl.Collator("ja");
 
-export function itemOptions(pokemon: Pokemon, usage?: UsageSnapshot) {
+export function itemOptions(
+  pokemon: Pokemon,
+  usage?: UsageSnapshot,
+  seasonContext?: UsageSeasonContext,
+) {
   const allowed = itemsForPokemon(pokemon);
   const rows =
-    usage && usageCompatible(usage) && usage.speciesId === pokemon.speciesId
+    usage &&
+    usageCompatible(usage, seasonContext) &&
+    usage.speciesId === pokemon.speciesId
       ? usage.rows.filter((row) => row.category === "held_item")
       : [];
   const adoption = new Map<string, UsageRow>();

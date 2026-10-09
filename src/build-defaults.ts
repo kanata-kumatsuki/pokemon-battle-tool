@@ -8,7 +8,6 @@ import {
   makeBuild,
   moveByName,
   natures,
-  supportedSeason,
   usageSourcePokemon,
   type Build,
 } from "./data.ts";
@@ -16,9 +15,11 @@ import {
   loadUsageIndex,
   usageCompatible,
   validSnapshot,
+  validIndex,
   type CacheEntry,
   type UsageIndex,
   type UsageRow,
+  type UsageSeasonContext,
   type UsageSnapshot,
 } from "./usage.ts";
 
@@ -132,6 +133,7 @@ export function popularBuild(
   usage?: UsageSnapshot,
   known: DefaultBuildKnown = {},
   knownBuild?: Build,
+  seasonContext?: UsageSeasonContext,
 ): PopularBuildResult {
   const initial = makeBuild(pokemonId);
   const pokemon = getPokemon(pokemonId);
@@ -169,7 +171,7 @@ export function popularBuild(
       date: usage.date,
       usageSourceName,
     };
-  if (!usageCompatible(usage) || usage.season !== supportedSeason)
+  if (!usageCompatible(usage, seasonContext))
     return {
       ...empty,
       reason: "season",
@@ -322,9 +324,10 @@ export function popularBuildFromEntry(
   entry: CacheEntry<UsageSnapshot> | undefined,
   known?: DefaultBuildKnown,
   knownBuild?: Build,
+  seasonContext?: UsageSeasonContext,
 ) {
   return {
-    ...popularBuild(pokemonId, entry?.data, known, knownBuild),
+    ...popularBuild(pokemonId, entry?.data, known, knownBuild, seasonContext),
     cacheError: entry?.error,
     checkedAt: entry?.checkedAt,
   };
@@ -367,9 +370,13 @@ export async function resolvePopularBuildSelection(
     ]);
   }
   if (!gate.complete(ticket, options.target ?? ticket.target)) return undefined;
-  const unsupportedIndexSeason =
-    indexEntry?.data && !usageCompatible(indexEntry.data);
-  const result = unsupportedIndexSeason
+  const seasonContext =
+    indexEntry?.data && validIndex(indexEntry.data)
+      ? indexEntry.data
+      : undefined;
+  const invalidIndexData =
+    indexEntry?.data && !seasonContext ? indexEntry.data : undefined;
+  const result = invalidIndexData
     ? {
         ...popularBuild(
           pokemonId,
@@ -378,14 +385,15 @@ export async function resolvePopularBuildSelection(
           options.knownBuild,
         ),
         reason: "season" as const,
-        season: indexEntry!.data!.season,
-        date: indexEntry!.data!.date,
+        season: invalidIndexData.season,
+        date: invalidIndexData.date,
       }
     : popularBuildFromEntry(
         pokemonId,
         entry,
         options.known,
         options.knownBuild,
+        seasonContext,
       );
   return {
     ...result,

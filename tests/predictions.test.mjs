@@ -178,6 +178,31 @@ test("unknown season blocks predictions; sleep and full HP contradict attacks an
       .length,
     0,
   );
+  const seasonContext = {
+    season: "M7",
+    previousSeason: "M6",
+    availableSeasons: ["M7", "M6", "M5"],
+  };
+  assert.ok(
+    predictActions({ ...i, season: "M7", seasonContext }).candidates.length > 0,
+  );
+  assert.ok(
+    predictActions({
+      ...i,
+      season: "M7",
+      seasonContext,
+      usage: { ...usage, season: "M7" },
+    }).candidates.length > 0,
+  );
+  assert.equal(
+    predictActions({
+      ...i,
+      season: "M7",
+      seasonContext,
+      usage: { ...usage, season: "M5" },
+    }).candidates.length,
+    0,
+  );
   i.defenseSide.status = "slp";
   assert.ok(
     predictActions(i).candidates.every((c) => c.key === "switch:unknown"),

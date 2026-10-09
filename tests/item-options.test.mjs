@@ -78,6 +78,38 @@ test("rank-only or mixed coverage uses source ranks without fabricating percenta
   assert.equal(result.options[1].usage.percent, null);
 });
 
+test("current and immediately previous indexed seasons order legal items", () => {
+  const context = {
+    season: "M7",
+    previousSeason: "M6",
+    availableSeasons: ["M7", "M6", "M5"],
+  };
+  const previous = itemOptions(
+    garchomp,
+    {
+      ...snapshot([
+        row("Leftovers", 3, 3),
+        row("Focus Sash", 25, 2),
+        row("Garchompite Z", 50, 1),
+      ]),
+      season: "M6",
+    },
+    context,
+  );
+  assert.equal(previous.hasUsage, true);
+  assert.deepEqual(names(previous).slice(0, 3), [
+    "もちものなし",
+    "ガブリアスナイトＺ",
+    "きあいのタスキ",
+  ]);
+  const tooOld = itemOptions(
+    garchomp,
+    { ...snapshot([row("Focus Sash", 80, 1)]), season: "M5" },
+    context,
+  );
+  assert.equal(tooOld.hasUsage, false);
+});
+
 test("Japanese aliases, ties and zero percent entries retain their reported values", () => {
   const result = itemOptions(
     garchomp,

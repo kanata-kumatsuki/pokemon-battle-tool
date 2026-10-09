@@ -2153,6 +2153,9 @@ button:focus-visible {
   color: #8b897d;
   margin-top: 6px;
 }
+.party-tip .party-ranking-summary {
+  line-height: 1.8;
+}
 .party-tip > .text-button {
   margin-left: auto;
   white-space: nowrap;
@@ -2241,6 +2244,88 @@ button:focus-visible {
 .picker-label {
   display: flex;
   justify-content: space-between;
+}
+.picker-party {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border: 1px solid #e3eaf5;
+  border-radius: 10px;
+  background: #f8faff;
+}
+.picker-party-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  margin-bottom: 8px;
+}
+.picker-party-heading span {
+  flex: none;
+  color: #8493aa;
+  font-size: 9px;
+  font-weight: 700;
+}
+.picker-party-heading strong {
+  min-width: 0;
+  color: #40536e;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.picker-party-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 6px;
+}
+.picker-party-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  min-width: 0;
+  min-height: 76px;
+  padding: 14px 4px 5px;
+  border: 1px solid #e3e9f2;
+  border-radius: 7px;
+  background: #fff;
+  text-align: center;
+}
+.picker-party-item:hover {
+  border-color: #9dbdf6;
+  background: #eef4ff;
+}
+.picker-party-item:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+.picker-party-item small {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  color: #a2afc2;
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+}
+.picker-party-item img {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.picker-party-item span {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  color: #40536e;
+  font-size: 11px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.picker-party-empty {
+  margin: 0;
+  color: #8c9ab0;
+  font-size: 10px;
 }
 .picker-grid {
   display: grid;
@@ -3746,6 +3831,24 @@ button:focus-visible {
   }
   .search-input input {
     font-size: 12px;
+  }
+  .picker-party {
+    padding: 9px;
+  }
+  .picker-party-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+  }
+  .picker-party-item {
+    min-height: 76px;
+    padding: 14px 4px 5px;
+  }
+  .picker-party-item img {
+    width: 32px;
+    height: 32px;
+  }
+  .picker-party-item span {
+    font-size: 10px;
   }
   .picker-grid {
     grid-template-columns: repeat(3, 1fr);
