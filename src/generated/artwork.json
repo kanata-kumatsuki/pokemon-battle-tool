@@ -1,0 +1,2873 @@
+{
+  "retrievedAt": "2026-09-20",
+  "catalog": {
+    "source": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon.csv",
+    "sha256": "16c81c33188b0eac403aa2f759fcbe9e42c611f722d263f5b5a6a5bff9f8ce6b"
+  },
+  "artwork": {
+    "abomasnow": {
+      "path": "/pokemon/artwork/abomasnow.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/460.png",
+      "pokeapiId": 460,
+      "width": 475,
+      "height": 475,
+      "sha256": "105bfb2ee8162a69f8d10b3997d496124ba497570d8a3d10e8af58664b39333b"
+    },
+    "abomasnowmega": {
+      "path": "/pokemon/artwork/abomasnowmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10060.png",
+      "pokeapiId": 10060,
+      "width": 475,
+      "height": 475,
+      "sha256": "f9836c58f459d66450ef963f4ee8349a62de02cb051602633391a9f53a032eb5"
+    },
+    "absol": {
+      "path": "/pokemon/artwork/absol.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/359.png",
+      "pokeapiId": 359,
+      "width": 475,
+      "height": 475,
+      "sha256": "19f0b71d2bdd3cba966bff5a8a6f8e00e254bfff0b0524967e45eab3d002ba87"
+    },
+    "absolmega": {
+      "path": "/pokemon/artwork/absolmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10057.png",
+      "pokeapiId": 10057,
+      "width": 475,
+      "height": 475,
+      "sha256": "56740a3a9fca699a7d13be13220784b7333057ba7aa6104bee07289dff0ef2f1"
+    },
+    "absolmegaz": {
+      "path": "/pokemon/artwork/absolmegaz.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10307.png",
+      "pokeapiId": 10307,
+      "width": 534,
+      "height": 534,
+      "sha256": "31911b251e03cde5b6d3b95e45db0337ee1e7528d45d28b749485766aafc608d"
+    },
+    "aegislash": {
+      "path": "/pokemon/artwork/aegislash.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/681.png",
+      "pokeapiId": 681,
+      "width": 475,
+      "height": 475,
+      "sha256": "196fd293d3721a1091700c029536addaf7c98125af6aca2285431102ebf24e26"
+    },
+    "aegislashblade": {
+      "path": "/pokemon/artwork/aegislashblade.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10026.png",
+      "pokeapiId": 10026,
+      "width": 475,
+      "height": 475,
+      "sha256": "403c62758f566b2d5ad09c5b1d5e4714b680a63db874bf7865045310163154c1"
+    },
+    "aerodactyl": {
+      "path": "/pokemon/artwork/aerodactyl.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/142.png",
+      "pokeapiId": 142,
+      "width": 475,
+      "height": 475,
+      "sha256": "5427b0a9ac5dbf1fee7fcd19f44de1dfb97d577c82262bb961538865a08bc79a"
+    },
+    "aerodactylmega": {
+      "path": "/pokemon/artwork/aerodactylmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10042.png",
+      "pokeapiId": 10042,
+      "width": 475,
+      "height": 475,
+      "sha256": "d0a95969d06805d588318c348158dbf3f54388f02b898165c9ce73d63e49365d"
+    },
+    "aggron": {
+      "path": "/pokemon/artwork/aggron.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/306.png",
+      "pokeapiId": 306,
+      "width": 475,
+      "height": 475,
+      "sha256": "87852235e548c06e4a1c03c15813144baa4f172f4cc06813453cc7f2c7c7dcd8"
+    },
+    "aggronmega": {
+      "path": "/pokemon/artwork/aggronmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10053.png",
+      "pokeapiId": 10053,
+      "width": 475,
+      "height": 475,
+      "sha256": "6fd7242541324e0ec2f7c5ddc1ac028805f71977cec2d2a03b8a07d47c075d4c"
+    },
+    "alakazam": {
+      "path": "/pokemon/artwork/alakazam.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/65.png",
+      "pokeapiId": 65,
+      "width": 475,
+      "height": 475,
+      "sha256": "8f1dfebe7855bf0838dc4110629b01a8862370373cabe527adf3f979bc4fa1e0"
+    },
+    "alakazammega": {
+      "path": "/pokemon/artwork/alakazammega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10037.png",
+      "pokeapiId": 10037,
+      "width": 475,
+      "height": 475,
+      "sha256": "fd2b8d597a8230eb29242a1b452435e2a2a400c7b545e3452bffa0c8ae584250"
+    },
+    "alcremie": {
+      "path": "/pokemon/artwork/alcremie.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/869.png",
+      "pokeapiId": 869,
+      "width": 475,
+      "height": 475,
+      "sha256": "a196a287a56e322ca6f506bb63d471dd927d4596fdb2ccc9e800f1ca7b027e7a"
+    },
+    "altaria": {
+      "path": "/pokemon/artwork/altaria.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/334.png",
+      "pokeapiId": 334,
+      "width": 475,
+      "height": 475,
+      "sha256": "17e156e4c200d28f93199550fa0b7e15a749f67ba71418296f519be679a28c5d"
+    },
+    "altariamega": {
+      "path": "/pokemon/artwork/altariamega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10067.png",
+      "pokeapiId": 10067,
+      "width": 475,
+      "height": 475,
+      "sha256": "88cd934633eb0bf9c49c24e1d93fb0c775f847be2ab350d3567aa772a0bd2419"
+    },
+    "ampharos": {
+      "path": "/pokemon/artwork/ampharos.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/181.png",
+      "pokeapiId": 181,
+      "width": 475,
+      "height": 475,
+      "sha256": "6642ebe7d357c229e6ba1a353bd8530bf98808b4c2a7acdd6bc4798fd07aa191"
+    },
+    "ampharosmega": {
+      "path": "/pokemon/artwork/ampharosmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10045.png",
+      "pokeapiId": 10045,
+      "width": 475,
+      "height": 475,
+      "sha256": "49d430f23a90bd214468b0d9eb2db1315686e830c0198bfa285b133ca160cbba"
+    },
+    "annihilape": {
+      "path": "/pokemon/artwork/annihilape.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/979.png",
+      "pokeapiId": 979,
+      "width": 475,
+      "height": 475,
+      "sha256": "b54f191d19ff3ad24c68c8db81484bdc27169e7a089c0af22cc62a00e75c16b3"
+    },
+    "appletun": {
+      "path": "/pokemon/artwork/appletun.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/842.png",
+      "pokeapiId": 842,
+      "width": 475,
+      "height": 475,
+      "sha256": "f6bb74d71c5685b28e7d0a200867d66ec26f46f2c231704e0a985b3cbff72250"
+    },
+    "araquanid": {
+      "path": "/pokemon/artwork/araquanid.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/752.png",
+      "pokeapiId": 752,
+      "width": 475,
+      "height": 475,
+      "sha256": "0cddae49061391f8072830dd540afba423b84e7ff3f301e47b94f82834b0039a"
+    },
+    "arbok": {
+      "path": "/pokemon/artwork/arbok.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/24.png",
+      "pokeapiId": 24,
+      "width": 475,
+      "height": 475,
+      "sha256": "f1e38593fba1de6e6db3d5db819f1b851307f342abb819f9c2ebfbbea9b93d42"
+    },
+    "arboliva": {
+      "path": "/pokemon/artwork/arboliva.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/930.png",
+      "pokeapiId": 930,
+      "width": 475,
+      "height": 475,
+      "sha256": "bc6daee22ed527ab1010aaef45f3c423fda50372ff881820e78acb17f9212426"
+    },
+    "arcanine": {
+      "path": "/pokemon/artwork/arcanine.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/59.png",
+      "pokeapiId": 59,
+      "width": 475,
+      "height": 475,
+      "sha256": "4461b18982bbed0d9384ebcf99015347ff47a4e9dc926476d779c83ebd2d7093"
+    },
+    "arcaninehisui": {
+      "path": "/pokemon/artwork/arcaninehisui.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10230.png",
+      "pokeapiId": 10230,
+      "width": 475,
+      "height": 475,
+      "sha256": "e98cb4b19ce33d79404553fc7892a6e1a6b4ce2e934b275d87b940c104e6927e"
+    },
+    "archaludon": {
+      "path": "/pokemon/artwork/archaludon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1018.png",
+      "pokeapiId": 1018,
+      "width": 475,
+      "height": 475,
+      "sha256": "00dc356abdfec19f9dd9a687397d41740f1f32501c60f17c5ed7a225b73b44a8"
+    },
+    "ariados": {
+      "path": "/pokemon/artwork/ariados.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/168.png",
+      "pokeapiId": 168,
+      "width": 475,
+      "height": 475,
+      "sha256": "7f84c37209cbd24f5bb894359172669102cd297d87dfa6f2d8efe3c711c5657f"
+    },
+    "armarouge": {
+      "path": "/pokemon/artwork/armarouge.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/936.png",
+      "pokeapiId": 936,
+      "width": 475,
+      "height": 475,
+      "sha256": "b0ff7cab861612f623256b4f1748b020ac6611ff033e088bbabc1a6301cd7b01"
+    },
+    "aromatisse": {
+      "path": "/pokemon/artwork/aromatisse.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/683.png",
+      "pokeapiId": 683,
+      "width": 475,
+      "height": 475,
+      "sha256": "bced310d6f9983b006f12ac0ffaa752ed49e63f8d22f425e115d3514117805cc"
+    },
+    "audino": {
+      "path": "/pokemon/artwork/audino.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/531.png",
+      "pokeapiId": 531,
+      "width": 475,
+      "height": 475,
+      "sha256": "42c151039a91c9ed795f6aa08574eeb60590c5186462ad3bbfd5d198571b8ef2"
+    },
+    "audinomega": {
+      "path": "/pokemon/artwork/audinomega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10069.png",
+      "pokeapiId": 10069,
+      "width": 475,
+      "height": 475,
+      "sha256": "a931b76a858904af313731debd3b5388372b2d1f45fb2ba1dabe9d5cdd0837e9"
+    },
+    "aurorus": {
+      "path": "/pokemon/artwork/aurorus.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/699.png",
+      "pokeapiId": 699,
+      "width": 475,
+      "height": 475,
+      "sha256": "d62aac6f16364d73762c55cca958377eb21a6ddde018a620f1629d6942e95012"
+    },
+    "avalugg": {
+      "path": "/pokemon/artwork/avalugg.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/713.png",
+      "pokeapiId": 713,
+      "width": 475,
+      "height": 475,
+      "sha256": "fcf36b688c589f82de09a0c70a0bcb1a2b2027931c6f6ef9d8bd56ef400349eb"
+    },
+    "avalugghisui": {
+      "path": "/pokemon/artwork/avalugghisui.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10243.png",
+      "pokeapiId": 10243,
+      "width": 475,
+      "height": 475,
+      "sha256": "08d5c91f31d4d116e01f4312a404843e2eac07385c2984d49267c1f3541a44a6"
+    },
+    "azumarill": {
+      "path": "/pokemon/artwork/azumarill.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/184.png",
+      "pokeapiId": 184,
+      "width": 475,
+      "height": 475,
+      "sha256": "a55c0d5b890fb2bcb90a3ea0dbc13fa53e2f54bdbed45d585975d05e77c123a2"
+    },
+    "banette": {
+      "path": "/pokemon/artwork/banette.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/354.png",
+      "pokeapiId": 354,
+      "width": 475,
+      "height": 475,
+      "sha256": "87118eb5533d59b822014f09330221a4227c632b88a4241b764c45d5ef614b40"
+    },
+    "banettemega": {
+      "path": "/pokemon/artwork/banettemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10056.png",
+      "pokeapiId": 10056,
+      "width": 475,
+      "height": 475,
+      "sha256": "26c1bd0e997c574eccb837defef90f281f351e06458cd57cc946fc8c35b728a1"
+    },
+    "barbaracle": {
+      "path": "/pokemon/artwork/barbaracle.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/689.png",
+      "pokeapiId": 689,
+      "width": 475,
+      "height": 475,
+      "sha256": "aadff3c90e5079de786b499893d2aa848c98f5ed8d33029a9a1817ba146867c2"
+    },
+    "barbaraclemega": {
+      "path": "/pokemon/artwork/barbaraclemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10298.png",
+      "pokeapiId": 10298,
+      "width": 534,
+      "height": 534,
+      "sha256": "7d666205b045fa62feb5cd195c885984233c37dc8e6a03fbebd83f4695410614"
+    },
+    "basculegion": {
+      "path": "/pokemon/artwork/basculegion.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/902.png",
+      "pokeapiId": 902,
+      "width": 475,
+      "height": 475,
+      "sha256": "52d42b194bb8421c4a14f4cbcdae5ab323380d2374f60844ffc2838a9d5e73cb"
+    },
+    "basculegionf": {
+      "path": "/pokemon/artwork/basculegionf.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10248.png",
+      "pokeapiId": 10248,
+      "width": 475,
+      "height": 475,
+      "sha256": "d76e3ba7087644711c63df72f0167b62f704ba22f597398b8af539fd2c99bc1c"
+    },
+    "bastiodon": {
+      "path": "/pokemon/artwork/bastiodon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/411.png",
+      "pokeapiId": 411,
+      "width": 475,
+      "height": 475,
+      "sha256": "9cc46414e2386e784626ba9711ec9ed93e2d1fbb08aad1aca89ffbf05841d700"
+    },
+    "baxcalibur": {
+      "path": "/pokemon/artwork/baxcalibur.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/998.png",
+      "pokeapiId": 998,
+      "width": 475,
+      "height": 475,
+      "sha256": "a84f278d8c3be89205418a6621ca0d3c51853ae8a0843852058d2e9c8bdebf97"
+    },
+    "baxcaliburmega": {
+      "path": "/pokemon/artwork/baxcaliburmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10325.png",
+      "pokeapiId": 10325,
+      "width": 534,
+      "height": 534,
+      "sha256": "82339dca0c6c97c59926cc0a31c3f8f7323247616cc559d3a21545cf955e36c3"
+    },
+    "beartic": {
+      "path": "/pokemon/artwork/beartic.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/614.png",
+      "pokeapiId": 614,
+      "width": 475,
+      "height": 475,
+      "sha256": "1de9e6735fc393bccea3b0668e1a5fc3dec85bf3f5114e8fc02725c24b61b842"
+    },
+    "beedrill": {
+      "path": "/pokemon/artwork/beedrill.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/15.png",
+      "pokeapiId": 15,
+      "width": 475,
+      "height": 475,
+      "sha256": "87bec9bd0348a95d7b108fb00737c48b3315d51c335b31ec89a471e21c1a1016"
+    },
+    "beedrillmega": {
+      "path": "/pokemon/artwork/beedrillmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10090.png",
+      "pokeapiId": 10090,
+      "width": 475,
+      "height": 475,
+      "sha256": "4b2d60b3cf86b29e332059b7fa3b4b774883e9b6bdeb34cf7ee85cbaf56c7a3d"
+    },
+    "bellibolt": {
+      "path": "/pokemon/artwork/bellibolt.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/939.png",
+      "pokeapiId": 939,
+      "width": 475,
+      "height": 475,
+      "sha256": "9dc693989f83c507218291348648ee9be808d4a78bb9831f48b67b3e9052842e"
+    },
+    "blastoise": {
+      "path": "/pokemon/artwork/blastoise.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/9.png",
+      "pokeapiId": 9,
+      "width": 475,
+      "height": 475,
+      "sha256": "ba0a6b633e7a5d5a8c52498b0556518005fd4c63ef4564a8b06b79a73905a635"
+    },
+    "blastoisemega": {
+      "path": "/pokemon/artwork/blastoisemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10036.png",
+      "pokeapiId": 10036,
+      "width": 475,
+      "height": 475,
+      "sha256": "68775044cf56a89e7a68630891891ddb193f13ab562b3cfcafa09cef5479c5a0"
+    },
+    "blaziken": {
+      "path": "/pokemon/artwork/blaziken.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/257.png",
+      "pokeapiId": 257,
+      "width": 475,
+      "height": 475,
+      "sha256": "56fc2d08ad58031fa04af4453f5998b95c5817d68f552f5c760682f07c99c91c"
+    },
+    "blazikenmega": {
+      "path": "/pokemon/artwork/blazikenmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10050.png",
+      "pokeapiId": 10050,
+      "width": 475,
+      "height": 475,
+      "sha256": "b25cbd755a742b718aaadac10227a35d47c7848aaeea8a49bd1f75aef0727cf2"
+    },
+    "camerupt": {
+      "path": "/pokemon/artwork/camerupt.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/323.png",
+      "pokeapiId": 323,
+      "width": 475,
+      "height": 475,
+      "sha256": "abd4b65d46f47ea847119a18eb3a65e5dc8ea3f61fb95a49121c5b15c33e3229"
+    },
+    "cameruptmega": {
+      "path": "/pokemon/artwork/cameruptmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10087.png",
+      "pokeapiId": 10087,
+      "width": 475,
+      "height": 475,
+      "sha256": "0fb2bdf3981de023ae9596f590f3c356396dbdd4b138f05993d4b73e2ae418a7"
+    },
+    "castform": {
+      "path": "/pokemon/artwork/castform.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/351.png",
+      "pokeapiId": 351,
+      "width": 475,
+      "height": 475,
+      "sha256": "1b8c7552ca689af4787113caaa140f3f617c50156a398c670cfa109b1828abba"
+    },
+    "castformrainy": {
+      "path": "/pokemon/artwork/castformrainy.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10014.png",
+      "pokeapiId": 10014,
+      "width": 475,
+      "height": 475,
+      "sha256": "7dd2a025a917a56e1361f3b0fbfcf1c686bfb49f040e00cab6ebef02bfccc7bb"
+    },
+    "castformsnowy": {
+      "path": "/pokemon/artwork/castformsnowy.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10015.png",
+      "pokeapiId": 10015,
+      "width": 475,
+      "height": 475,
+      "sha256": "1055bd905fe0a0a69066f8f767fde213c3d8405249d5be4e2c774e98b647403b"
+    },
+    "castformsunny": {
+      "path": "/pokemon/artwork/castformsunny.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10013.png",
+      "pokeapiId": 10013,
+      "width": 475,
+      "height": 475,
+      "sha256": "2eb265d10abaeb95003231e025211622ce66c4a222e82cc2b2e0cc3ef486acc2"
+    },
+    "ceruledge": {
+      "path": "/pokemon/artwork/ceruledge.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/937.png",
+      "pokeapiId": 937,
+      "width": 475,
+      "height": 475,
+      "sha256": "0013d5f503037eb0fe545ea553c781f751df8f385382d4042e0a60a2060fde14"
+    },
+    "chandelure": {
+      "path": "/pokemon/artwork/chandelure.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/609.png",
+      "pokeapiId": 609,
+      "width": 475,
+      "height": 475,
+      "sha256": "c4dc9669beb0d42295e776a823aa6874e62bdecb83e1bc7b8cf28bfabdc91840"
+    },
+    "chandeluremega": {
+      "path": "/pokemon/artwork/chandeluremega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10291.png",
+      "pokeapiId": 10291,
+      "width": 534,
+      "height": 534,
+      "sha256": "402ae5bd39647271e3aae2e01eeb0d3f030b3877baaec755ebb517930b0d8dc6"
+    },
+    "charizard": {
+      "path": "/pokemon/artwork/charizard.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png",
+      "pokeapiId": 6,
+      "width": 475,
+      "height": 475,
+      "sha256": "b6d5b8ee9fb05dc6f53294b2cae660dec770b92762cdb19d16bcbd679e1ba43a"
+    },
+    "charizardmegax": {
+      "path": "/pokemon/artwork/charizardmegax.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10034.png",
+      "pokeapiId": 10034,
+      "width": 475,
+      "height": 475,
+      "sha256": "d7650ad47e44981447de3f558e5b4a102d1b378559b33608352287a824c1d68d"
+    },
+    "charizardmegay": {
+      "path": "/pokemon/artwork/charizardmegay.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10035.png",
+      "pokeapiId": 10035,
+      "width": 475,
+      "height": 475,
+      "sha256": "c22b1f5d692e7ce241a2784ab4816ad362140e266173968c4facc7d310e84d13"
+    },
+    "chesnaught": {
+      "path": "/pokemon/artwork/chesnaught.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/652.png",
+      "pokeapiId": 652,
+      "width": 475,
+      "height": 475,
+      "sha256": "c180b69f7b59f6d41ef48aa080449766286f73f39ce9f4df09a2455a935722b1"
+    },
+    "chesnaughtmega": {
+      "path": "/pokemon/artwork/chesnaughtmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10292.png",
+      "pokeapiId": 10292,
+      "width": 534,
+      "height": 534,
+      "sha256": "3269a14e83bb987581f93b30463f2b543592ec765d1fe5af2d57eb3b6e32edc4"
+    },
+    "chimecho": {
+      "path": "/pokemon/artwork/chimecho.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/358.png",
+      "pokeapiId": 358,
+      "width": 475,
+      "height": 475,
+      "sha256": "5153dadd3dc75ce579909e8f6e25746b207d507b65deef4754fa826adf5f23a2"
+    },
+    "chimechomega": {
+      "path": "/pokemon/artwork/chimechomega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10306.png",
+      "pokeapiId": 10306,
+      "width": 534,
+      "height": 534,
+      "sha256": "d18868dc6da0a0fa77ca2d9f91bb37fb4dc72b29792e7e34bcf4cab2be782a18"
+    },
+    "cinderace": {
+      "path": "/pokemon/artwork/cinderace.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/815.png",
+      "pokeapiId": 815,
+      "width": 475,
+      "height": 475,
+      "sha256": "835185034b1931d5fc801a5ce78f21cf1f1555ef767bc4e92a052c59561f1186"
+    },
+    "clawitzer": {
+      "path": "/pokemon/artwork/clawitzer.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/693.png",
+      "pokeapiId": 693,
+      "width": 475,
+      "height": 475,
+      "sha256": "f85dc9aa047b80f8eada8794e17ab687ba43fe99e190ccf5031b58ec8b68a188"
+    },
+    "clefable": {
+      "path": "/pokemon/artwork/clefable.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/36.png",
+      "pokeapiId": 36,
+      "width": 475,
+      "height": 475,
+      "sha256": "7a3c310640c4ba6671fa34ceaf43116745cfc9cc13621660f60d6215cd202eda"
+    },
+    "clefablemega": {
+      "path": "/pokemon/artwork/clefablemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10278.png",
+      "pokeapiId": 10278,
+      "width": 534,
+      "height": 534,
+      "sha256": "6d3ae2d7909f99c2666d2ce3ede076f9b9958df753dae86c0e82b0c3c0b934ce"
+    },
+    "cofagrigus": {
+      "path": "/pokemon/artwork/cofagrigus.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/563.png",
+      "pokeapiId": 563,
+      "width": 475,
+      "height": 475,
+      "sha256": "7be39d69a8e069e1eb6902cbcad4f0b6be087b3c1da68a54381cf5af95b2a4d1"
+    },
+    "conkeldurr": {
+      "path": "/pokemon/artwork/conkeldurr.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/534.png",
+      "pokeapiId": 534,
+      "width": 475,
+      "height": 475,
+      "sha256": "73d17912f1514274ceec7a41bcb4dd279ee8550201037b69b49caf9984b58188"
+    },
+    "corviknight": {
+      "path": "/pokemon/artwork/corviknight.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/823.png",
+      "pokeapiId": 823,
+      "width": 475,
+      "height": 475,
+      "sha256": "f6bc05f08b586cac13883360232a5369c9e0873dee6f9cb83fba27e62cf76ab9"
+    },
+    "crabominable": {
+      "path": "/pokemon/artwork/crabominable.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/740.png",
+      "pokeapiId": 740,
+      "width": 475,
+      "height": 475,
+      "sha256": "1ad0547e4eab59609f5820f2f41c03dfff17be2e36fc5c0d2c71df162f8fdff9"
+    },
+    "crabominablemega": {
+      "path": "/pokemon/artwork/crabominablemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10315.png",
+      "pokeapiId": 10315,
+      "width": 534,
+      "height": 534,
+      "sha256": "ff8236a75ae84933173961264a336b1ae3fcbae81167cf94e1c365b0a7d27b0e"
+    },
+    "decidueye": {
+      "path": "/pokemon/artwork/decidueye.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/724.png",
+      "pokeapiId": 724,
+      "width": 475,
+      "height": 475,
+      "sha256": "bb6827d337596159bca7937ee773c4d25a8aa37ae66b238b6d3deefe33fb166c"
+    },
+    "decidueyehisui": {
+      "path": "/pokemon/artwork/decidueyehisui.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10244.png",
+      "pokeapiId": 10244,
+      "width": 475,
+      "height": 475,
+      "sha256": "b330b3803fa8d2a8d070a4643c7951c0499b918f5639ec1910de11ebd81d9d2b"
+    },
+    "dedenne": {
+      "path": "/pokemon/artwork/dedenne.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/702.png",
+      "pokeapiId": 702,
+      "width": 475,
+      "height": 475,
+      "sha256": "505152d09bedbb3013f96d347eac1d76fe6b4f6f24675c534fc24efd027111e2"
+    },
+    "delphox": {
+      "path": "/pokemon/artwork/delphox.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/655.png",
+      "pokeapiId": 655,
+      "width": 475,
+      "height": 475,
+      "sha256": "6c96ec531064017b5efc94ac84bedc85eac54cb814a31e48a2116017670d08b4"
+    },
+    "delphoxmega": {
+      "path": "/pokemon/artwork/delphoxmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10293.png",
+      "pokeapiId": 10293,
+      "width": 534,
+      "height": 534,
+      "sha256": "80f6f9264afe4e3fcfe7fd38ffcb312c3e1b2199dfeeca6b2699d5c07c7e239d"
+    },
+    "diggersby": {
+      "path": "/pokemon/artwork/diggersby.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/660.png",
+      "pokeapiId": 660,
+      "width": 475,
+      "height": 475,
+      "sha256": "47b02d33f186413c298a8fc4149c347a5e93305c4217ddeff94b678aa5d8f8cd"
+    },
+    "ditto": {
+      "path": "/pokemon/artwork/ditto.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png",
+      "pokeapiId": 132,
+      "width": 475,
+      "height": 475,
+      "sha256": "5f7be2f22d06658a52b4e863a22e37d8904e539d9d8e23f15d4ea869b095e21f"
+    },
+    "dragalge": {
+      "path": "/pokemon/artwork/dragalge.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/691.png",
+      "pokeapiId": 691,
+      "width": 475,
+      "height": 475,
+      "sha256": "946da7659dda770f3cd656edddb06e59c0ff12714fe1bcfede57864d73b3b72c"
+    },
+    "dragalgemega": {
+      "path": "/pokemon/artwork/dragalgemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10299.png",
+      "pokeapiId": 10299,
+      "width": 534,
+      "height": 534,
+      "sha256": "020cd76224f2d00c45f8e4f9707acd47feaa1c485f8bbd505189fbfb07c50a42"
+    },
+    "dragapult": {
+      "path": "/pokemon/artwork/dragapult.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/887.png",
+      "pokeapiId": 887,
+      "width": 475,
+      "height": 475,
+      "sha256": "ee19f0d35c248baf2be61e1a91b6cdb9dbe701fb81dbb070347d1832e3df4f00"
+    },
+    "dragonite": {
+      "path": "/pokemon/artwork/dragonite.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png",
+      "pokeapiId": 149,
+      "width": 475,
+      "height": 475,
+      "sha256": "4bd7549caa15eac43a8197ba53e843a95f2b56c71b1121829ea76764fbf26f9c"
+    },
+    "dragonitemega": {
+      "path": "/pokemon/artwork/dragonitemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10281.png",
+      "pokeapiId": 10281,
+      "width": 534,
+      "height": 534,
+      "sha256": "131695e511a32ec999144ed2c2410c8c7e742b38dd6ca0b30dcb1146c9a2eebd"
+    },
+    "drampa": {
+      "path": "/pokemon/artwork/drampa.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/780.png",
+      "pokeapiId": 780,
+      "width": 475,
+      "height": 475,
+      "sha256": "bf20e323b934fd06760fe6c380673804cbb319ed9906407fabbb8afb13b04b5e"
+    },
+    "drampamega": {
+      "path": "/pokemon/artwork/drampamega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10302.png",
+      "pokeapiId": 10302,
+      "width": 534,
+      "height": 534,
+      "sha256": "99b1ce0d12316833b3a066c42dacd1b11d30ea0f1903c992de87705edd736e3f"
+    },
+    "eelektross": {
+      "path": "/pokemon/artwork/eelektross.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/604.png",
+      "pokeapiId": 604,
+      "width": 475,
+      "height": 475,
+      "sha256": "57ecb34d9988e1bd17d4aa9e980cd30d5cdef9dccf578e4cccf8fd9c8e3e3c73"
+    },
+    "eelektrossmega": {
+      "path": "/pokemon/artwork/eelektrossmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10290.png",
+      "pokeapiId": 10290,
+      "width": 534,
+      "height": 534,
+      "sha256": "406689f2026c2fbe76c33e7f10a8f2564d6e56c641f1d5dcb4862101973e1b47"
+    },
+    "emboar": {
+      "path": "/pokemon/artwork/emboar.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/500.png",
+      "pokeapiId": 500,
+      "width": 475,
+      "height": 475,
+      "sha256": "ab35dc92a353a2cacedaba416a22e29eedc6b998562010e211e1dfcae618b63d"
+    },
+    "emboarmega": {
+      "path": "/pokemon/artwork/emboarmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10286.png",
+      "pokeapiId": 10286,
+      "width": 534,
+      "height": 534,
+      "sha256": "f01ff6da7df9a5ac4a2fbc668aa694bce59d8c0ecca51671b5faee0b982107a4"
+    },
+    "emolga": {
+      "path": "/pokemon/artwork/emolga.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/587.png",
+      "pokeapiId": 587,
+      "width": 475,
+      "height": 475,
+      "sha256": "921748d60160341d92b4f1e6f69bebe699e425f43acd04768192f7cf635a4d30"
+    },
+    "empoleon": {
+      "path": "/pokemon/artwork/empoleon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/395.png",
+      "pokeapiId": 395,
+      "width": 475,
+      "height": 475,
+      "sha256": "4d8697a9e331f7bc6b57495d5bb1f7df049ab94aaaa66e2a3ea9131eec067f0c"
+    },
+    "espathra": {
+      "path": "/pokemon/artwork/espathra.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/956.png",
+      "pokeapiId": 956,
+      "width": 475,
+      "height": 475,
+      "sha256": "7352ce61e917db10ee94d2930226f3ae692723bef36a4b0e8f9465e40da55f39"
+    },
+    "espeon": {
+      "path": "/pokemon/artwork/espeon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/196.png",
+      "pokeapiId": 196,
+      "width": 475,
+      "height": 475,
+      "sha256": "d0e74b02adc3df07f9bf026303b1068c58183f8703ae2ca42b8d7b58e9a0696f"
+    },
+    "excadrill": {
+      "path": "/pokemon/artwork/excadrill.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/530.png",
+      "pokeapiId": 530,
+      "width": 475,
+      "height": 475,
+      "sha256": "3f0376151a774ee61cb39fe8ef968e999555cb9ae3cca1fd45a531acb73ebe73"
+    },
+    "excadrillmega": {
+      "path": "/pokemon/artwork/excadrillmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10287.png",
+      "pokeapiId": 10287,
+      "width": 534,
+      "height": 534,
+      "sha256": "7fe22e3c468001612206acfd21bb46bcf4c82c95dde5a2ab8f52356d7d15a63d"
+    },
+    "falinks": {
+      "path": "/pokemon/artwork/falinks.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/870.png",
+      "pokeapiId": 870,
+      "width": 475,
+      "height": 475,
+      "sha256": "b56430d074b5b6a4248abc026f8019c4549eaee5cba2c9cc3b96e9bc61b315de"
+    },
+    "falinksmega": {
+      "path": "/pokemon/artwork/falinksmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10303.png",
+      "pokeapiId": 10303,
+      "width": 534,
+      "height": 534,
+      "sha256": "383c4cdd043ca06358c12a4db0199fca3a6ec1feb772e5683e46b1cade019d6f"
+    },
+    "farfetchd": {
+      "path": "/pokemon/artwork/farfetchd.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/83.png",
+      "pokeapiId": 83,
+      "width": 475,
+      "height": 475,
+      "sha256": "19cb4412f5c6dd4b24e22b9d3286c27c47831a635564ed6b49aa5b8f421a4cbf"
+    },
+    "farigiraf": {
+      "path": "/pokemon/artwork/farigiraf.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/981.png",
+      "pokeapiId": 981,
+      "width": 475,
+      "height": 475,
+      "sha256": "b9d80d126927272324d996547dae09c441bc82470d5399092a7ebd4b87a6af03"
+    },
+    "feraligatr": {
+      "path": "/pokemon/artwork/feraligatr.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/160.png",
+      "pokeapiId": 160,
+      "width": 475,
+      "height": 475,
+      "sha256": "dbf82434fe9635c37c05a16f5e7cf74abcb1ebd1543f1bc16905a953d4a98c14"
+    },
+    "feraligatrmega": {
+      "path": "/pokemon/artwork/feraligatrmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10283.png",
+      "pokeapiId": 10283,
+      "width": 534,
+      "height": 534,
+      "sha256": "e731d1f490d0cdc848e5ac86abbada326ebeb89e58814edc384a4d8dce72b926"
+    },
+    "flapple": {
+      "path": "/pokemon/artwork/flapple.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/841.png",
+      "pokeapiId": 841,
+      "width": 475,
+      "height": 475,
+      "sha256": "af602eef56e7b03a1baf1c8b03d6e1cabdaa29bc99da51dd9d70fcb036aa5a6f"
+    },
+    "flareon": {
+      "path": "/pokemon/artwork/flareon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/136.png",
+      "pokeapiId": 136,
+      "width": 475,
+      "height": 475,
+      "sha256": "a11d3f021baf917f9106266d5fec5b6326a2850b130e4560e333fa9f481c41ec"
+    },
+    "floetteeternal": {
+      "path": "/pokemon/artwork/floetteeternal.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10061.png",
+      "pokeapiId": 10061,
+      "width": 475,
+      "height": 475,
+      "sha256": "0fd6f33342970033f592aea38d5834584bf106a195485b7e69bff7fd0236d7c7"
+    },
+    "floettemega": {
+      "path": "/pokemon/artwork/floettemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10296.png",
+      "pokeapiId": 10296,
+      "width": 534,
+      "height": 534,
+      "sha256": "17c5da4d419f51a3798b25090d6d054507b52cf6b161e62250107054f98633ca"
+    },
+    "florges": {
+      "path": "/pokemon/artwork/florges.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/671.png",
+      "pokeapiId": 671,
+      "width": 475,
+      "height": 475,
+      "sha256": "b6b4346ffb5b500b241ef6e27c9bb65d410e0c2ce32fe513eba58eb6d46eb127"
+    },
+    "forretress": {
+      "path": "/pokemon/artwork/forretress.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/205.png",
+      "pokeapiId": 205,
+      "width": 475,
+      "height": 475,
+      "sha256": "1ae19ac7d15ccb9b82848c85e4e63a10c4759aa84434d3ddb757ff182f69271f"
+    },
+    "froslass": {
+      "path": "/pokemon/artwork/froslass.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/478.png",
+      "pokeapiId": 478,
+      "width": 475,
+      "height": 475,
+      "sha256": "ab2ee1564be21553415e4ad57be506a37e78853547585a9f9a45d6e86f3eed1a"
+    },
+    "froslassmega": {
+      "path": "/pokemon/artwork/froslassmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10285.png",
+      "pokeapiId": 10285,
+      "width": 534,
+      "height": 534,
+      "sha256": "443dff1436cd11e60414c84670638d9ad3836574c24484e53520a6b5a209df2f"
+    },
+    "furfrou": {
+      "path": "/pokemon/artwork/furfrou.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/676.png",
+      "pokeapiId": 676,
+      "width": 475,
+      "height": 475,
+      "sha256": "2400c013fc62421162ee97d6d6a711f2c69cf42102e4f4b49181e590aaafbfc5"
+    },
+    "gallade": {
+      "path": "/pokemon/artwork/gallade.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/475.png",
+      "pokeapiId": 475,
+      "width": 475,
+      "height": 475,
+      "sha256": "ae5db3774ea3c639e3f7b03be4dbd367e959c2892e91967f8501cddcaa782d59"
+    },
+    "gallademega": {
+      "path": "/pokemon/artwork/gallademega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10068.png",
+      "pokeapiId": 10068,
+      "width": 475,
+      "height": 475,
+      "sha256": "77198c080e6bc9f1f937ecd8679a942eb4bb324f83619c382092ff38bb5e52c0"
+    },
+    "garbodor": {
+      "path": "/pokemon/artwork/garbodor.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/569.png",
+      "pokeapiId": 569,
+      "width": 475,
+      "height": 475,
+      "sha256": "89e02355cedd4ad5877030179bf34c085d1bba5835baff001a8f3e27bc640e0d"
+    },
+    "garchomp": {
+      "path": "/pokemon/artwork/garchomp.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/445.png",
+      "pokeapiId": 445,
+      "width": 475,
+      "height": 475,
+      "sha256": "c9122fe26666487f152bc299ce73257141d5e762d486ac49867c97b19342980f"
+    },
+    "garchompmega": {
+      "path": "/pokemon/artwork/garchompmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10058.png",
+      "pokeapiId": 10058,
+      "width": 475,
+      "height": 475,
+      "sha256": "f96630560e83330e537e85505a035f5558da644cf57d2790d1d01f7ffb89a89c"
+    },
+    "garchompmegaz": {
+      "path": "/pokemon/artwork/garchompmegaz.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10309.png",
+      "pokeapiId": 10309,
+      "width": 526,
+      "height": 526,
+      "sha256": "adc0730f22936f916733c8e5a9d11589ec42405f95a66c30fd1431e68268a5ed"
+    },
+    "gardevoir": {
+      "path": "/pokemon/artwork/gardevoir.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png",
+      "pokeapiId": 282,
+      "width": 475,
+      "height": 475,
+      "sha256": "ac40b3e87de95706cae9631802b975882f9830c1528253d367cfa7fd3f2957bd"
+    },
+    "gardevoirmega": {
+      "path": "/pokemon/artwork/gardevoirmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10051.png",
+      "pokeapiId": 10051,
+      "width": 475,
+      "height": 475,
+      "sha256": "964b98a76b38a00627d19e61e3d23071ff95b945b4ef5eab96646ada56653098"
+    },
+    "garganacl": {
+      "path": "/pokemon/artwork/garganacl.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/934.png",
+      "pokeapiId": 934,
+      "width": 475,
+      "height": 475,
+      "sha256": "6419081de708795dbae6ad75845cdc80673bce7821b4771e75cdf2dce4b8a180"
+    },
+    "gengar": {
+      "path": "/pokemon/artwork/gengar.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/94.png",
+      "pokeapiId": 94,
+      "width": 475,
+      "height": 475,
+      "sha256": "b6549b80537676fcf4a589c8853b38cce42f42b5f707bbe2e63797666175cf06"
+    },
+    "gengarmega": {
+      "path": "/pokemon/artwork/gengarmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10038.png",
+      "pokeapiId": 10038,
+      "width": 475,
+      "height": 475,
+      "sha256": "d0bf0d4214986de3782e8c459798487a89de6ccafa2fe591c219aee33287415d"
+    },
+    "gholdengo": {
+      "path": "/pokemon/artwork/gholdengo.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png",
+      "pokeapiId": 1000,
+      "width": 475,
+      "height": 475,
+      "sha256": "0711a486bf76284aac7317736275cf43085883db2c8868a8ea6d09a090b9b70b"
+    },
+    "glaceon": {
+      "path": "/pokemon/artwork/glaceon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/471.png",
+      "pokeapiId": 471,
+      "width": 475,
+      "height": 475,
+      "sha256": "bc7c93a32e133f9e560b38722d0bc4992b7bb8d1cd902de984ccbd872a19f71b"
+    },
+    "glalie": {
+      "path": "/pokemon/artwork/glalie.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/362.png",
+      "pokeapiId": 362,
+      "width": 475,
+      "height": 475,
+      "sha256": "18569123d7c5a6bbab377dead11071811024d04b88ef712dacb7ead5bfe01b58"
+    },
+    "glaliemega": {
+      "path": "/pokemon/artwork/glaliemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10074.png",
+      "pokeapiId": 10074,
+      "width": 475,
+      "height": 475,
+      "sha256": "6abc54c1db8b14d8a04f531cc15307631fdf91b00cc3f4078bd9fca063bfd414"
+    },
+    "glimmora": {
+      "path": "/pokemon/artwork/glimmora.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/970.png",
+      "pokeapiId": 970,
+      "width": 475,
+      "height": 475,
+      "sha256": "de55a14c4c684b8a62a3d5a3002a1abfd11f53ba99f038210244745f346a27bd"
+    },
+    "glimmoramega": {
+      "path": "/pokemon/artwork/glimmoramega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10321.png",
+      "pokeapiId": 10321,
+      "width": 534,
+      "height": 534,
+      "sha256": "ac618185cd0392296a5381b9deff8537ef250776eca9442972c62ee9f8492fcd"
+    },
+    "gliscor": {
+      "path": "/pokemon/artwork/gliscor.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/472.png",
+      "pokeapiId": 472,
+      "width": 475,
+      "height": 475,
+      "sha256": "9e902ab70836789a73430ad13ed6420b703f357cafc4c827ef2138a7856a7a60"
+    },
+    "gogoat": {
+      "path": "/pokemon/artwork/gogoat.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/673.png",
+      "pokeapiId": 673,
+      "width": 475,
+      "height": 475,
+      "sha256": "b6dbb8ecd63577445b3b5b39b07627c9259b1a3be930f03d1a0eaa0e5069b5ca"
+    },
+    "golisopod": {
+      "path": "/pokemon/artwork/golisopod.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/768.png",
+      "pokeapiId": 768,
+      "width": 475,
+      "height": 475,
+      "sha256": "7484549ea7cb1115c568c4c90b7ba05edd5c58dad3c83d43823c75fca2600f3b"
+    },
+    "golisopodmega": {
+      "path": "/pokemon/artwork/golisopodmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10316.png",
+      "pokeapiId": 10316,
+      "width": 534,
+      "height": 534,
+      "sha256": "17957ffdd27466edf0f5578a90ea26526eec7d3941544808b08a4316b95df28c"
+    },
+    "golurk": {
+      "path": "/pokemon/artwork/golurk.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/623.png",
+      "pokeapiId": 623,
+      "width": 475,
+      "height": 475,
+      "sha256": "0d59fcbba2fbdc98e8d825d88a94012d60e7b54e1e09034aca2f51ed4abf4098"
+    },
+    "golurkmega": {
+      "path": "/pokemon/artwork/golurkmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10313.png",
+      "pokeapiId": 10313,
+      "width": 533,
+      "height": 533,
+      "sha256": "4ebc7e8e9f6391ddc95f4a144314e26899b269974853a79584060b38e1c80426"
+    },
+    "goodra": {
+      "path": "/pokemon/artwork/goodra.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/706.png",
+      "pokeapiId": 706,
+      "width": 475,
+      "height": 475,
+      "sha256": "d7b5bfbaa321940e254b2b9be2815827005d2e5bca40b52a6e600c26e44a0f8b"
+    },
+    "goodrahisui": {
+      "path": "/pokemon/artwork/goodrahisui.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10242.png",
+      "pokeapiId": 10242,
+      "width": 475,
+      "height": 475,
+      "sha256": "34f333f166e94cf9f5913fa18e12c3a3d8e3708e7c0e10643fe66b8eecceaa2a"
+    },
+    "gourgeist": {
+      "path": "/pokemon/artwork/gourgeist.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/711.png",
+      "pokeapiId": 711,
+      "width": 475,
+      "height": 475,
+      "sha256": "6c25b571f3d1eb23bfe549948aa08032279600e4f3a5448670609029303d2959"
+    },
+    "gourgeistlarge": {
+      "path": "/pokemon/artwork/gourgeistlarge.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10031.png",
+      "pokeapiId": 10031,
+      "width": 475,
+      "height": 475,
+      "sha256": "6c25b571f3d1eb23bfe549948aa08032279600e4f3a5448670609029303d2959"
+    },
+    "gourgeistsmall": {
+      "path": "/pokemon/artwork/gourgeistsmall.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10030.png",
+      "pokeapiId": 10030,
+      "width": 475,
+      "height": 475,
+      "sha256": "6c25b571f3d1eb23bfe549948aa08032279600e4f3a5448670609029303d2959"
+    },
+    "gourgeistsuper": {
+      "path": "/pokemon/artwork/gourgeistsuper.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10032.png",
+      "pokeapiId": 10032,
+      "width": 475,
+      "height": 475,
+      "sha256": "6c25b571f3d1eb23bfe549948aa08032279600e4f3a5448670609029303d2959"
+    },
+    "grapploct": {
+      "path": "/pokemon/artwork/grapploct.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/853.png",
+      "pokeapiId": 853,
+      "width": 475,
+      "height": 475,
+      "sha256": "c88671a2e8962116c8a2ab3c8e3deae751d28a08de66b22ab7f98ac02469fec3"
+    },
+    "greninja": {
+      "path": "/pokemon/artwork/greninja.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/658.png",
+      "pokeapiId": 658,
+      "width": 475,
+      "height": 475,
+      "sha256": "e88f4590ff53a8f8965c9e1be19a0f069c51c4dc7ca64ecb25ac96c64c8504d3"
+    },
+    "greninjamega": {
+      "path": "/pokemon/artwork/greninjamega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10294.png",
+      "pokeapiId": 10294,
+      "width": 534,
+      "height": 534,
+      "sha256": "417b5aeaa97b618211f3c8c9336e2a6da80f3c6104db71e1fb575805cf44b995"
+    },
+    "grimmsnarl": {
+      "path": "/pokemon/artwork/grimmsnarl.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/861.png",
+      "pokeapiId": 861,
+      "width": 475,
+      "height": 475,
+      "sha256": "75b6f34affa4dadf07738848e263557edfcd862aa38f5496ccfd42d7caabeefe"
+    },
+    "gyarados": {
+      "path": "/pokemon/artwork/gyarados.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/130.png",
+      "pokeapiId": 130,
+      "width": 475,
+      "height": 475,
+      "sha256": "41d17760b81321cc7a3fb2cb1568d3c33010e892b687eeacb3738ba307071f8b"
+    },
+    "gyaradosmega": {
+      "path": "/pokemon/artwork/gyaradosmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10041.png",
+      "pokeapiId": 10041,
+      "width": 475,
+      "height": 475,
+      "sha256": "325994347779ceb88aa2c18a3c5ea4731419e8c20758377e879f6ddff6bac7e1"
+    },
+    "hatterene": {
+      "path": "/pokemon/artwork/hatterene.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/858.png",
+      "pokeapiId": 858,
+      "width": 475,
+      "height": 475,
+      "sha256": "c78f9709fa359636d32f452325d57155058ecdbd4fed2971ef6a1a29d312f5ac"
+    },
+    "hawlucha": {
+      "path": "/pokemon/artwork/hawlucha.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/701.png",
+      "pokeapiId": 701,
+      "width": 475,
+      "height": 475,
+      "sha256": "041072a1c2ef2b141295050f97a51132370e4db24da7f45286d9f96a1210543e"
+    },
+    "hawluchamega": {
+      "path": "/pokemon/artwork/hawluchamega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10300.png",
+      "pokeapiId": 10300,
+      "width": 534,
+      "height": 534,
+      "sha256": "e8eb83d03fca88606b1a3fe3eec168b6c575dabdffa6fe9c496b4b4c33b2f56e"
+    },
+    "heliolisk": {
+      "path": "/pokemon/artwork/heliolisk.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/695.png",
+      "pokeapiId": 695,
+      "width": 475,
+      "height": 475,
+      "sha256": "9dbd958d586bb8d2b4ac8895b83c3496d945e713d92ca003232e23b7c7f7f382"
+    },
+    "heracross": {
+      "path": "/pokemon/artwork/heracross.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/214.png",
+      "pokeapiId": 214,
+      "width": 475,
+      "height": 475,
+      "sha256": "227abfbedbdfec11c8255c471b465fa79604224687eccbbc4f77b92817acbebd"
+    },
+    "heracrossmega": {
+      "path": "/pokemon/artwork/heracrossmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10047.png",
+      "pokeapiId": 10047,
+      "width": 475,
+      "height": 475,
+      "sha256": "b71ee289107d5fc2bd637d139d0b4bbf3b8475b2e6ead429beff0652318af825"
+    },
+    "hippowdon": {
+      "path": "/pokemon/artwork/hippowdon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/450.png",
+      "pokeapiId": 450,
+      "width": 475,
+      "height": 475,
+      "sha256": "b4e107152d0b2a7aadb2470583335deb345a205d8ecad396cc35c5fa2c864566"
+    },
+    "houndoom": {
+      "path": "/pokemon/artwork/houndoom.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/229.png",
+      "pokeapiId": 229,
+      "width": 475,
+      "height": 475,
+      "sha256": "9e1244e7f417cbb7c45c35681544989da2f3fa7df3a9c7135e0cb55c711590f0"
+    },
+    "houndoommega": {
+      "path": "/pokemon/artwork/houndoommega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10048.png",
+      "pokeapiId": 10048,
+      "width": 475,
+      "height": 475,
+      "sha256": "42cc8d7923cd126115c5dbd9bf0aaf8eea6fbeedc8979e7a43b6dd9c60f2da53"
+    },
+    "houndstone": {
+      "path": "/pokemon/artwork/houndstone.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/972.png",
+      "pokeapiId": 972,
+      "width": 475,
+      "height": 475,
+      "sha256": "33bb46e621c1f651c80521a525154329397551a732558ca9496c748e06c5f887"
+    },
+    "hydrapple": {
+      "path": "/pokemon/artwork/hydrapple.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1019.png",
+      "pokeapiId": 1019,
+      "width": 475,
+      "height": 475,
+      "sha256": "2ce688f10809dfc18b2a5fe3cdf123175f823ac8e3ac57a1f18c6aeee5e4fe51"
+    },
+    "hydreigon": {
+      "path": "/pokemon/artwork/hydreigon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/635.png",
+      "pokeapiId": 635,
+      "width": 475,
+      "height": 475,
+      "sha256": "74b0d31de02ec0c2350fccce401190f196037d51f17a5931a04ff9b2d67a2c3b"
+    },
+    "incineroar": {
+      "path": "/pokemon/artwork/incineroar.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/727.png",
+      "pokeapiId": 727,
+      "width": 475,
+      "height": 475,
+      "sha256": "7978632503c045c8e0dd53f7e31f563fa25ec7f7e5b369261d13dab62b2e92cb"
+    },
+    "indeedee": {
+      "path": "/pokemon/artwork/indeedee.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/876.png",
+      "pokeapiId": 876,
+      "width": 475,
+      "height": 475,
+      "sha256": "55bdbe3c3f9651f79b885ed3e80b8840995d6479eea035cfcae45501cef97818"
+    },
+    "indeedeef": {
+      "path": "/pokemon/artwork/indeedeef.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10186.png",
+      "pokeapiId": 10186,
+      "width": 475,
+      "height": 475,
+      "sha256": "6601b83b41c73f8581d03b874ba88ade0bfeb77fbc1791258bd6e4fae69f92de"
+    },
+    "infernape": {
+      "path": "/pokemon/artwork/infernape.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/392.png",
+      "pokeapiId": 392,
+      "width": 475,
+      "height": 475,
+      "sha256": "0b23361c54a8c17ff414a0abfb79bf642fb9443dc0163e3c6162346c5558e8e3"
+    },
+    "inteleon": {
+      "path": "/pokemon/artwork/inteleon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/818.png",
+      "pokeapiId": 818,
+      "width": 475,
+      "height": 475,
+      "sha256": "3518769c1c7118b142f531eba0d221060fa696050f1fe576bd59f01862e86743"
+    },
+    "jolteon": {
+      "path": "/pokemon/artwork/jolteon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/135.png",
+      "pokeapiId": 135,
+      "width": 475,
+      "height": 475,
+      "sha256": "bf525c20b899e08398d93d0436d2e592463068d85da8760424ac340c7f8f8ed8"
+    },
+    "kangaskhan": {
+      "path": "/pokemon/artwork/kangaskhan.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/115.png",
+      "pokeapiId": 115,
+      "width": 475,
+      "height": 475,
+      "sha256": "bc2424e71902a870074096821791b089969b88fdf766fc5675927dacd9c29d48"
+    },
+    "kangaskhanmega": {
+      "path": "/pokemon/artwork/kangaskhanmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10039.png",
+      "pokeapiId": 10039,
+      "width": 475,
+      "height": 475,
+      "sha256": "f742406a09c65cd435df5ad3bd15bc107951eb30e9970935dafe505fd0479737"
+    },
+    "kingambit": {
+      "path": "/pokemon/artwork/kingambit.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/983.png",
+      "pokeapiId": 983,
+      "width": 475,
+      "height": 475,
+      "sha256": "6b5ba19f7c1c880ecb95bf692444949bc93af0d5128be80932ef9a9043f10455"
+    },
+    "kleavor": {
+      "path": "/pokemon/artwork/kleavor.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/900.png",
+      "pokeapiId": 900,
+      "width": 475,
+      "height": 475,
+      "sha256": "58e2ac2b61210efc00bc79b41dcd1267824fb1c71aae2f5a1cf4cfe3ecef8714"
+    },
+    "klefki": {
+      "path": "/pokemon/artwork/klefki.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/707.png",
+      "pokeapiId": 707,
+      "width": 475,
+      "height": 475,
+      "sha256": "617a8bd49051f91b1d41629c5e20160580a3989ad95e1cf7a923a07c5c11435f"
+    },
+    "kommoo": {
+      "path": "/pokemon/artwork/kommoo.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/784.png",
+      "pokeapiId": 784,
+      "width": 475,
+      "height": 475,
+      "sha256": "882235f7647c8795b1b27cedb6f62ee5c229730e5f28cb239485d504f312f15c"
+    },
+    "krookodile": {
+      "path": "/pokemon/artwork/krookodile.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/553.png",
+      "pokeapiId": 553,
+      "width": 475,
+      "height": 475,
+      "sha256": "f9bea552e4bab77af86079a73b314c7598a3efc184dd36f37ddcc9e3fa154df0"
+    },
+    "leafeon": {
+      "path": "/pokemon/artwork/leafeon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/470.png",
+      "pokeapiId": 470,
+      "width": 475,
+      "height": 475,
+      "sha256": "3cb145cfafe87da63f75d80d2540e2f7f61c3c97275ff4231a462d949f4bd339"
+    },
+    "liepard": {
+      "path": "/pokemon/artwork/liepard.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/510.png",
+      "pokeapiId": 510,
+      "width": 475,
+      "height": 475,
+      "sha256": "94ec6871a6d61d2a5bc286b75f72382e4a60076f66304cbc22f35ebab75c63e7"
+    },
+    "lopunny": {
+      "path": "/pokemon/artwork/lopunny.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/428.png",
+      "pokeapiId": 428,
+      "width": 475,
+      "height": 475,
+      "sha256": "f2aaf542f2c6392e484241febf471eacebbd810ea21dd54af34e72afb8e58938"
+    },
+    "lopunnymega": {
+      "path": "/pokemon/artwork/lopunnymega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10088.png",
+      "pokeapiId": 10088,
+      "width": 475,
+      "height": 475,
+      "sha256": "e896b108c4e9ebcca67e1ad48fa15e5306dd06b949647a248af310d790791da2"
+    },
+    "lucario": {
+      "path": "/pokemon/artwork/lucario.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png",
+      "pokeapiId": 448,
+      "width": 475,
+      "height": 475,
+      "sha256": "8c5064f1d4a37c8b554d7ad83d77970b02d6875750f934c782493c83f8943127"
+    },
+    "lucariomega": {
+      "path": "/pokemon/artwork/lucariomega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10059.png",
+      "pokeapiId": 10059,
+      "width": 475,
+      "height": 475,
+      "sha256": "2f31714a341ae4adcfff9bc406f2fac662b081c18a4c532b02c03357a257acd1"
+    },
+    "lucariomegaz": {
+      "path": "/pokemon/artwork/lucariomegaz.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10310.png",
+      "pokeapiId": 10310,
+      "width": 534,
+      "height": 534,
+      "sha256": "4de3167fa8f7c95825d0fbbbd982249948af7ba681c744201d8733d0930b23c3"
+    },
+    "luxray": {
+      "path": "/pokemon/artwork/luxray.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/405.png",
+      "pokeapiId": 405,
+      "width": 475,
+      "height": 475,
+      "sha256": "02e63bb1b1682340a583de8a68767dfafa81fcf0103bc5ad5f0a26c847e324d4"
+    },
+    "lycanroc": {
+      "path": "/pokemon/artwork/lycanroc.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/745.png",
+      "pokeapiId": 745,
+      "width": 475,
+      "height": 475,
+      "sha256": "bbf9857260d2b19f6a7e3a7f2b34cab13e65dd977583badc01255a41b30b0a50"
+    },
+    "lycanrocdusk": {
+      "path": "/pokemon/artwork/lycanrocdusk.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10152.png",
+      "pokeapiId": 10152,
+      "width": 475,
+      "height": 475,
+      "sha256": "9e8bf7acee3f3b9bcc58d01ca23ff8e305939d2f1bd6d990e973af3586fa4294"
+    },
+    "lycanrocmidnight": {
+      "path": "/pokemon/artwork/lycanrocmidnight.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10126.png",
+      "pokeapiId": 10126,
+      "width": 475,
+      "height": 475,
+      "sha256": "7b5a48d91d0e5741bd7deec45cc3b169cef41f15c45e614f22915b6865ecfc2c"
+    },
+    "mabosstiff": {
+      "path": "/pokemon/artwork/mabosstiff.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/943.png",
+      "pokeapiId": 943,
+      "width": 475,
+      "height": 475,
+      "sha256": "8a636622b570fb82a59395b150a35b2f7da1921b8849619ef83db4041dc15fad"
+    },
+    "machamp": {
+      "path": "/pokemon/artwork/machamp.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/68.png",
+      "pokeapiId": 68,
+      "width": 475,
+      "height": 475,
+      "sha256": "5d124f441d6690e19de8685e30b1e5d375f2fd6dd91be5cfd164dacf6853f7e6"
+    },
+    "malamar": {
+      "path": "/pokemon/artwork/malamar.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/687.png",
+      "pokeapiId": 687,
+      "width": 475,
+      "height": 475,
+      "sha256": "81cf08a03b9498a91fff50dff2593f5674d2f418ff3adb1c5b350914ed9e3278"
+    },
+    "malamarmega": {
+      "path": "/pokemon/artwork/malamarmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10297.png",
+      "pokeapiId": 10297,
+      "width": 534,
+      "height": 534,
+      "sha256": "4d2967d52feb9ae238ee362b615c862dcba7f16d16539e2452d5bd86f8637aa0"
+    },
+    "mamoswine": {
+      "path": "/pokemon/artwork/mamoswine.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/473.png",
+      "pokeapiId": 473,
+      "width": 475,
+      "height": 475,
+      "sha256": "51dff25e8e46efbfe388bbc1f4122998334afd0a323a4a0ad1774f51fed1ed48"
+    },
+    "manectric": {
+      "path": "/pokemon/artwork/manectric.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/310.png",
+      "pokeapiId": 310,
+      "width": 475,
+      "height": 475,
+      "sha256": "f09e58377f721f09fb02cc8b532921d911d10003ae9b515a0884fd2c6d84dfb9"
+    },
+    "manectricmega": {
+      "path": "/pokemon/artwork/manectricmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10055.png",
+      "pokeapiId": 10055,
+      "width": 475,
+      "height": 475,
+      "sha256": "1ba35ae5134f9acaabcd5bfc94dff8afb48befe6da48cdca7857ba20f9658736"
+    },
+    "maushold": {
+      "path": "/pokemon/artwork/maushold.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10257.png",
+      "pokeapiId": 10257,
+      "width": 475,
+      "height": 475,
+      "sha256": "c61e5640fd53f1358fcf7175640375ddc10bd5df1f5149177a17b15f5b699973"
+    },
+    "mausholdfour": {
+      "path": "/pokemon/artwork/mausholdfour.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/925.png",
+      "pokeapiId": 925,
+      "width": 475,
+      "height": 475,
+      "sha256": "3ad979acad528c618d916ab257379144f7eed0a7e33c9414bf94dfa996f9425f"
+    },
+    "mawile": {
+      "path": "/pokemon/artwork/mawile.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/303.png",
+      "pokeapiId": 303,
+      "width": 475,
+      "height": 475,
+      "sha256": "c8486e58e6ab7214218307818b0943cc18e77ad97a0aef79314966e6b7ed1bdf"
+    },
+    "mawilemega": {
+      "path": "/pokemon/artwork/mawilemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10052.png",
+      "pokeapiId": 10052,
+      "width": 475,
+      "height": 475,
+      "sha256": "571220495d371a572ff733275ce799595c9ce7998caef622e263064dd6fc9505"
+    },
+    "medicham": {
+      "path": "/pokemon/artwork/medicham.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/308.png",
+      "pokeapiId": 308,
+      "width": 475,
+      "height": 475,
+      "sha256": "b36a23b133cd13651f216e945632e9099d643c11afd30962f7b457b2cef00940"
+    },
+    "medichammega": {
+      "path": "/pokemon/artwork/medichammega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10054.png",
+      "pokeapiId": 10054,
+      "width": 475,
+      "height": 475,
+      "sha256": "1c2ff743f9bf4bd74cdb94e4fac5eb5236b632976c0a1d3c50ace5c75b9783d2"
+    },
+    "meganium": {
+      "path": "/pokemon/artwork/meganium.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/154.png",
+      "pokeapiId": 154,
+      "width": 475,
+      "height": 475,
+      "sha256": "fc2b42d8c484a48df1102980e4fe21d7e280e7c1b904cd2fd3a3a110adc978b3"
+    },
+    "meganiummega": {
+      "path": "/pokemon/artwork/meganiummega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10282.png",
+      "pokeapiId": 10282,
+      "width": 534,
+      "height": 534,
+      "sha256": "943ae7680e529f38619d6c585dac27c85fea0ae40497fa0aaaccb0844568d8ce"
+    },
+    "meowscarada": {
+      "path": "/pokemon/artwork/meowscarada.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/908.png",
+      "pokeapiId": 908,
+      "width": 475,
+      "height": 475,
+      "sha256": "c8f79c0bb80a6f1f5e3bf0ae6cbe4c44421e14494f3432915b2fc9b8d4776b54"
+    },
+    "meowstic": {
+      "path": "/pokemon/artwork/meowstic.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/678.png",
+      "pokeapiId": 678,
+      "width": 475,
+      "height": 475,
+      "sha256": "1a54e28587fcd1617bccd93f8230bff8029fb061cb82c6a869be0456996e5eca"
+    },
+    "meowsticf": {
+      "path": "/pokemon/artwork/meowsticf.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10025.png",
+      "pokeapiId": 10025,
+      "width": 475,
+      "height": 475,
+      "sha256": "9f84584c6e420c2a785abf8e2bf1f9841a1e6cb66244997c21d4fcc6b1c1a6f1"
+    },
+    "meowsticfmega": {
+      "path": "/pokemon/artwork/meowsticfmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10326.png",
+      "pokeapiId": 10326,
+      "width": 534,
+      "height": 534,
+      "sha256": "43df0a7b80ff176a245fdcf5ea228c8b5e13fe7e16f97cc923ece5cab8f9ef11"
+    },
+    "meowsticmmega": {
+      "path": "/pokemon/artwork/meowsticmmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10314.png",
+      "pokeapiId": 10314,
+      "width": 534,
+      "height": 534,
+      "sha256": "43df0a7b80ff176a245fdcf5ea228c8b5e13fe7e16f97cc923ece5cab8f9ef11"
+    },
+    "metagross": {
+      "path": "/pokemon/artwork/metagross.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/376.png",
+      "pokeapiId": 376,
+      "width": 475,
+      "height": 475,
+      "sha256": "a871d3272f6da2fb4df63d2304db65aac08c24a9575e8d7ba6377f2ee87535d0"
+    },
+    "metagrossmega": {
+      "path": "/pokemon/artwork/metagrossmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10076.png",
+      "pokeapiId": 10076,
+      "width": 475,
+      "height": 475,
+      "sha256": "20b1eddfe408111a47109b26691d30e0dc18d6550d6a0996c17d292528116cda"
+    },
+    "milotic": {
+      "path": "/pokemon/artwork/milotic.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/350.png",
+      "pokeapiId": 350,
+      "width": 475,
+      "height": 475,
+      "sha256": "b64a73b400ab342ecc7933992c57e67605ae717028185edf451d60a6d9bdcf2c"
+    },
+    "mimikyu": {
+      "path": "/pokemon/artwork/mimikyu.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/778.png",
+      "pokeapiId": 778,
+      "width": 475,
+      "height": 475,
+      "sha256": "3f368b3fb05af171b6ac0ce893ee065aea6e608be45e04087af1902fc43ab708"
+    },
+    "mimikyubusted": {
+      "path": "/pokemon/artwork/mimikyubusted.png",
+      "source": "https://img.pokemondb.net/artwork/vector/mimikyu-busted.png",
+      "note": "Official Global Link illustration; no matching Sugimori artwork for Busted form was found. Source gallery: https://pokemondb.net/artwork/mimikyu",
+      "width": 302,
+      "height": 263,
+      "sha256": "eb0e1927a811a2f2ca8f5e8478d5bbc2c0fbbbfe7655fb0ce2f8398282fc80b0"
+    },
+    "morpeko": {
+      "path": "/pokemon/artwork/morpeko.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/877.png",
+      "pokeapiId": 877,
+      "width": 475,
+      "height": 475,
+      "sha256": "e6a1bd4f20df13dc5f09ed811695e7a53b1120e9eff47e537e732cac046cf8be"
+    },
+    "morpekohangry": {
+      "path": "/pokemon/artwork/morpekohangry.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10187.png",
+      "pokeapiId": 10187,
+      "width": 475,
+      "height": 475,
+      "sha256": "1381bd4b5c5eade0801d7775dc0da060b72d73a6416ad1fe879803a1a51c5ddc"
+    },
+    "mrmime": {
+      "path": "/pokemon/artwork/mrmime.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/122.png",
+      "pokeapiId": 122,
+      "width": 475,
+      "height": 475,
+      "sha256": "9c46e52050633b1ca8ed05ffee09cda121ac338021de0d600b9590c0f8590c53"
+    },
+    "mrrime": {
+      "path": "/pokemon/artwork/mrrime.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/866.png",
+      "pokeapiId": 866,
+      "width": 475,
+      "height": 475,
+      "sha256": "a13c9d321795d21f3c485bf08b1c12a74772c99a218bb0bb8ad152074621b886"
+    },
+    "mudsdale": {
+      "path": "/pokemon/artwork/mudsdale.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/750.png",
+      "pokeapiId": 750,
+      "width": 475,
+      "height": 475,
+      "sha256": "d4d7385c94b46031992b32877bd7668aa3a0f5e70a2f6a94a0e82dc8e8f6a539"
+    },
+    "musharna": {
+      "path": "/pokemon/artwork/musharna.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/518.png",
+      "pokeapiId": 518,
+      "width": 475,
+      "height": 475,
+      "sha256": "01ebd4eef351ed068f4cd0810a71f24f7060d65baf11b43c4054778b7a22d97c"
+    },
+    "ninetales": {
+      "path": "/pokemon/artwork/ninetales.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/38.png",
+      "pokeapiId": 38,
+      "width": 475,
+      "height": 475,
+      "sha256": "e60b06bf0aa8b23a593958cc32806534a3553707797be10767550a6f4ddb9068"
+    },
+    "ninetalesalola": {
+      "path": "/pokemon/artwork/ninetalesalola.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10104.png",
+      "pokeapiId": 10104,
+      "width": 475,
+      "height": 475,
+      "sha256": "d5cfa322d05e9bc110803e8fa361c5a2c74e078d8dade87caca083e6ae834477"
+    },
+    "noivern": {
+      "path": "/pokemon/artwork/noivern.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/715.png",
+      "pokeapiId": 715,
+      "width": 475,
+      "height": 475,
+      "sha256": "05ff4bc3bd6bbff5f1eb3b975787cbefea7102ca238d8a16d0713c9fd6ee2bc6"
+    },
+    "oranguru": {
+      "path": "/pokemon/artwork/oranguru.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/765.png",
+      "pokeapiId": 765,
+      "width": 475,
+      "height": 475,
+      "sha256": "a9e429e4330e9326884837e6c066bd31cd3ed36062565e560cc250d84322947a"
+    },
+    "orthworm": {
+      "path": "/pokemon/artwork/orthworm.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/968.png",
+      "pokeapiId": 968,
+      "width": 475,
+      "height": 475,
+      "sha256": "e7e82066607fe0f88e479a436dd2df8c130b10d9572311148d040d7334a23360"
+    },
+    "overqwil": {
+      "path": "/pokemon/artwork/overqwil.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/904.png",
+      "pokeapiId": 904,
+      "width": 475,
+      "height": 475,
+      "sha256": "4a0a3ed47bd9f71145388d03ee4f204d15c0434a5c213fe990fb50f7e951927b"
+    },
+    "palafin": {
+      "path": "/pokemon/artwork/palafin.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/964.png",
+      "pokeapiId": 964,
+      "width": 475,
+      "height": 475,
+      "sha256": "60a2225a9b929e70f521ae1b781a1b487e735ab07a00b766e7168241afa6210d"
+    },
+    "palafinhero": {
+      "path": "/pokemon/artwork/palafinhero.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10256.png",
+      "pokeapiId": 10256,
+      "width": 475,
+      "height": 475,
+      "sha256": "06ac303ef6d70a41c22e2e040a3097aa30037c88f5c929775e15592c180d59c5"
+    },
+    "pangoro": {
+      "path": "/pokemon/artwork/pangoro.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/675.png",
+      "pokeapiId": 675,
+      "width": 475,
+      "height": 475,
+      "sha256": "8462e93ead3eb900993bcf6bb4ebdd547bb955533b35e01d7ac7f0f8f5029512"
+    },
+    "passimian": {
+      "path": "/pokemon/artwork/passimian.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/766.png",
+      "pokeapiId": 766,
+      "width": 475,
+      "height": 475,
+      "sha256": "42834ce883954876a957e02f378d893b2b35f2ebc511a39d8785244fabaafdb4"
+    },
+    "pawmot": {
+      "path": "/pokemon/artwork/pawmot.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/923.png",
+      "pokeapiId": 923,
+      "width": 475,
+      "height": 475,
+      "sha256": "405267f8bd37a4b9d9ba944e40f513f469882c545a58e1e65f2584598e99fc84"
+    },
+    "pelipper": {
+      "path": "/pokemon/artwork/pelipper.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/279.png",
+      "pokeapiId": 279,
+      "width": 475,
+      "height": 475,
+      "sha256": "fcfd21fd7c13cae911b888cef149d2f6c76c81624efaa2db7ec00b34ade1d14e"
+    },
+    "perrserker": {
+      "path": "/pokemon/artwork/perrserker.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/863.png",
+      "pokeapiId": 863,
+      "width": 475,
+      "height": 475,
+      "sha256": "27dd34d7f1d7aee21f0f68ba834b687593e52519c61f39a921fb79a2b80d9473"
+    },
+    "persian": {
+      "path": "/pokemon/artwork/persian.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/53.png",
+      "pokeapiId": 53,
+      "width": 475,
+      "height": 475,
+      "sha256": "b477fdc0d93c55455908cc1e430d0959203234f85362d60431a0843eaec332e7"
+    },
+    "persianalola": {
+      "path": "/pokemon/artwork/persianalola.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10108.png",
+      "pokeapiId": 10108,
+      "width": 475,
+      "height": 475,
+      "sha256": "31e10e5611aea1afe12fea3ea7bfca86431aa92b6314152d88973d60d46c72a7"
+    },
+    "pidgeot": {
+      "path": "/pokemon/artwork/pidgeot.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/18.png",
+      "pokeapiId": 18,
+      "width": 475,
+      "height": 475,
+      "sha256": "0f2cf5f30ee821f867cdced8d64fa87a11ae01643bb48c10296ee1ffdc18ca14"
+    },
+    "pidgeotmega": {
+      "path": "/pokemon/artwork/pidgeotmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10073.png",
+      "pokeapiId": 10073,
+      "width": 475,
+      "height": 475,
+      "sha256": "599e2853f8a26f83691dcc5f6ab79a84ac4b88df756be4ccd20ce18e3cecff12"
+    },
+    "pikachu": {
+      "path": "/pokemon/artwork/pikachu.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+      "pokeapiId": 25,
+      "width": 475,
+      "height": 475,
+      "sha256": "759ceafdb4b8d637dfcfe673cf672bc3c472354a3b2e7e0835d9cdcacd8d195d"
+    },
+    "pincurchin": {
+      "path": "/pokemon/artwork/pincurchin.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/871.png",
+      "pokeapiId": 871,
+      "width": 475,
+      "height": 475,
+      "sha256": "9b851a32c2e7efc7722ceab0583b2a316589e8f9b7aa9daad958768ec68faea9"
+    },
+    "pinsir": {
+      "path": "/pokemon/artwork/pinsir.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/127.png",
+      "pokeapiId": 127,
+      "width": 475,
+      "height": 475,
+      "sha256": "badba34a0d5e77e7fa0b553b7e148c157b4bf15ee3c3d44a6ad1de1067c7c447"
+    },
+    "pinsirmega": {
+      "path": "/pokemon/artwork/pinsirmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10040.png",
+      "pokeapiId": 10040,
+      "width": 475,
+      "height": 475,
+      "sha256": "d004223a18364dac0cc935a00930d9e6c2a75f9db881a680883829bd834a6bfc"
+    },
+    "politoed": {
+      "path": "/pokemon/artwork/politoed.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/186.png",
+      "pokeapiId": 186,
+      "width": 475,
+      "height": 475,
+      "sha256": "a204b4f908fb2b3174e79b40e634064cb39f43d4d9dcc5f0e9a2df4fd9d67d3e"
+    },
+    "polteageist": {
+      "path": "/pokemon/artwork/polteageist.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/855.png",
+      "pokeapiId": 855,
+      "width": 475,
+      "height": 475,
+      "sha256": "bbec8f8a6dc1466150779d749017484034b3132e3d30cb255b7172768a05ba45"
+    },
+    "polteageistantique": {
+      "path": "/pokemon/artwork/polteageistantique.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/855.png",
+      "pokeapiId": 855,
+      "width": 475,
+      "height": 475,
+      "sha256": "bbec8f8a6dc1466150779d749017484034b3132e3d30cb255b7172768a05ba45"
+    },
+    "primarina": {
+      "path": "/pokemon/artwork/primarina.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/730.png",
+      "pokeapiId": 730,
+      "width": 475,
+      "height": 475,
+      "sha256": "5af256ff00cd759238a7ca7c91083f8810347b0a4cd8579ff1a2f5955b8ad3fc"
+    },
+    "pyroar": {
+      "path": "/pokemon/artwork/pyroar.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/668.png",
+      "pokeapiId": 668,
+      "width": 475,
+      "height": 475,
+      "sha256": "518c0fe1bc3388e4642a84197653043c28bfcbf42ccadd5a3791619f0fbb870c"
+    },
+    "pyroarmega": {
+      "path": "/pokemon/artwork/pyroarmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10295.png",
+      "pokeapiId": 10295,
+      "width": 534,
+      "height": 534,
+      "sha256": "56e1b7bdf4f81f8d6ef837b996a10608ddc082c851b4f43c950f686fb5c1994e"
+    },
+    "quaquaval": {
+      "path": "/pokemon/artwork/quaquaval.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/914.png",
+      "pokeapiId": 914,
+      "width": 475,
+      "height": 475,
+      "sha256": "03d904ef9156559923378ab8051ab512f106fac1667dfc7c058275673b7a75d1"
+    },
+    "qwilfish": {
+      "path": "/pokemon/artwork/qwilfish.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/211.png",
+      "pokeapiId": 211,
+      "width": 475,
+      "height": 475,
+      "sha256": "057c61e2c121bf3a3a3bcebc112c5039a69bead30a0a5364cefea2ce7627c914"
+    },
+    "raichu": {
+      "path": "/pokemon/artwork/raichu.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/26.png",
+      "pokeapiId": 26,
+      "width": 475,
+      "height": 475,
+      "sha256": "e5671c5f00695fa6f6a3fc08a70d0b53a34e14f5dafcccc66316bdee90d076ac"
+    },
+    "raichualola": {
+      "path": "/pokemon/artwork/raichualola.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10100.png",
+      "pokeapiId": 10100,
+      "width": 475,
+      "height": 475,
+      "sha256": "0cc06daa4c80f2277ae50cb722099ec6f1d4327dfd59012ad868a01a1bad8a4e"
+    },
+    "raichumegax": {
+      "path": "/pokemon/artwork/raichumegax.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10304.png",
+      "pokeapiId": 10304,
+      "width": 534,
+      "height": 534,
+      "sha256": "73ecdf6978e2dc4e2169a73754ebe32a35283bbfa5b7a61c59190d80c52f0912"
+    },
+    "raichumegay": {
+      "path": "/pokemon/artwork/raichumegay.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10305.png",
+      "pokeapiId": 10305,
+      "width": 534,
+      "height": 534,
+      "sha256": "a46a2213c8096940b2d2fbef481af38628492371c1a740b9f510fff6949f4d4c"
+    },
+    "rampardos": {
+      "path": "/pokemon/artwork/rampardos.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/409.png",
+      "pokeapiId": 409,
+      "width": 475,
+      "height": 475,
+      "sha256": "5a4bccdfd1accec3d88e7b9e3d52962a5933ad47ac8e969bfd87b27c71ff10ff"
+    },
+    "reuniclus": {
+      "path": "/pokemon/artwork/reuniclus.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/579.png",
+      "pokeapiId": 579,
+      "width": 475,
+      "height": 475,
+      "sha256": "a4fb21b2d0c321541d70fe4cd18762ba8cdde2c5e5c0a3b9d82dd663664c2f06"
+    },
+    "rhyperior": {
+      "path": "/pokemon/artwork/rhyperior.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/464.png",
+      "pokeapiId": 464,
+      "width": 475,
+      "height": 475,
+      "sha256": "039ec0c6aaae4ddd9ffa06308cc7a34523271893937a21212d5b4658cfee6117"
+    },
+    "rillaboom": {
+      "path": "/pokemon/artwork/rillaboom.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/812.png",
+      "pokeapiId": 812,
+      "width": 475,
+      "height": 475,
+      "sha256": "a742144d8f5c1beeccaeba0b4ac5eef36cb1137ab488549bdc9c176f94e06dda"
+    },
+    "roserade": {
+      "path": "/pokemon/artwork/roserade.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/407.png",
+      "pokeapiId": 407,
+      "width": 475,
+      "height": 475,
+      "sha256": "a98c33e6125b7be201f8f6f4872ad97fb361c5ab8ee97e260fecdc8c08968dc0"
+    },
+    "rotom": {
+      "path": "/pokemon/artwork/rotom.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/479.png",
+      "pokeapiId": 479,
+      "width": 475,
+      "height": 475,
+      "sha256": "aac3908d8eff725ce710df92af856a8eda2689296b93496e6b099594983df4eb"
+    },
+    "rotomfan": {
+      "path": "/pokemon/artwork/rotomfan.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10011.png",
+      "pokeapiId": 10011,
+      "width": 475,
+      "height": 475,
+      "sha256": "9c5388e822558e1e1c2b1c36929ac8c1ae3c9aa3a8a6590a507a0512cb6c5fbb"
+    },
+    "rotomfrost": {
+      "path": "/pokemon/artwork/rotomfrost.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10010.png",
+      "pokeapiId": 10010,
+      "width": 475,
+      "height": 475,
+      "sha256": "0acec65e6d6ab58d3f3e37b8a90df5d053edc3d095bcdab662d3ce8f1f54e2e8"
+    },
+    "rotomheat": {
+      "path": "/pokemon/artwork/rotomheat.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10008.png",
+      "pokeapiId": 10008,
+      "width": 475,
+      "height": 475,
+      "sha256": "5990b8ca2d19d7183977b47218819fed390b0349ebdecb69a07cec8bb6bd3c38"
+    },
+    "rotommow": {
+      "path": "/pokemon/artwork/rotommow.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10012.png",
+      "pokeapiId": 10012,
+      "width": 475,
+      "height": 475,
+      "sha256": "1d5845a411ccfdc5997bd0e90bcf4742b67e4b846361afee2a95fb1f54345ead"
+    },
+    "rotomwash": {
+      "path": "/pokemon/artwork/rotomwash.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10009.png",
+      "pokeapiId": 10009,
+      "width": 475,
+      "height": 475,
+      "sha256": "45833d80ed0e71b3100330ae76b6b4e9823329c8d86e5be2847173a39e963b1c"
+    },
+    "runerigus": {
+      "path": "/pokemon/artwork/runerigus.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/867.png",
+      "pokeapiId": 867,
+      "width": 475,
+      "height": 475,
+      "sha256": "a78afc57f11b3ff747fae524d0f0004752a6286ba5defe89cd66536da05a33c9"
+    },
+    "sableye": {
+      "path": "/pokemon/artwork/sableye.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/302.png",
+      "pokeapiId": 302,
+      "width": 475,
+      "height": 475,
+      "sha256": "69c4e511be37f3fb0a4d79e5c937a7b87d5fcf6a220755744c173b31fdc4caaf"
+    },
+    "sableyemega": {
+      "path": "/pokemon/artwork/sableyemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10066.png",
+      "pokeapiId": 10066,
+      "width": 475,
+      "height": 475,
+      "sha256": "9b8c2a1baa6e8c74e0b0a842d3f40258dcbeb64134d349a5514ac4796f392091"
+    },
+    "salamence": {
+      "path": "/pokemon/artwork/salamence.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/373.png",
+      "pokeapiId": 373,
+      "width": 475,
+      "height": 475,
+      "sha256": "3d9f18c1a25e998ef5e50e5a447e5f38637ee8a7f428b5f4477091a9b8192d3f"
+    },
+    "salamencemega": {
+      "path": "/pokemon/artwork/salamencemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10089.png",
+      "pokeapiId": 10089,
+      "width": 475,
+      "height": 475,
+      "sha256": "2feefc31d137b99301a66a71bb8a5ca136ccbab2743aab09165f1b9b9aa22ffd"
+    },
+    "salazzle": {
+      "path": "/pokemon/artwork/salazzle.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png",
+      "pokeapiId": 758,
+      "width": 475,
+      "height": 475,
+      "sha256": "6d0161102030370b99d11ef77ce4819d467119c6df1d1cac94fe266a34ccb7f2"
+    },
+    "samurott": {
+      "path": "/pokemon/artwork/samurott.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/503.png",
+      "pokeapiId": 503,
+      "width": 475,
+      "height": 475,
+      "sha256": "192e0d2a7d4dffb822bb9d5ed46015c1d1e2e52cce99f262318d5ad98797c9c1"
+    },
+    "samurotthisui": {
+      "path": "/pokemon/artwork/samurotthisui.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10236.png",
+      "pokeapiId": 10236,
+      "width": 475,
+      "height": 475,
+      "sha256": "db691de28911c26781ca2991f9b4b42bd7d083ae68b5d1dc0bcd0430fba3ed4e"
+    },
+    "sandaconda": {
+      "path": "/pokemon/artwork/sandaconda.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/844.png",
+      "pokeapiId": 844,
+      "width": 475,
+      "height": 475,
+      "sha256": "ba693d922b6c999083d397a6f23fb8e2b1e422770a85210a567086a83037369f"
+    },
+    "sceptile": {
+      "path": "/pokemon/artwork/sceptile.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/254.png",
+      "pokeapiId": 254,
+      "width": 475,
+      "height": 475,
+      "sha256": "f0d143504a9da150a51c88c0a8c5deb2fc7a0c95717b003fd45de27ad95f43ed"
+    },
+    "sceptilemega": {
+      "path": "/pokemon/artwork/sceptilemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10065.png",
+      "pokeapiId": 10065,
+      "width": 475,
+      "height": 475,
+      "sha256": "dcfb9373f0007252d462779c72cc6cb661db1628a0bd1b72ff90b47e277c1151"
+    },
+    "scizor": {
+      "path": "/pokemon/artwork/scizor.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/212.png",
+      "pokeapiId": 212,
+      "width": 475,
+      "height": 475,
+      "sha256": "67765e304fa030422abc88e4b1f5eae21cb558e9b6dc0f1a43656f0f1daf6434"
+    },
+    "scizormega": {
+      "path": "/pokemon/artwork/scizormega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10046.png",
+      "pokeapiId": 10046,
+      "width": 475,
+      "height": 475,
+      "sha256": "597ffefb7d1188bf7a73ddfc651f2a109fa4cfe72af2d1ee541a8c1f54d1d192"
+    },
+    "scolipede": {
+      "path": "/pokemon/artwork/scolipede.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/545.png",
+      "pokeapiId": 545,
+      "width": 475,
+      "height": 475,
+      "sha256": "1e804ecd2412fd23f08114a58aba9d18d79be5fe78fee01785470c9d765f5f27"
+    },
+    "scolipedemega": {
+      "path": "/pokemon/artwork/scolipedemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10288.png",
+      "pokeapiId": 10288,
+      "width": 534,
+      "height": 534,
+      "sha256": "aeead00420852c590cf43e86ece7fe6a3be711300f567565866e0d5e80e2aea9"
+    },
+    "scovillain": {
+      "path": "/pokemon/artwork/scovillain.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/952.png",
+      "pokeapiId": 952,
+      "width": 475,
+      "height": 475,
+      "sha256": "532b8c959d44a45f3d01bf1ef47fa316b9b705b25d5f600f4c5a097d010d19c2"
+    },
+    "scovillainmega": {
+      "path": "/pokemon/artwork/scovillainmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10320.png",
+      "pokeapiId": 10320,
+      "width": 534,
+      "height": 534,
+      "sha256": "3c75525e19bcbcb58af2ccc79e39e1b7215d3d10669e40ec57ff58b592956ec5"
+    },
+    "scrafty": {
+      "path": "/pokemon/artwork/scrafty.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/560.png",
+      "pokeapiId": 560,
+      "width": 475,
+      "height": 475,
+      "sha256": "ff5559304f21daabe6861bad61a6bd3b27214fe16c10ef0c91ed0cdc1c3abef6"
+    },
+    "scraftymega": {
+      "path": "/pokemon/artwork/scraftymega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10289.png",
+      "pokeapiId": 10289,
+      "width": 534,
+      "height": 534,
+      "sha256": "2bc94edbc26b70bac031355fac4140bfe918d61694b081854d4bad4e15b28aaa"
+    },
+    "serperior": {
+      "path": "/pokemon/artwork/serperior.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/497.png",
+      "pokeapiId": 497,
+      "width": 475,
+      "height": 475,
+      "sha256": "9dd16782bae17e6e39fead09b9dcf43e6155e5f38368ff3ce243964997a5c48c"
+    },
+    "sharpedo": {
+      "path": "/pokemon/artwork/sharpedo.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/319.png",
+      "pokeapiId": 319,
+      "width": 475,
+      "height": 475,
+      "sha256": "fd36f8289de70fa69538fc7e18291402f6dc5271f79054953a8ecd925f60a3f9"
+    },
+    "sharpedomega": {
+      "path": "/pokemon/artwork/sharpedomega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10070.png",
+      "pokeapiId": 10070,
+      "width": 475,
+      "height": 475,
+      "sha256": "cf1112a0fcbbd8f9d3d63070809b3f68d7e1fdb87452e4417911657b7989ec9e"
+    },
+    "simipour": {
+      "path": "/pokemon/artwork/simipour.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/516.png",
+      "pokeapiId": 516,
+      "width": 475,
+      "height": 475,
+      "sha256": "76604cb8de67e6c7ced38c9c4faf024848c14d155e26fd1915983fabd9135787"
+    },
+    "simisage": {
+      "path": "/pokemon/artwork/simisage.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/512.png",
+      "pokeapiId": 512,
+      "width": 475,
+      "height": 475,
+      "sha256": "2ca68c33743ec3a845d3259b03944f08df8d62a02a51ff222fa5ee1647e27e09"
+    },
+    "simisear": {
+      "path": "/pokemon/artwork/simisear.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/514.png",
+      "pokeapiId": 514,
+      "width": 475,
+      "height": 475,
+      "sha256": "2f6055eb94d615758ddd46c7cce5b2fb7ca4213468222ac83eaf32756a8ea4fa"
+    },
+    "sinistcha": {
+      "path": "/pokemon/artwork/sinistcha.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1013.png",
+      "pokeapiId": 1013,
+      "width": 475,
+      "height": 475,
+      "sha256": "2d9f5d4a4a9154a6d6dc7aa3bc1585d81817bbfd3cf7ad95da0b52ba14014948"
+    },
+    "sinistchamasterpiece": {
+      "path": "/pokemon/artwork/sinistchamasterpiece.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1013.png",
+      "pokeapiId": 1013,
+      "width": 475,
+      "height": 475,
+      "sha256": "2d9f5d4a4a9154a6d6dc7aa3bc1585d81817bbfd3cf7ad95da0b52ba14014948"
+    },
+    "sirfetchd": {
+      "path": "/pokemon/artwork/sirfetchd.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/865.png",
+      "pokeapiId": 865,
+      "width": 475,
+      "height": 475,
+      "sha256": "895383562ce46b986a07bd931c540b434211c0fd1c0bb90c1dc142142570f5d9"
+    },
+    "skarmory": {
+      "path": "/pokemon/artwork/skarmory.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/227.png",
+      "pokeapiId": 227,
+      "width": 475,
+      "height": 475,
+      "sha256": "3c9de3ea5ba321721e92c67f65864a8ace88787de11dd881206e7cb424763636"
+    },
+    "skarmorymega": {
+      "path": "/pokemon/artwork/skarmorymega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10284.png",
+      "pokeapiId": 10284,
+      "width": 534,
+      "height": 534,
+      "sha256": "8f6c80c9cb10db4764c0f72866490794c0cd959c7dd467e8f7485c5ade4ccb26"
+    },
+    "skeledirge": {
+      "path": "/pokemon/artwork/skeledirge.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/911.png",
+      "pokeapiId": 911,
+      "width": 475,
+      "height": 475,
+      "sha256": "b6b4449d6841c303a2913f70020f9c329eb836fd23976d3ffb00a24f60810d5a"
+    },
+    "slowbro": {
+      "path": "/pokemon/artwork/slowbro.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/80.png",
+      "pokeapiId": 80,
+      "width": 475,
+      "height": 475,
+      "sha256": "78c59860688ec9c386afce52097d4f6ede75401f2bbb492e1a63fd50a0517e95"
+    },
+    "slowbrogalar": {
+      "path": "/pokemon/artwork/slowbrogalar.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10165.png",
+      "pokeapiId": 10165,
+      "width": 475,
+      "height": 475,
+      "sha256": "5694a3a22f6c57d4e111acb10f16115651d4a6d216224026d56a421eb16635f0"
+    },
+    "slowbromega": {
+      "path": "/pokemon/artwork/slowbromega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10071.png",
+      "pokeapiId": 10071,
+      "width": 475,
+      "height": 475,
+      "sha256": "b961fd5533de378edf003ef0244dceaf4fb643a8072925449b8a600c56354845"
+    },
+    "slowking": {
+      "path": "/pokemon/artwork/slowking.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/199.png",
+      "pokeapiId": 199,
+      "width": 475,
+      "height": 475,
+      "sha256": "ef4c791a9ea73ca822a8c52a1f728e1712d28e333ff477255574baf8d8fbcb61"
+    },
+    "slowkinggalar": {
+      "path": "/pokemon/artwork/slowkinggalar.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10172.png",
+      "pokeapiId": 10172,
+      "width": 475,
+      "height": 475,
+      "sha256": "e63890514f1abfebeb2713a8dae5e4d096f14925ded68dc269ff06f8890cf46c"
+    },
+    "slurpuff": {
+      "path": "/pokemon/artwork/slurpuff.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/685.png",
+      "pokeapiId": 685,
+      "width": 475,
+      "height": 475,
+      "sha256": "4a3845d70de1b28d2b1d3dbfb2197f8491afd3e63fbd2dfa1ce1255e00e44bee"
+    },
+    "sneasler": {
+      "path": "/pokemon/artwork/sneasler.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/903.png",
+      "pokeapiId": 903,
+      "width": 475,
+      "height": 475,
+      "sha256": "5668b45d33b097e8caef5f6bd53dec924486095d63a8f63f349c2b86bc39cf84"
+    },
+    "snorlax": {
+      "path": "/pokemon/artwork/snorlax.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/143.png",
+      "pokeapiId": 143,
+      "width": 475,
+      "height": 475,
+      "sha256": "1afd32e5f6053a50860d67c5d7cc3bc6ca9a174634097fe65880523a0a13a55a"
+    },
+    "spiritomb": {
+      "path": "/pokemon/artwork/spiritomb.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/442.png",
+      "pokeapiId": 442,
+      "width": 475,
+      "height": 475,
+      "sha256": "96fe269ba07f74ff7da7dd553684f99d26e4398710ed400bc7fc1f1968f700fd"
+    },
+    "squawkabilly": {
+      "path": "/pokemon/artwork/squawkabilly.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/931.png",
+      "pokeapiId": 931,
+      "width": 475,
+      "height": 475,
+      "sha256": "f7f38ea017f4bbe64eac93d2331d50ace69a810682d94769f7de55b0cb5343e5"
+    },
+    "squawkabillyblue": {
+      "path": "/pokemon/artwork/squawkabillyblue.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10260.png",
+      "pokeapiId": 10260,
+      "width": 475,
+      "height": 475,
+      "sha256": "e21af17b979838bcd67aa856c490607f280d53b87e0bdc4332528515680b8bfe"
+    },
+    "squawkabillywhite": {
+      "path": "/pokemon/artwork/squawkabillywhite.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10262.png",
+      "pokeapiId": 10262,
+      "width": 475,
+      "height": 475,
+      "sha256": "dd91b500b08a8794039940838bc3f85af41a531cf86a18523ac8f409db0258e2"
+    },
+    "squawkabillyyellow": {
+      "path": "/pokemon/artwork/squawkabillyyellow.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10261.png",
+      "pokeapiId": 10261,
+      "width": 475,
+      "height": 475,
+      "sha256": "3bee866d895e642f0c9bc3016cd7a9dcfbc1465bffd4631cd0bc415e7a634a5b"
+    },
+    "staraptor": {
+      "path": "/pokemon/artwork/staraptor.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/398.png",
+      "pokeapiId": 398,
+      "width": 475,
+      "height": 475,
+      "sha256": "dd8f43d1a1cc9975af7c56057cdab4a80400ec4dd67b0338490382336fef269f"
+    },
+    "staraptormega": {
+      "path": "/pokemon/artwork/staraptormega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10308.png",
+      "pokeapiId": 10308,
+      "width": 534,
+      "height": 534,
+      "sha256": "c15f1c7d6bafa54bc3d705df8b30fc540bfcade2dfbb5654536ade759dfa4b6b"
+    },
+    "starmie": {
+      "path": "/pokemon/artwork/starmie.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/121.png",
+      "pokeapiId": 121,
+      "width": 475,
+      "height": 475,
+      "sha256": "4e9cebb6042fd5489471341c5d5778a900662be93e343234468edc2dfe94436f"
+    },
+    "starmiemega": {
+      "path": "/pokemon/artwork/starmiemega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10280.png",
+      "pokeapiId": 10280,
+      "width": 534,
+      "height": 534,
+      "sha256": "4e5421f29472f608cd74b0c3bd01ee160d24e8437f946da459177cff08e6b6b3"
+    },
+    "steelix": {
+      "path": "/pokemon/artwork/steelix.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/208.png",
+      "pokeapiId": 208,
+      "width": 475,
+      "height": 475,
+      "sha256": "cd82cb87b4ad5034501f0dc871b791bc6fa12cb2fe93e7637aaae95b2c8a6623"
+    },
+    "steelixmega": {
+      "path": "/pokemon/artwork/steelixmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10072.png",
+      "pokeapiId": 10072,
+      "width": 475,
+      "height": 475,
+      "sha256": "96f7d8639656865df146c4687ccf0760b8920ae3b02e9c20a085d0104e2eb2bf"
+    },
+    "stunfisk": {
+      "path": "/pokemon/artwork/stunfisk.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/618.png",
+      "pokeapiId": 618,
+      "width": 475,
+      "height": 475,
+      "sha256": "d14f1c3fc8996308475bad4d73dc519cf5486e379ef05293be248bfaf14206cd"
+    },
+    "stunfiskgalar": {
+      "path": "/pokemon/artwork/stunfiskgalar.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10180.png",
+      "pokeapiId": 10180,
+      "width": 475,
+      "height": 475,
+      "sha256": "c93892b4c2c6acd72f35a162287db25761977363b8e4e0047a8a0820b689cfcf"
+    },
+    "swalot": {
+      "path": "/pokemon/artwork/swalot.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/317.png",
+      "pokeapiId": 317,
+      "width": 475,
+      "height": 475,
+      "sha256": "ed0fa1f27c05e80fec2e0c7f200549a33b13a0367a183effe837262fcbee5c0c"
+    },
+    "swampert": {
+      "path": "/pokemon/artwork/swampert.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/260.png",
+      "pokeapiId": 260,
+      "width": 475,
+      "height": 475,
+      "sha256": "c812815f91ebfb092870f933d24c0c82a5bc8f0ba8fc971d68d38496640bc101"
+    },
+    "swampertmega": {
+      "path": "/pokemon/artwork/swampertmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10064.png",
+      "pokeapiId": 10064,
+      "width": 475,
+      "height": 475,
+      "sha256": "97ad73857721432594e28e437eb6d00e1953da78a27df69febcefc8dedbfc6a9"
+    },
+    "sylveon": {
+      "path": "/pokemon/artwork/sylveon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/700.png",
+      "pokeapiId": 700,
+      "width": 475,
+      "height": 475,
+      "sha256": "193777db6d89cdace234fe3198dca4e955a7a5a18011cd0105178b436f6199a7"
+    },
+    "talonflame": {
+      "path": "/pokemon/artwork/talonflame.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/663.png",
+      "pokeapiId": 663,
+      "width": 475,
+      "height": 475,
+      "sha256": "788d4828075299c05978b0c303f9f7bbadb439d2996af21e1fc9b1aac464a6f1"
+    },
+    "tauros": {
+      "path": "/pokemon/artwork/tauros.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/128.png",
+      "pokeapiId": 128,
+      "width": 475,
+      "height": 475,
+      "sha256": "04ba885a5e71dc1e6970e7a83a098464e3fa29b83502631772a0f709662887e4"
+    },
+    "taurospaldeaaqua": {
+      "path": "/pokemon/artwork/taurospaldeaaqua.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10252.png",
+      "pokeapiId": 10252,
+      "width": 475,
+      "height": 475,
+      "sha256": "f4faa86229f0bb73d708c6a0ca552d19e9b86c44aa6d311c6ec1fd9589a86df5"
+    },
+    "taurospaldeablaze": {
+      "path": "/pokemon/artwork/taurospaldeablaze.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10251.png",
+      "pokeapiId": 10251,
+      "width": 475,
+      "height": 475,
+      "sha256": "ffb676aff00b335fbf8917dbc47fe4bf261790002d3266d193f7f387159c55f3"
+    },
+    "taurospaldeacombat": {
+      "path": "/pokemon/artwork/taurospaldeacombat.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10250.png",
+      "pokeapiId": 10250,
+      "width": 475,
+      "height": 475,
+      "sha256": "1942ab8db0d34114dcb23190362ec6540e199470a6a67243ef0dd08701e2a678"
+    },
+    "thievul": {
+      "path": "/pokemon/artwork/thievul.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/828.png",
+      "pokeapiId": 828,
+      "width": 475,
+      "height": 475,
+      "sha256": "8532c5ab0e06e5a8591860d82ef1dc701ba8b03a14f87a40bdbb7ee50073ee4d"
+    },
+    "tinkaton": {
+      "path": "/pokemon/artwork/tinkaton.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/959.png",
+      "pokeapiId": 959,
+      "width": 475,
+      "height": 475,
+      "sha256": "b7825d0857e446d7622b104c82c41c38cf4d69fe2bfab6b8734ec639829d0ee0"
+    },
+    "torkoal": {
+      "path": "/pokemon/artwork/torkoal.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/324.png",
+      "pokeapiId": 324,
+      "width": 475,
+      "height": 475,
+      "sha256": "74cd3c62884521ee44ca87e24c044cdac17a4cb5fb78b064a42fdfeaf087940f"
+    },
+    "torterra": {
+      "path": "/pokemon/artwork/torterra.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/389.png",
+      "pokeapiId": 389,
+      "width": 475,
+      "height": 475,
+      "sha256": "47396a17f77a4d050bb953bba9744c8b94f04f5254d59196340b9c5887b742a1"
+    },
+    "toucannon": {
+      "path": "/pokemon/artwork/toucannon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/733.png",
+      "pokeapiId": 733,
+      "width": 475,
+      "height": 475,
+      "sha256": "3721f56828ca651242ace16de832af0df075040bdb182b81d6a56846a27e6997"
+    },
+    "toxapex": {
+      "path": "/pokemon/artwork/toxapex.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/748.png",
+      "pokeapiId": 748,
+      "width": 475,
+      "height": 475,
+      "sha256": "2eb1c9e63f74522857b50cd906ef3ec7985ca66b3c914c5b5ef0a36a692ae3f5"
+    },
+    "toxicroak": {
+      "path": "/pokemon/artwork/toxicroak.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/454.png",
+      "pokeapiId": 454,
+      "width": 475,
+      "height": 475,
+      "sha256": "20036cc1e28705cb235353ceb2e69c94d8d5fdfd9c697f270337af35a49bba59"
+    },
+    "toxtricity": {
+      "path": "/pokemon/artwork/toxtricity.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/849.png",
+      "pokeapiId": 849,
+      "width": 475,
+      "height": 475,
+      "sha256": "7b9871deccdbc0b24c176cb1c8767d6ac75fba12fb8e7d8dacf7e680cb2bc497"
+    },
+    "toxtricitylowkey": {
+      "path": "/pokemon/artwork/toxtricitylowkey.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10184.png",
+      "pokeapiId": 10184,
+      "width": 475,
+      "height": 475,
+      "sha256": "aa40d6c62d62a01caee9341a8c164f780bc6a26a0cdfdf0aa93abad35b4048d4"
+    },
+    "trevenant": {
+      "path": "/pokemon/artwork/trevenant.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/709.png",
+      "pokeapiId": 709,
+      "width": 475,
+      "height": 475,
+      "sha256": "df23987bef7045c46d8f9a6a83cd23c3b23e006a424669051b0c6e4fbfa9c85f"
+    },
+    "tsareena": {
+      "path": "/pokemon/artwork/tsareena.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/763.png",
+      "pokeapiId": 763,
+      "width": 475,
+      "height": 475,
+      "sha256": "d4c5f9bdfc2d8b5ce80142325af61537ad75b5c215a46870e422467de971b27d"
+    },
+    "typhlosion": {
+      "path": "/pokemon/artwork/typhlosion.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/157.png",
+      "pokeapiId": 157,
+      "width": 475,
+      "height": 475,
+      "sha256": "04230d9302910d2af6e91fc4a372d059932b420e322200aedbf251f6b1df512d"
+    },
+    "typhlosionhisui": {
+      "path": "/pokemon/artwork/typhlosionhisui.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10233.png",
+      "pokeapiId": 10233,
+      "width": 475,
+      "height": 475,
+      "sha256": "5bcccc176e3aca2aad32ed927a56c75d8db993867af1f2e311784c376907f47c"
+    },
+    "tyranitar": {
+      "path": "/pokemon/artwork/tyranitar.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/248.png",
+      "pokeapiId": 248,
+      "width": 475,
+      "height": 475,
+      "sha256": "080b69438af4483ecd73f7ba154b5d5c845726028ac3071bde455de8978bb509"
+    },
+    "tyranitarmega": {
+      "path": "/pokemon/artwork/tyranitarmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10049.png",
+      "pokeapiId": 10049,
+      "width": 475,
+      "height": 475,
+      "sha256": "e5042d33e8f7d28ef4f4af88706f3a897b8f10cd4d51034b928e09dfbd8295bd"
+    },
+    "tyrantrum": {
+      "path": "/pokemon/artwork/tyrantrum.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/697.png",
+      "pokeapiId": 697,
+      "width": 475,
+      "height": 475,
+      "sha256": "d8b0afca742d381220ac3d69458df71f10aa9dc2bf295255c1ebf49eeee32f87"
+    },
+    "umbreon": {
+      "path": "/pokemon/artwork/umbreon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/197.png",
+      "pokeapiId": 197,
+      "width": 475,
+      "height": 475,
+      "sha256": "8d7f18f7b323269dff84480f1ee8873a5d47a3eb3fd4b2ac1d2bbf0cf45a6ddd"
+    },
+    "vanilluxe": {
+      "path": "/pokemon/artwork/vanilluxe.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/584.png",
+      "pokeapiId": 584,
+      "width": 475,
+      "height": 475,
+      "sha256": "8a85a247406db62529a087b9dfa79304e8195802452db87dcde84fa4e18a5f81"
+    },
+    "vaporeon": {
+      "path": "/pokemon/artwork/vaporeon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/134.png",
+      "pokeapiId": 134,
+      "width": 475,
+      "height": 475,
+      "sha256": "3f4a86ef2ec064c98dd8fb207046c7202c1669e5fb7fac05fc1acea364d2770f"
+    },
+    "venusaur": {
+      "path": "/pokemon/artwork/venusaur.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png",
+      "pokeapiId": 3,
+      "width": 475,
+      "height": 475,
+      "sha256": "106d0040aa775f95871706c30ddd4abaef2c962215f5e8bd4141e0caef0ef8e4"
+    },
+    "venusaurmega": {
+      "path": "/pokemon/artwork/venusaurmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10033.png",
+      "pokeapiId": 10033,
+      "width": 475,
+      "height": 475,
+      "sha256": "e067b4e2dadf5e661b659462ba8303d7c3fb195d4c400286aee8f9a8d4a5ad1b"
+    },
+    "victreebel": {
+      "path": "/pokemon/artwork/victreebel.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/71.png",
+      "pokeapiId": 71,
+      "width": 475,
+      "height": 475,
+      "sha256": "47c1fff808f898e37590ec5c10913efeb8a2593684b9f834a469d6b9991a8fcc"
+    },
+    "victreebelmega": {
+      "path": "/pokemon/artwork/victreebelmega.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10279.png",
+      "pokeapiId": 10279,
+      "width": 534,
+      "height": 534,
+      "sha256": "83893f8dfa8f46ec54667abbfaecd01bada21757ea6ca1e78f84d6225e00f19b"
+    },
+    "vileplume": {
+      "path": "/pokemon/artwork/vileplume.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/45.png",
+      "pokeapiId": 45,
+      "width": 475,
+      "height": 475,
+      "sha256": "9c2b9e9a3b91e2400f6e54165d4dcdedf6650f85fcdf552a52d8d68a2129abb1"
+    },
+    "vivillon": {
+      "path": "/pokemon/artwork/vivillon.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/666.png",
+      "pokeapiId": 666,
+      "width": 475,
+      "height": 475,
+      "sha256": "b3dbfb7060adb159c16b633a7f788ad96b29767db4973d46759667f317af5e41"
+    },
+    "vivillonfancy": {
+      "path": "/pokemon/artwork/vivillonfancy.png",
+      "source": "https://archives.bulbagarden.net/media/upload/7/74/0666Vivillon-Fancy.png",
+      "note": "Official Ken Sugimori artwork. Source: https://archives.bulbagarden.net/wiki/File:0666Vivillon-Fancy.png",
+      "width": 1359,
+      "height": 1359,
+      "sha256": "a9a67b01422fba3acaa13a1710ab8153bb3748a9bd6e0238adb44692eda4fcb3"
+    },
+    "vivillonpokeball": {
+      "path": "/pokemon/artwork/vivillonpokeball.png",
+      "source": "https://archives.bulbagarden.net/media/upload/e/ed/0666Vivillon-Pok%C3%A9_Ball.png",
+      "note": "Official Ken Sugimori artwork. Source: https://archives.bulbagarden.net/wiki/File:0666Vivillon-Pok%C3%A9_Ball.png",
+      "width": 1811,
+      "height": 1811,
+      "sha256": "8204963fb8fa6b6614f148b827a07a74b1b76f27e8dd78348d51a50c44d3b89f"
+    },
+    "volcarona": {
+      "path": "/pokemon/artwork/volcarona.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/637.png",
+      "pokeapiId": 637,
+      "width": 475,
+      "height": 475,
+      "sha256": "05e4d5f86fd53f786bcf13e6fa334678eeb010041bdb2eb747dc24aebb7b1287"
+    },
+    "watchog": {
+      "path": "/pokemon/artwork/watchog.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/505.png",
+      "pokeapiId": 505,
+      "width": 475,
+      "height": 475,
+      "sha256": "fa8cd921937fc584073afbb43d6d7f4a748b962e8455dc4b50a10de862d49096"
+    },
+    "weavile": {
+      "path": "/pokemon/artwork/weavile.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/461.png",
+      "pokeapiId": 461,
+      "width": 475,
+      "height": 475,
+      "sha256": "11d5a85c9948d2ab4b2cd0cc0f373f6d3a42f703454e4b78a01ce8732dfbe991"
+    },
+    "whimsicott": {
+      "path": "/pokemon/artwork/whimsicott.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/547.png",
+      "pokeapiId": 547,
+      "width": 475,
+      "height": 475,
+      "sha256": "1d6c01ad624a6e7ca2095331d49280e1eb0facbb5228513da08101d3de98f3e0"
+    },
+    "wigglytuff": {
+      "path": "/pokemon/artwork/wigglytuff.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/40.png",
+      "pokeapiId": 40,
+      "width": 475,
+      "height": 475,
+      "sha256": "8150678a4be49542717ac2cdc6c18ecf80e6910172b045d15e79f239a8678a5e"
+    },
+    "wyrdeer": {
+      "path": "/pokemon/artwork/wyrdeer.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/899.png",
+      "pokeapiId": 899,
+      "width": 475,
+      "height": 475,
+      "sha256": "f131e4c94627dfaa8e041966f39022d9233345cde531f012d9ca3c73d4f2c030"
+    },
+    "zoroark": {
+      "path": "/pokemon/artwork/zoroark.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/571.png",
+      "pokeapiId": 571,
+      "width": 475,
+      "height": 475,
+      "sha256": "b9dc530c88c2baee1026f03eb4b57bd7db94289d9811bafbe961ae49150938cd"
+    },
+    "zoroarkhisui": {
+      "path": "/pokemon/artwork/zoroarkhisui.png",
+      "source": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10239.png",
+      "pokeapiId": 10239,
+      "width": 475,
+      "height": 475,
+      "sha256": "e05c0ece8bff7926177bfe9e07ee9f81d2b1736e26915687bfeea5cb56a6a889"
+    }
+  }
+}

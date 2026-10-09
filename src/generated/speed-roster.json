@@ -1,0 +1,3599 @@
+{
+  "retrievedAt": "2026-09-18",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/mods/champions/formats-data.ts",
+      "sha256": "a512b537a84574a324c250c6ff99ad60f0cf1e82420fdae60d4635eec8661e13"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/smogon/pokemon-showdown/master/data/pokedex.ts",
+      "sha256": "73048386b864be5aff093e9393acf32e8016299e9d7b76078bf5120b769e2fe0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/PokeAPI/pokeapi/master/data/v2/csv/pokemon_species_names.csv",
+      "sha256": "820cde17074cdb1c2b0595c997fb8f998e773bd5da3bb525dec85703c86c5fd9"
+    }
+  ],
+  "pokemon": [
+    {
+      "id": "venusaur",
+      "number": 3,
+      "name": "フシギバナ",
+      "englishName": "Venusaur",
+      "baseSpeed": 80,
+      "types": ["grass", "poison"],
+      "mega": false,
+      "abilities": ["Overgrow", "Chlorophyll"]
+    },
+    {
+      "id": "venusaurmega",
+      "number": 3,
+      "name": "メガフシギバナ",
+      "englishName": "Venusaur-Mega",
+      "baseSpeed": 80,
+      "types": ["grass", "poison"],
+      "mega": true,
+      "abilities": ["Thick Fat"]
+    },
+    {
+      "id": "charizard",
+      "number": 6,
+      "name": "リザードン",
+      "englishName": "Charizard",
+      "baseSpeed": 100,
+      "types": ["fire", "flying"],
+      "mega": false,
+      "abilities": ["Blaze", "Solar Power"]
+    },
+    {
+      "id": "charizardmegax",
+      "number": 6,
+      "name": "メガリザードンX",
+      "englishName": "Charizard-Mega-X",
+      "baseSpeed": 100,
+      "types": ["fire", "dragon"],
+      "mega": true,
+      "abilities": ["Tough Claws"]
+    },
+    {
+      "id": "charizardmegay",
+      "number": 6,
+      "name": "メガリザードンY",
+      "englishName": "Charizard-Mega-Y",
+      "baseSpeed": 100,
+      "types": ["fire", "flying"],
+      "mega": true,
+      "abilities": ["Drought"]
+    },
+    {
+      "id": "blastoise",
+      "number": 9,
+      "name": "カメックス",
+      "englishName": "Blastoise",
+      "baseSpeed": 78,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Torrent", "Rain Dish"]
+    },
+    {
+      "id": "blastoisemega",
+      "number": 9,
+      "name": "メガカメックス",
+      "englishName": "Blastoise-Mega",
+      "baseSpeed": 78,
+      "types": ["water"],
+      "mega": true,
+      "abilities": ["Mega Launcher"]
+    },
+    {
+      "id": "beedrill",
+      "number": 15,
+      "name": "スピアー",
+      "englishName": "Beedrill",
+      "baseSpeed": 75,
+      "types": ["bug", "poison"],
+      "mega": false,
+      "abilities": ["Swarm", "Sniper"]
+    },
+    {
+      "id": "beedrillmega",
+      "number": 15,
+      "name": "メガスピアー",
+      "englishName": "Beedrill-Mega",
+      "baseSpeed": 145,
+      "types": ["bug", "poison"],
+      "mega": true,
+      "abilities": ["Adaptability"]
+    },
+    {
+      "id": "pidgeot",
+      "number": 18,
+      "name": "ピジョット",
+      "englishName": "Pidgeot",
+      "baseSpeed": 101,
+      "types": ["normal", "flying"],
+      "mega": false,
+      "abilities": ["Keen Eye", "Tangled Feet", "Big Pecks"]
+    },
+    {
+      "id": "pidgeotmega",
+      "number": 18,
+      "name": "メガピジョット",
+      "englishName": "Pidgeot-Mega",
+      "baseSpeed": 121,
+      "types": ["normal", "flying"],
+      "mega": true,
+      "abilities": ["No Guard"]
+    },
+    {
+      "id": "arbok",
+      "number": 24,
+      "name": "アーボック",
+      "englishName": "Arbok",
+      "baseSpeed": 80,
+      "types": ["poison"],
+      "mega": false,
+      "abilities": ["Intimidate", "Shed Skin", "Unnerve"]
+    },
+    {
+      "id": "pikachu",
+      "number": 25,
+      "name": "ピカチュウ",
+      "englishName": "Pikachu",
+      "baseSpeed": 90,
+      "types": ["electric"],
+      "mega": false,
+      "abilities": ["Static", "Lightning Rod"]
+    },
+    {
+      "id": "raichu",
+      "number": 26,
+      "name": "ライチュウ",
+      "englishName": "Raichu",
+      "baseSpeed": 110,
+      "types": ["electric"],
+      "mega": false,
+      "abilities": ["Static", "Lightning Rod"]
+    },
+    {
+      "id": "raichualola",
+      "number": 26,
+      "name": "ライチュウ（アローラ）",
+      "englishName": "Raichu-Alola",
+      "baseSpeed": 110,
+      "types": ["electric", "psychic"],
+      "mega": false,
+      "abilities": ["Surge Surfer"]
+    },
+    {
+      "id": "raichumegax",
+      "number": 26,
+      "name": "メガライチュウX",
+      "englishName": "Raichu-Mega-X",
+      "baseSpeed": 110,
+      "types": ["electric"],
+      "mega": true,
+      "abilities": ["Electric Surge"]
+    },
+    {
+      "id": "raichumegay",
+      "number": 26,
+      "name": "メガライチュウY",
+      "englishName": "Raichu-Mega-Y",
+      "baseSpeed": 130,
+      "types": ["electric"],
+      "mega": true,
+      "abilities": ["No Guard"]
+    },
+    {
+      "id": "clefable",
+      "number": 36,
+      "name": "ピクシー",
+      "englishName": "Clefable",
+      "baseSpeed": 60,
+      "types": ["fairy"],
+      "mega": false,
+      "abilities": ["Cute Charm", "Magic Guard", "Unaware"]
+    },
+    {
+      "id": "clefablemega",
+      "number": 36,
+      "name": "メガピクシー",
+      "englishName": "Clefable-Mega",
+      "baseSpeed": 70,
+      "types": ["fairy", "flying"],
+      "mega": true,
+      "abilities": ["Magic Bounce"]
+    },
+    {
+      "id": "ninetales",
+      "number": 38,
+      "name": "キュウコン",
+      "englishName": "Ninetales",
+      "baseSpeed": 100,
+      "types": ["fire"],
+      "mega": false,
+      "abilities": ["Flash Fire", "Drought"]
+    },
+    {
+      "id": "ninetalesalola",
+      "number": 38,
+      "name": "キュウコン（アローラ）",
+      "englishName": "Ninetales-Alola",
+      "baseSpeed": 109,
+      "types": ["ice", "fairy"],
+      "mega": false,
+      "abilities": ["Snow Cloak", "Snow Warning"]
+    },
+    {
+      "id": "wigglytuff",
+      "number": 40,
+      "name": "プクリン",
+      "englishName": "Wigglytuff",
+      "baseSpeed": 45,
+      "types": ["normal", "fairy"],
+      "mega": false,
+      "abilities": ["Cute Charm", "Competitive", "Frisk"]
+    },
+    {
+      "id": "vileplume",
+      "number": 45,
+      "name": "ラフレシア",
+      "englishName": "Vileplume",
+      "baseSpeed": 50,
+      "types": ["grass", "poison"],
+      "mega": false,
+      "abilities": ["Chlorophyll", "Effect Spore"]
+    },
+    {
+      "id": "persian",
+      "number": 53,
+      "name": "ペルシアン",
+      "englishName": "Persian",
+      "baseSpeed": 115,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Limber", "Technician", "Unnerve"]
+    },
+    {
+      "id": "persianalola",
+      "number": 53,
+      "name": "ペルシアン（アローラ）",
+      "englishName": "Persian-Alola",
+      "baseSpeed": 115,
+      "types": ["dark"],
+      "mega": false,
+      "abilities": ["Fur Coat", "Technician", "Rattled"]
+    },
+    {
+      "id": "arcanine",
+      "number": 59,
+      "name": "ウインディ",
+      "englishName": "Arcanine",
+      "baseSpeed": 95,
+      "types": ["fire"],
+      "mega": false,
+      "abilities": ["Intimidate", "Flash Fire", "Justified"]
+    },
+    {
+      "id": "arcaninehisui",
+      "number": 59,
+      "name": "ウインディ（ヒスイ）",
+      "englishName": "Arcanine-Hisui",
+      "baseSpeed": 90,
+      "types": ["fire", "rock"],
+      "mega": false,
+      "abilities": ["Intimidate", "Flash Fire", "Rock Head"]
+    },
+    {
+      "id": "alakazam",
+      "number": 65,
+      "name": "フーディン",
+      "englishName": "Alakazam",
+      "baseSpeed": 120,
+      "types": ["psychic"],
+      "mega": false,
+      "abilities": ["Synchronize", "Inner Focus", "Magic Guard"]
+    },
+    {
+      "id": "alakazammega",
+      "number": 65,
+      "name": "メガフーディン",
+      "englishName": "Alakazam-Mega",
+      "baseSpeed": 150,
+      "types": ["psychic"],
+      "mega": true,
+      "abilities": ["Trace"]
+    },
+    {
+      "id": "machamp",
+      "number": 68,
+      "name": "カイリキー",
+      "englishName": "Machamp",
+      "baseSpeed": 55,
+      "types": ["fighting"],
+      "mega": false,
+      "abilities": ["Guts", "No Guard", "Steadfast"]
+    },
+    {
+      "id": "victreebel",
+      "number": 71,
+      "name": "ウツボット",
+      "englishName": "Victreebel",
+      "baseSpeed": 70,
+      "types": ["grass", "poison"],
+      "mega": false,
+      "abilities": ["Chlorophyll", "Gluttony"]
+    },
+    {
+      "id": "victreebelmega",
+      "number": 71,
+      "name": "メガウツボット",
+      "englishName": "Victreebel-Mega",
+      "baseSpeed": 70,
+      "types": ["grass", "poison"],
+      "mega": true,
+      "abilities": ["Innards Out"]
+    },
+    {
+      "id": "slowbro",
+      "number": 80,
+      "name": "ヤドラン",
+      "englishName": "Slowbro",
+      "baseSpeed": 30,
+      "types": ["water", "psychic"],
+      "mega": false,
+      "abilities": ["Oblivious", "Own Tempo", "Regenerator"]
+    },
+    {
+      "id": "slowbrogalar",
+      "number": 80,
+      "name": "ヤドラン（ガラル）",
+      "englishName": "Slowbro-Galar",
+      "baseSpeed": 30,
+      "types": ["poison", "psychic"],
+      "mega": false,
+      "abilities": ["Quick Draw", "Own Tempo", "Regenerator"]
+    },
+    {
+      "id": "slowbromega",
+      "number": 80,
+      "name": "メガヤドラン",
+      "englishName": "Slowbro-Mega",
+      "baseSpeed": 30,
+      "types": ["water", "psychic"],
+      "mega": true,
+      "abilities": ["Shell Armor"]
+    },
+    {
+      "id": "farfetchd",
+      "number": 83,
+      "name": "カモネギ",
+      "englishName": "Farfetch’d",
+      "baseSpeed": 60,
+      "types": ["normal", "flying"],
+      "mega": false,
+      "abilities": ["Keen Eye", "Inner Focus", "Defiant"]
+    },
+    {
+      "id": "gengar",
+      "number": 94,
+      "name": "ゲンガー",
+      "englishName": "Gengar",
+      "baseSpeed": 110,
+      "types": ["ghost", "poison"],
+      "mega": false,
+      "abilities": ["Cursed Body"]
+    },
+    {
+      "id": "gengarmega",
+      "number": 94,
+      "name": "メガゲンガー",
+      "englishName": "Gengar-Mega",
+      "baseSpeed": 130,
+      "types": ["ghost", "poison"],
+      "mega": true,
+      "abilities": ["Shadow Tag"]
+    },
+    {
+      "id": "kangaskhan",
+      "number": 115,
+      "name": "ガルーラ",
+      "englishName": "Kangaskhan",
+      "baseSpeed": 90,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Early Bird", "Scrappy", "Inner Focus"]
+    },
+    {
+      "id": "kangaskhanmega",
+      "number": 115,
+      "name": "メガガルーラ",
+      "englishName": "Kangaskhan-Mega",
+      "baseSpeed": 100,
+      "types": ["normal"],
+      "mega": true,
+      "abilities": ["Parental Bond"]
+    },
+    {
+      "id": "starmie",
+      "number": 121,
+      "name": "スターミー",
+      "englishName": "Starmie",
+      "baseSpeed": 115,
+      "types": ["water", "psychic"],
+      "mega": false,
+      "abilities": ["Illuminate", "Natural Cure", "Analytic"]
+    },
+    {
+      "id": "starmiemega",
+      "number": 121,
+      "name": "メガスターミー",
+      "englishName": "Starmie-Mega",
+      "baseSpeed": 120,
+      "types": ["water", "psychic"],
+      "mega": true,
+      "abilities": ["Huge Power"]
+    },
+    {
+      "id": "mrmime",
+      "number": 122,
+      "name": "バリヤード",
+      "englishName": "Mr. Mime",
+      "baseSpeed": 90,
+      "types": ["psychic", "fairy"],
+      "mega": false,
+      "abilities": ["Soundproof", "Filter", "Technician"]
+    },
+    {
+      "id": "pinsir",
+      "number": 127,
+      "name": "カイロス",
+      "englishName": "Pinsir",
+      "baseSpeed": 85,
+      "types": ["bug"],
+      "mega": false,
+      "abilities": ["Hyper Cutter", "Mold Breaker", "Moxie"]
+    },
+    {
+      "id": "pinsirmega",
+      "number": 127,
+      "name": "メガカイロス",
+      "englishName": "Pinsir-Mega",
+      "baseSpeed": 105,
+      "types": ["bug", "flying"],
+      "mega": true,
+      "abilities": ["Aerilate"]
+    },
+    {
+      "id": "tauros",
+      "number": 128,
+      "name": "ケンタロス",
+      "englishName": "Tauros",
+      "baseSpeed": 110,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Intimidate", "Anger Point", "Sheer Force"]
+    },
+    {
+      "id": "taurospaldeaaqua",
+      "number": 128,
+      "name": "ケンタロス（パルデア・ウォーター）",
+      "englishName": "Tauros-Paldea-Aqua",
+      "baseSpeed": 100,
+      "types": ["fighting", "water"],
+      "mega": false,
+      "abilities": ["Intimidate", "Anger Point", "Cud Chew"]
+    },
+    {
+      "id": "taurospaldeablaze",
+      "number": 128,
+      "name": "ケンタロス（パルデア・ブレイズ）",
+      "englishName": "Tauros-Paldea-Blaze",
+      "baseSpeed": 100,
+      "types": ["fighting", "fire"],
+      "mega": false,
+      "abilities": ["Intimidate", "Anger Point", "Cud Chew"]
+    },
+    {
+      "id": "taurospaldeacombat",
+      "number": 128,
+      "name": "ケンタロス（パルデア・コンバット）",
+      "englishName": "Tauros-Paldea-Combat",
+      "baseSpeed": 100,
+      "types": ["fighting"],
+      "mega": false,
+      "abilities": ["Intimidate", "Anger Point", "Cud Chew"]
+    },
+    {
+      "id": "gyarados",
+      "number": 130,
+      "name": "ギャラドス",
+      "englishName": "Gyarados",
+      "baseSpeed": 81,
+      "types": ["water", "flying"],
+      "mega": false,
+      "abilities": ["Intimidate", "Moxie"]
+    },
+    {
+      "id": "gyaradosmega",
+      "number": 130,
+      "name": "メガギャラドス",
+      "englishName": "Gyarados-Mega",
+      "baseSpeed": 81,
+      "types": ["water", "dark"],
+      "mega": true,
+      "abilities": ["Mold Breaker"]
+    },
+    {
+      "id": "ditto",
+      "number": 132,
+      "name": "メタモン",
+      "englishName": "Ditto",
+      "baseSpeed": 48,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Limber", "Imposter"]
+    },
+    {
+      "id": "vaporeon",
+      "number": 134,
+      "name": "シャワーズ",
+      "englishName": "Vaporeon",
+      "baseSpeed": 65,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Water Absorb", "Hydration"]
+    },
+    {
+      "id": "jolteon",
+      "number": 135,
+      "name": "サンダース",
+      "englishName": "Jolteon",
+      "baseSpeed": 130,
+      "types": ["electric"],
+      "mega": false,
+      "abilities": ["Volt Absorb", "Quick Feet"]
+    },
+    {
+      "id": "flareon",
+      "number": 136,
+      "name": "ブースター",
+      "englishName": "Flareon",
+      "baseSpeed": 65,
+      "types": ["fire"],
+      "mega": false,
+      "abilities": ["Flash Fire", "Guts"]
+    },
+    {
+      "id": "aerodactyl",
+      "number": 142,
+      "name": "プテラ",
+      "englishName": "Aerodactyl",
+      "baseSpeed": 130,
+      "types": ["rock", "flying"],
+      "mega": false,
+      "abilities": ["Rock Head", "Pressure", "Unnerve"]
+    },
+    {
+      "id": "aerodactylmega",
+      "number": 142,
+      "name": "メガプテラ",
+      "englishName": "Aerodactyl-Mega",
+      "baseSpeed": 150,
+      "types": ["rock", "flying"],
+      "mega": true,
+      "abilities": ["Tough Claws"]
+    },
+    {
+      "id": "snorlax",
+      "number": 143,
+      "name": "カビゴン",
+      "englishName": "Snorlax",
+      "baseSpeed": 30,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Immunity", "Thick Fat", "Gluttony"]
+    },
+    {
+      "id": "dragonite",
+      "number": 149,
+      "name": "カイリュー",
+      "englishName": "Dragonite",
+      "baseSpeed": 80,
+      "types": ["dragon", "flying"],
+      "mega": false,
+      "abilities": ["Inner Focus", "Multiscale"]
+    },
+    {
+      "id": "dragonitemega",
+      "number": 149,
+      "name": "メガカイリュー",
+      "englishName": "Dragonite-Mega",
+      "baseSpeed": 100,
+      "types": ["dragon", "flying"],
+      "mega": true,
+      "abilities": ["Multiscale"]
+    },
+    {
+      "id": "meganium",
+      "number": 154,
+      "name": "メガニウム",
+      "englishName": "Meganium",
+      "baseSpeed": 80,
+      "types": ["grass"],
+      "mega": false,
+      "abilities": ["Overgrow", "Leaf Guard"]
+    },
+    {
+      "id": "meganiummega",
+      "number": 154,
+      "name": "メガメガニウム",
+      "englishName": "Meganium-Mega",
+      "baseSpeed": 80,
+      "types": ["grass", "fairy"],
+      "mega": true,
+      "abilities": ["Mega Sol"]
+    },
+    {
+      "id": "typhlosion",
+      "number": 157,
+      "name": "バクフーン",
+      "englishName": "Typhlosion",
+      "baseSpeed": 100,
+      "types": ["fire"],
+      "mega": false,
+      "abilities": ["Blaze", "Flash Fire"]
+    },
+    {
+      "id": "typhlosionhisui",
+      "number": 157,
+      "name": "バクフーン（ヒスイ）",
+      "englishName": "Typhlosion-Hisui",
+      "baseSpeed": 95,
+      "types": ["fire", "ghost"],
+      "mega": false,
+      "abilities": ["Blaze", "Frisk"]
+    },
+    {
+      "id": "feraligatr",
+      "number": 160,
+      "name": "オーダイル",
+      "englishName": "Feraligatr",
+      "baseSpeed": 78,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Torrent", "Sheer Force"]
+    },
+    {
+      "id": "feraligatrmega",
+      "number": 160,
+      "name": "メガオーダイル",
+      "englishName": "Feraligatr-Mega",
+      "baseSpeed": 78,
+      "types": ["water", "dragon"],
+      "mega": true,
+      "abilities": ["Dragonize"]
+    },
+    {
+      "id": "ariados",
+      "number": 168,
+      "name": "アリアドス",
+      "englishName": "Ariados",
+      "baseSpeed": 40,
+      "types": ["bug", "poison"],
+      "mega": false,
+      "abilities": ["Swarm", "Insomnia", "Sniper"]
+    },
+    {
+      "id": "ampharos",
+      "number": 181,
+      "name": "デンリュウ",
+      "englishName": "Ampharos",
+      "baseSpeed": 55,
+      "types": ["electric"],
+      "mega": false,
+      "abilities": ["Static", "Plus"]
+    },
+    {
+      "id": "ampharosmega",
+      "number": 181,
+      "name": "メガデンリュウ",
+      "englishName": "Ampharos-Mega",
+      "baseSpeed": 45,
+      "types": ["electric", "dragon"],
+      "mega": true,
+      "abilities": ["Mold Breaker"]
+    },
+    {
+      "id": "azumarill",
+      "number": 184,
+      "name": "マリルリ",
+      "englishName": "Azumarill",
+      "baseSpeed": 50,
+      "types": ["water", "fairy"],
+      "mega": false,
+      "abilities": ["Thick Fat", "Huge Power", "Sap Sipper"]
+    },
+    {
+      "id": "politoed",
+      "number": 186,
+      "name": "ニョロトノ",
+      "englishName": "Politoed",
+      "baseSpeed": 70,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Water Absorb", "Damp", "Drizzle"]
+    },
+    {
+      "id": "espeon",
+      "number": 196,
+      "name": "エーフィ",
+      "englishName": "Espeon",
+      "baseSpeed": 110,
+      "types": ["psychic"],
+      "mega": false,
+      "abilities": ["Synchronize", "Magic Bounce"]
+    },
+    {
+      "id": "umbreon",
+      "number": 197,
+      "name": "ブラッキー",
+      "englishName": "Umbreon",
+      "baseSpeed": 65,
+      "types": ["dark"],
+      "mega": false,
+      "abilities": ["Synchronize", "Inner Focus"]
+    },
+    {
+      "id": "slowking",
+      "number": 199,
+      "name": "ヤドキング",
+      "englishName": "Slowking",
+      "baseSpeed": 30,
+      "types": ["water", "psychic"],
+      "mega": false,
+      "abilities": ["Oblivious", "Own Tempo", "Regenerator"]
+    },
+    {
+      "id": "slowkinggalar",
+      "number": 199,
+      "name": "ヤドキング（ガラル）",
+      "englishName": "Slowking-Galar",
+      "baseSpeed": 30,
+      "types": ["poison", "psychic"],
+      "mega": false,
+      "abilities": ["Curious Medicine", "Own Tempo", "Regenerator"]
+    },
+    {
+      "id": "forretress",
+      "number": 205,
+      "name": "フォレトス",
+      "englishName": "Forretress",
+      "baseSpeed": 40,
+      "types": ["bug", "steel"],
+      "mega": false,
+      "abilities": ["Sturdy", "Overcoat"]
+    },
+    {
+      "id": "steelix",
+      "number": 208,
+      "name": "ハガネール",
+      "englishName": "Steelix",
+      "baseSpeed": 30,
+      "types": ["steel", "ground"],
+      "mega": false,
+      "abilities": ["Rock Head", "Sturdy", "Sheer Force"]
+    },
+    {
+      "id": "steelixmega",
+      "number": 208,
+      "name": "メガハガネール",
+      "englishName": "Steelix-Mega",
+      "baseSpeed": 30,
+      "types": ["steel", "ground"],
+      "mega": true,
+      "abilities": ["Sand Force"]
+    },
+    {
+      "id": "qwilfish",
+      "number": 211,
+      "name": "ハリーセン",
+      "englishName": "Qwilfish",
+      "baseSpeed": 85,
+      "types": ["water", "poison"],
+      "mega": false,
+      "abilities": ["Poison Point", "Swift Swim", "Intimidate"]
+    },
+    {
+      "id": "scizor",
+      "number": 212,
+      "name": "ハッサム",
+      "englishName": "Scizor",
+      "baseSpeed": 65,
+      "types": ["bug", "steel"],
+      "mega": false,
+      "abilities": ["Swarm", "Technician", "Light Metal"]
+    },
+    {
+      "id": "scizormega",
+      "number": 212,
+      "name": "メガハッサム",
+      "englishName": "Scizor-Mega",
+      "baseSpeed": 75,
+      "types": ["bug", "steel"],
+      "mega": true,
+      "abilities": ["Technician"]
+    },
+    {
+      "id": "heracross",
+      "number": 214,
+      "name": "ヘラクロス",
+      "englishName": "Heracross",
+      "baseSpeed": 85,
+      "types": ["bug", "fighting"],
+      "mega": false,
+      "abilities": ["Swarm", "Guts", "Moxie"]
+    },
+    {
+      "id": "heracrossmega",
+      "number": 214,
+      "name": "メガヘラクロス",
+      "englishName": "Heracross-Mega",
+      "baseSpeed": 75,
+      "types": ["bug", "fighting"],
+      "mega": true,
+      "abilities": ["Skill Link"]
+    },
+    {
+      "id": "skarmory",
+      "number": 227,
+      "name": "エアームド",
+      "englishName": "Skarmory",
+      "baseSpeed": 70,
+      "types": ["steel", "flying"],
+      "mega": false,
+      "abilities": ["Keen Eye", "Sturdy", "Weak Armor"]
+    },
+    {
+      "id": "skarmorymega",
+      "number": 227,
+      "name": "メガエアームド",
+      "englishName": "Skarmory-Mega",
+      "baseSpeed": 110,
+      "types": ["steel", "flying"],
+      "mega": true,
+      "abilities": ["Stalwart"]
+    },
+    {
+      "id": "houndoom",
+      "number": 229,
+      "name": "ヘルガー",
+      "englishName": "Houndoom",
+      "baseSpeed": 95,
+      "types": ["dark", "fire"],
+      "mega": false,
+      "abilities": ["Early Bird", "Flash Fire", "Unnerve"]
+    },
+    {
+      "id": "houndoommega",
+      "number": 229,
+      "name": "メガヘルガー",
+      "englishName": "Houndoom-Mega",
+      "baseSpeed": 115,
+      "types": ["dark", "fire"],
+      "mega": true,
+      "abilities": ["Solar Power"]
+    },
+    {
+      "id": "tyranitar",
+      "number": 248,
+      "name": "バンギラス",
+      "englishName": "Tyranitar",
+      "baseSpeed": 61,
+      "types": ["rock", "dark"],
+      "mega": false,
+      "abilities": ["Sand Stream", "Unnerve"]
+    },
+    {
+      "id": "tyranitarmega",
+      "number": 248,
+      "name": "メガバンギラス",
+      "englishName": "Tyranitar-Mega",
+      "baseSpeed": 71,
+      "types": ["rock", "dark"],
+      "mega": true,
+      "abilities": ["Sand Stream"]
+    },
+    {
+      "id": "sceptile",
+      "number": 254,
+      "name": "ジュカイン",
+      "englishName": "Sceptile",
+      "baseSpeed": 120,
+      "types": ["grass"],
+      "mega": false,
+      "abilities": ["Overgrow", "Unburden"]
+    },
+    {
+      "id": "sceptilemega",
+      "number": 254,
+      "name": "メガジュカイン",
+      "englishName": "Sceptile-Mega",
+      "baseSpeed": 145,
+      "types": ["grass", "dragon"],
+      "mega": true,
+      "abilities": ["Lightning Rod"]
+    },
+    {
+      "id": "blaziken",
+      "number": 257,
+      "name": "バシャーモ",
+      "englishName": "Blaziken",
+      "baseSpeed": 80,
+      "types": ["fire", "fighting"],
+      "mega": false,
+      "abilities": ["Blaze", "Speed Boost"]
+    },
+    {
+      "id": "blazikenmega",
+      "number": 257,
+      "name": "メガバシャーモ",
+      "englishName": "Blaziken-Mega",
+      "baseSpeed": 100,
+      "types": ["fire", "fighting"],
+      "mega": true,
+      "abilities": ["Speed Boost"]
+    },
+    {
+      "id": "swampert",
+      "number": 260,
+      "name": "ラグラージ",
+      "englishName": "Swampert",
+      "baseSpeed": 60,
+      "types": ["water", "ground"],
+      "mega": false,
+      "abilities": ["Torrent", "Damp"]
+    },
+    {
+      "id": "swampertmega",
+      "number": 260,
+      "name": "メガラグラージ",
+      "englishName": "Swampert-Mega",
+      "baseSpeed": 70,
+      "types": ["water", "ground"],
+      "mega": true,
+      "abilities": ["Swift Swim"]
+    },
+    {
+      "id": "pelipper",
+      "number": 279,
+      "name": "ペリッパー",
+      "englishName": "Pelipper",
+      "baseSpeed": 65,
+      "types": ["water", "flying"],
+      "mega": false,
+      "abilities": ["Keen Eye", "Drizzle", "Rain Dish"]
+    },
+    {
+      "id": "gardevoir",
+      "number": 282,
+      "name": "サーナイト",
+      "englishName": "Gardevoir",
+      "baseSpeed": 80,
+      "types": ["psychic", "fairy"],
+      "mega": false,
+      "abilities": ["Synchronize", "Trace", "Telepathy"]
+    },
+    {
+      "id": "gardevoirmega",
+      "number": 282,
+      "name": "メガサーナイト",
+      "englishName": "Gardevoir-Mega",
+      "baseSpeed": 100,
+      "types": ["psychic", "fairy"],
+      "mega": true,
+      "abilities": ["Pixilate"]
+    },
+    {
+      "id": "sableye",
+      "number": 302,
+      "name": "ヤミラミ",
+      "englishName": "Sableye",
+      "baseSpeed": 50,
+      "types": ["dark", "ghost"],
+      "mega": false,
+      "abilities": ["Keen Eye", "Stall", "Prankster"]
+    },
+    {
+      "id": "sableyemega",
+      "number": 302,
+      "name": "メガヤミラミ",
+      "englishName": "Sableye-Mega",
+      "baseSpeed": 20,
+      "types": ["dark", "ghost"],
+      "mega": true,
+      "abilities": ["Magic Bounce"]
+    },
+    {
+      "id": "mawile",
+      "number": 303,
+      "name": "クチート",
+      "englishName": "Mawile",
+      "baseSpeed": 50,
+      "types": ["steel", "fairy"],
+      "mega": false,
+      "abilities": ["Hyper Cutter", "Intimidate", "Sheer Force"]
+    },
+    {
+      "id": "mawilemega",
+      "number": 303,
+      "name": "メガクチート",
+      "englishName": "Mawile-Mega",
+      "baseSpeed": 50,
+      "types": ["steel", "fairy"],
+      "mega": true,
+      "abilities": ["Huge Power"]
+    },
+    {
+      "id": "aggron",
+      "number": 306,
+      "name": "ボスゴドラ",
+      "englishName": "Aggron",
+      "baseSpeed": 50,
+      "types": ["steel", "rock"],
+      "mega": false,
+      "abilities": ["Sturdy", "Rock Head", "Heavy Metal"]
+    },
+    {
+      "id": "aggronmega",
+      "number": 306,
+      "name": "メガボスゴドラ",
+      "englishName": "Aggron-Mega",
+      "baseSpeed": 50,
+      "types": ["steel"],
+      "mega": true,
+      "abilities": ["Filter"]
+    },
+    {
+      "id": "medicham",
+      "number": 308,
+      "name": "チャーレム",
+      "englishName": "Medicham",
+      "baseSpeed": 80,
+      "types": ["fighting", "psychic"],
+      "mega": false,
+      "abilities": ["Pure Power", "Telepathy"]
+    },
+    {
+      "id": "medichammega",
+      "number": 308,
+      "name": "メガチャーレム",
+      "englishName": "Medicham-Mega",
+      "baseSpeed": 100,
+      "types": ["fighting", "psychic"],
+      "mega": true,
+      "abilities": ["Pure Power"]
+    },
+    {
+      "id": "manectric",
+      "number": 310,
+      "name": "ライボルト",
+      "englishName": "Manectric",
+      "baseSpeed": 105,
+      "types": ["electric"],
+      "mega": false,
+      "abilities": ["Static", "Lightning Rod", "Minus"]
+    },
+    {
+      "id": "manectricmega",
+      "number": 310,
+      "name": "メガライボルト",
+      "englishName": "Manectric-Mega",
+      "baseSpeed": 135,
+      "types": ["electric"],
+      "mega": true,
+      "abilities": ["Intimidate"]
+    },
+    {
+      "id": "swalot",
+      "number": 317,
+      "name": "マルノーム",
+      "englishName": "Swalot",
+      "baseSpeed": 55,
+      "types": ["poison"],
+      "mega": false,
+      "abilities": ["Liquid Ooze", "Sticky Hold", "Gluttony"]
+    },
+    {
+      "id": "sharpedo",
+      "number": 319,
+      "name": "サメハダー",
+      "englishName": "Sharpedo",
+      "baseSpeed": 95,
+      "types": ["water", "dark"],
+      "mega": false,
+      "abilities": ["Rough Skin", "Speed Boost"]
+    },
+    {
+      "id": "sharpedomega",
+      "number": 319,
+      "name": "メガサメハダー",
+      "englishName": "Sharpedo-Mega",
+      "baseSpeed": 105,
+      "types": ["water", "dark"],
+      "mega": true,
+      "abilities": ["Strong Jaw"]
+    },
+    {
+      "id": "camerupt",
+      "number": 323,
+      "name": "バクーダ",
+      "englishName": "Camerupt",
+      "baseSpeed": 40,
+      "types": ["fire", "ground"],
+      "mega": false,
+      "abilities": ["Magma Armor", "Solid Rock", "Anger Point"]
+    },
+    {
+      "id": "cameruptmega",
+      "number": 323,
+      "name": "メガバクーダ",
+      "englishName": "Camerupt-Mega",
+      "baseSpeed": 20,
+      "types": ["fire", "ground"],
+      "mega": true,
+      "abilities": ["Sheer Force"]
+    },
+    {
+      "id": "torkoal",
+      "number": 324,
+      "name": "コータス",
+      "englishName": "Torkoal",
+      "baseSpeed": 20,
+      "types": ["fire"],
+      "mega": false,
+      "abilities": ["White Smoke", "Drought", "Shell Armor"]
+    },
+    {
+      "id": "altaria",
+      "number": 334,
+      "name": "チルタリス",
+      "englishName": "Altaria",
+      "baseSpeed": 80,
+      "types": ["dragon", "flying"],
+      "mega": false,
+      "abilities": ["Natural Cure", "Cloud Nine"]
+    },
+    {
+      "id": "altariamega",
+      "number": 334,
+      "name": "メガチルタリス",
+      "englishName": "Altaria-Mega",
+      "baseSpeed": 80,
+      "types": ["dragon", "fairy"],
+      "mega": true,
+      "abilities": ["Pixilate"]
+    },
+    {
+      "id": "milotic",
+      "number": 350,
+      "name": "ミロカロス",
+      "englishName": "Milotic",
+      "baseSpeed": 81,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Marvel Scale", "Competitive", "Cute Charm"]
+    },
+    {
+      "id": "castform",
+      "number": 351,
+      "name": "ポワルン",
+      "englishName": "Castform",
+      "baseSpeed": 70,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Forecast"]
+    },
+    {
+      "id": "castformrainy",
+      "number": 351,
+      "name": "ポワルン（あまみず）",
+      "englishName": "Castform-Rainy",
+      "baseSpeed": 70,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Forecast"]
+    },
+    {
+      "id": "castformsnowy",
+      "number": 351,
+      "name": "ポワルン（ゆきぐも）",
+      "englishName": "Castform-Snowy",
+      "baseSpeed": 70,
+      "types": ["ice"],
+      "mega": false,
+      "abilities": ["Forecast"]
+    },
+    {
+      "id": "castformsunny",
+      "number": 351,
+      "name": "ポワルン（ポジ）",
+      "englishName": "Castform-Sunny",
+      "baseSpeed": 70,
+      "types": ["fire"],
+      "mega": false,
+      "abilities": ["Forecast"]
+    },
+    {
+      "id": "banette",
+      "number": 354,
+      "name": "ジュペッタ",
+      "englishName": "Banette",
+      "baseSpeed": 65,
+      "types": ["ghost"],
+      "mega": false,
+      "abilities": ["Insomnia", "Frisk", "Cursed Body"]
+    },
+    {
+      "id": "banettemega",
+      "number": 354,
+      "name": "メガジュペッタ",
+      "englishName": "Banette-Mega",
+      "baseSpeed": 75,
+      "types": ["ghost"],
+      "mega": true,
+      "abilities": ["Prankster"]
+    },
+    {
+      "id": "chimecho",
+      "number": 358,
+      "name": "チリーン",
+      "englishName": "Chimecho",
+      "baseSpeed": 65,
+      "types": ["psychic"],
+      "mega": false,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "chimechomega",
+      "number": 358,
+      "name": "メガチリーン",
+      "englishName": "Chimecho-Mega",
+      "baseSpeed": 65,
+      "types": ["psychic", "steel"],
+      "mega": true,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "absol",
+      "number": 359,
+      "name": "アブソル",
+      "englishName": "Absol",
+      "baseSpeed": 75,
+      "types": ["dark"],
+      "mega": false,
+      "abilities": ["Pressure", "Super Luck", "Justified"]
+    },
+    {
+      "id": "absolmega",
+      "number": 359,
+      "name": "メガアブソル",
+      "englishName": "Absol-Mega",
+      "baseSpeed": 115,
+      "types": ["dark"],
+      "mega": true,
+      "abilities": ["Magic Bounce"]
+    },
+    {
+      "id": "absolmegaz",
+      "number": 359,
+      "name": "メガアブソルZ",
+      "englishName": "Absol-Mega-Z",
+      "baseSpeed": 151,
+      "types": ["dark", "ghost"],
+      "mega": true,
+      "abilities": ["Sharpness"]
+    },
+    {
+      "id": "glalie",
+      "number": 362,
+      "name": "オニゴーリ",
+      "englishName": "Glalie",
+      "baseSpeed": 80,
+      "types": ["ice"],
+      "mega": false,
+      "abilities": ["Inner Focus", "Ice Body", "Moody"]
+    },
+    {
+      "id": "glaliemega",
+      "number": 362,
+      "name": "メガオニゴーリ",
+      "englishName": "Glalie-Mega",
+      "baseSpeed": 100,
+      "types": ["ice"],
+      "mega": true,
+      "abilities": ["Refrigerate"]
+    },
+    {
+      "id": "salamence",
+      "number": 373,
+      "name": "ボーマンダ",
+      "englishName": "Salamence",
+      "baseSpeed": 100,
+      "types": ["dragon", "flying"],
+      "mega": false,
+      "abilities": ["Intimidate", "Moxie"]
+    },
+    {
+      "id": "salamencemega",
+      "number": 373,
+      "name": "メガボーマンダ",
+      "englishName": "Salamence-Mega",
+      "baseSpeed": 120,
+      "types": ["dragon", "flying"],
+      "mega": true,
+      "abilities": ["Aerilate"]
+    },
+    {
+      "id": "metagross",
+      "number": 376,
+      "name": "メタグロス",
+      "englishName": "Metagross",
+      "baseSpeed": 70,
+      "types": ["steel", "psychic"],
+      "mega": false,
+      "abilities": ["Clear Body", "Light Metal"]
+    },
+    {
+      "id": "metagrossmega",
+      "number": 376,
+      "name": "メガメタグロス",
+      "englishName": "Metagross-Mega",
+      "baseSpeed": 110,
+      "types": ["steel", "psychic"],
+      "mega": true,
+      "abilities": ["Tough Claws"]
+    },
+    {
+      "id": "torterra",
+      "number": 389,
+      "name": "ドダイトス",
+      "englishName": "Torterra",
+      "baseSpeed": 56,
+      "types": ["grass", "ground"],
+      "mega": false,
+      "abilities": ["Overgrow", "Shell Armor"]
+    },
+    {
+      "id": "infernape",
+      "number": 392,
+      "name": "ゴウカザル",
+      "englishName": "Infernape",
+      "baseSpeed": 108,
+      "types": ["fire", "fighting"],
+      "mega": false,
+      "abilities": ["Blaze", "Iron Fist"]
+    },
+    {
+      "id": "empoleon",
+      "number": 395,
+      "name": "エンペルト",
+      "englishName": "Empoleon",
+      "baseSpeed": 60,
+      "types": ["water", "steel"],
+      "mega": false,
+      "abilities": ["Torrent", "Competitive"]
+    },
+    {
+      "id": "staraptor",
+      "number": 398,
+      "name": "ムクホーク",
+      "englishName": "Staraptor",
+      "baseSpeed": 100,
+      "types": ["normal", "flying"],
+      "mega": false,
+      "abilities": ["Intimidate", "Reckless"]
+    },
+    {
+      "id": "staraptormega",
+      "number": 398,
+      "name": "メガムクホーク",
+      "englishName": "Staraptor-Mega",
+      "baseSpeed": 110,
+      "types": ["fighting", "flying"],
+      "mega": true,
+      "abilities": ["Contrary"]
+    },
+    {
+      "id": "luxray",
+      "number": 405,
+      "name": "レントラー",
+      "englishName": "Luxray",
+      "baseSpeed": 70,
+      "types": ["electric"],
+      "mega": false,
+      "abilities": ["Rivalry", "Intimidate", "Guts"]
+    },
+    {
+      "id": "roserade",
+      "number": 407,
+      "name": "ロズレイド",
+      "englishName": "Roserade",
+      "baseSpeed": 90,
+      "types": ["grass", "poison"],
+      "mega": false,
+      "abilities": ["Natural Cure", "Poison Point", "Technician"]
+    },
+    {
+      "id": "rampardos",
+      "number": 409,
+      "name": "ラムパルド",
+      "englishName": "Rampardos",
+      "baseSpeed": 58,
+      "types": ["rock"],
+      "mega": false,
+      "abilities": ["Mold Breaker", "Sheer Force"]
+    },
+    {
+      "id": "bastiodon",
+      "number": 411,
+      "name": "トリデプス",
+      "englishName": "Bastiodon",
+      "baseSpeed": 30,
+      "types": ["rock", "steel"],
+      "mega": false,
+      "abilities": ["Sturdy", "Soundproof"]
+    },
+    {
+      "id": "lopunny",
+      "number": 428,
+      "name": "ミミロップ",
+      "englishName": "Lopunny",
+      "baseSpeed": 105,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Cute Charm", "Klutz", "Limber"]
+    },
+    {
+      "id": "lopunnymega",
+      "number": 428,
+      "name": "メガミミロップ",
+      "englishName": "Lopunny-Mega",
+      "baseSpeed": 135,
+      "types": ["normal", "fighting"],
+      "mega": true,
+      "abilities": ["Scrappy"]
+    },
+    {
+      "id": "spiritomb",
+      "number": 442,
+      "name": "ミカルゲ",
+      "englishName": "Spiritomb",
+      "baseSpeed": 35,
+      "types": ["ghost", "dark"],
+      "mega": false,
+      "abilities": ["Pressure", "Infiltrator"]
+    },
+    {
+      "id": "garchomp",
+      "number": 445,
+      "name": "ガブリアス",
+      "englishName": "Garchomp",
+      "baseSpeed": 102,
+      "types": ["dragon", "ground"],
+      "mega": false,
+      "abilities": ["Sand Veil", "Rough Skin"]
+    },
+    {
+      "id": "garchompmega",
+      "number": 445,
+      "name": "メガガブリアス",
+      "englishName": "Garchomp-Mega",
+      "baseSpeed": 92,
+      "types": ["dragon", "ground"],
+      "mega": true,
+      "abilities": ["Sand Force"]
+    },
+    {
+      "id": "garchompmegaz",
+      "number": 445,
+      "name": "メガガブリアスZ",
+      "englishName": "Garchomp-Mega-Z",
+      "baseSpeed": 151,
+      "types": ["dragon"],
+      "mega": true,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "lucario",
+      "number": 448,
+      "name": "ルカリオ",
+      "englishName": "Lucario",
+      "baseSpeed": 90,
+      "types": ["fighting", "steel"],
+      "mega": false,
+      "abilities": ["Steadfast", "Inner Focus", "Justified"]
+    },
+    {
+      "id": "lucariomega",
+      "number": 448,
+      "name": "メガルカリオ",
+      "englishName": "Lucario-Mega",
+      "baseSpeed": 112,
+      "types": ["fighting", "steel"],
+      "mega": true,
+      "abilities": ["Adaptability"]
+    },
+    {
+      "id": "lucariomegaz",
+      "number": 448,
+      "name": "メガルカリオZ",
+      "englishName": "Lucario-Mega-Z",
+      "baseSpeed": 151,
+      "types": ["fighting", "steel"],
+      "mega": true,
+      "abilities": ["Aura Guard"]
+    },
+    {
+      "id": "hippowdon",
+      "number": 450,
+      "name": "カバルドン",
+      "englishName": "Hippowdon",
+      "baseSpeed": 47,
+      "types": ["ground"],
+      "mega": false,
+      "abilities": ["Sand Stream", "Sand Force"]
+    },
+    {
+      "id": "toxicroak",
+      "number": 454,
+      "name": "ドクロッグ",
+      "englishName": "Toxicroak",
+      "baseSpeed": 85,
+      "types": ["poison", "fighting"],
+      "mega": false,
+      "abilities": ["Anticipation", "Dry Skin", "Poison Touch"]
+    },
+    {
+      "id": "abomasnow",
+      "number": 460,
+      "name": "ユキノオー",
+      "englishName": "Abomasnow",
+      "baseSpeed": 60,
+      "types": ["grass", "ice"],
+      "mega": false,
+      "abilities": ["Snow Warning", "Soundproof"]
+    },
+    {
+      "id": "abomasnowmega",
+      "number": 460,
+      "name": "メガユキノオー",
+      "englishName": "Abomasnow-Mega",
+      "baseSpeed": 30,
+      "types": ["grass", "ice"],
+      "mega": true,
+      "abilities": ["Snow Warning"]
+    },
+    {
+      "id": "weavile",
+      "number": 461,
+      "name": "マニューラ",
+      "englishName": "Weavile",
+      "baseSpeed": 125,
+      "types": ["dark", "ice"],
+      "mega": false,
+      "abilities": ["Pressure", "Pickpocket"]
+    },
+    {
+      "id": "rhyperior",
+      "number": 464,
+      "name": "ドサイドン",
+      "englishName": "Rhyperior",
+      "baseSpeed": 40,
+      "types": ["ground", "rock"],
+      "mega": false,
+      "abilities": ["Lightning Rod", "Solid Rock", "Reckless"]
+    },
+    {
+      "id": "leafeon",
+      "number": 470,
+      "name": "リーフィア",
+      "englishName": "Leafeon",
+      "baseSpeed": 95,
+      "types": ["grass"],
+      "mega": false,
+      "abilities": ["Leaf Guard", "Chlorophyll"]
+    },
+    {
+      "id": "glaceon",
+      "number": 471,
+      "name": "グレイシア",
+      "englishName": "Glaceon",
+      "baseSpeed": 65,
+      "types": ["ice"],
+      "mega": false,
+      "abilities": ["Snow Cloak", "Ice Body"]
+    },
+    {
+      "id": "gliscor",
+      "number": 472,
+      "name": "グライオン",
+      "englishName": "Gliscor",
+      "baseSpeed": 95,
+      "types": ["ground", "flying"],
+      "mega": false,
+      "abilities": ["Hyper Cutter", "Sand Veil", "Poison Heal"]
+    },
+    {
+      "id": "mamoswine",
+      "number": 473,
+      "name": "マンムー",
+      "englishName": "Mamoswine",
+      "baseSpeed": 80,
+      "types": ["ice", "ground"],
+      "mega": false,
+      "abilities": ["Oblivious", "Snow Cloak", "Thick Fat"]
+    },
+    {
+      "id": "gallade",
+      "number": 475,
+      "name": "エルレイド",
+      "englishName": "Gallade",
+      "baseSpeed": 80,
+      "types": ["psychic", "fighting"],
+      "mega": false,
+      "abilities": ["Steadfast", "Sharpness", "Justified"]
+    },
+    {
+      "id": "gallademega",
+      "number": 475,
+      "name": "メガエルレイド",
+      "englishName": "Gallade-Mega",
+      "baseSpeed": 110,
+      "types": ["psychic", "fighting"],
+      "mega": true,
+      "abilities": ["Inner Focus"]
+    },
+    {
+      "id": "froslass",
+      "number": 478,
+      "name": "ユキメノコ",
+      "englishName": "Froslass",
+      "baseSpeed": 110,
+      "types": ["ice", "ghost"],
+      "mega": false,
+      "abilities": ["Snow Cloak", "Cursed Body"]
+    },
+    {
+      "id": "froslassmega",
+      "number": 478,
+      "name": "メガユキメノコ",
+      "englishName": "Froslass-Mega",
+      "baseSpeed": 120,
+      "types": ["ice", "ghost"],
+      "mega": true,
+      "abilities": ["Snow Warning"]
+    },
+    {
+      "id": "rotom",
+      "number": 479,
+      "name": "ロトム",
+      "englishName": "Rotom",
+      "baseSpeed": 91,
+      "types": ["electric", "ghost"],
+      "mega": false,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "rotomfan",
+      "number": 479,
+      "name": "ロトム（スピン）",
+      "englishName": "Rotom-Fan",
+      "baseSpeed": 86,
+      "types": ["electric", "flying"],
+      "mega": false,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "rotomfrost",
+      "number": 479,
+      "name": "ロトム（フロスト）",
+      "englishName": "Rotom-Frost",
+      "baseSpeed": 86,
+      "types": ["electric", "ice"],
+      "mega": false,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "rotomheat",
+      "number": 479,
+      "name": "ロトム（ヒート）",
+      "englishName": "Rotom-Heat",
+      "baseSpeed": 86,
+      "types": ["electric", "fire"],
+      "mega": false,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "rotommow",
+      "number": 479,
+      "name": "ロトム（カット）",
+      "englishName": "Rotom-Mow",
+      "baseSpeed": 86,
+      "types": ["electric", "grass"],
+      "mega": false,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "rotomwash",
+      "number": 479,
+      "name": "ロトム（ウォッシュ）",
+      "englishName": "Rotom-Wash",
+      "baseSpeed": 86,
+      "types": ["electric", "water"],
+      "mega": false,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "serperior",
+      "number": 497,
+      "name": "ジャローダ",
+      "englishName": "Serperior",
+      "baseSpeed": 113,
+      "types": ["grass"],
+      "mega": false,
+      "abilities": ["Overgrow", "Contrary"]
+    },
+    {
+      "id": "emboar",
+      "number": 500,
+      "name": "エンブオー",
+      "englishName": "Emboar",
+      "baseSpeed": 65,
+      "types": ["fire", "fighting"],
+      "mega": false,
+      "abilities": ["Blaze", "Reckless"]
+    },
+    {
+      "id": "emboarmega",
+      "number": 500,
+      "name": "メガエンブオー",
+      "englishName": "Emboar-Mega",
+      "baseSpeed": 75,
+      "types": ["fire", "fighting"],
+      "mega": true,
+      "abilities": ["Mold Breaker"]
+    },
+    {
+      "id": "samurott",
+      "number": 503,
+      "name": "ダイケンキ",
+      "englishName": "Samurott",
+      "baseSpeed": 70,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Torrent", "Shell Armor"]
+    },
+    {
+      "id": "samurotthisui",
+      "number": 503,
+      "name": "ダイケンキ（ヒスイ）",
+      "englishName": "Samurott-Hisui",
+      "baseSpeed": 85,
+      "types": ["water", "dark"],
+      "mega": false,
+      "abilities": ["Torrent", "Sharpness"]
+    },
+    {
+      "id": "watchog",
+      "number": 505,
+      "name": "ミルホッグ",
+      "englishName": "Watchog",
+      "baseSpeed": 77,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Illuminate", "Keen Eye", "Analytic"]
+    },
+    {
+      "id": "liepard",
+      "number": 510,
+      "name": "レパルダス",
+      "englishName": "Liepard",
+      "baseSpeed": 106,
+      "types": ["dark"],
+      "mega": false,
+      "abilities": ["Limber", "Unburden", "Prankster"]
+    },
+    {
+      "id": "simisage",
+      "number": 512,
+      "name": "ヤナッキー",
+      "englishName": "Simisage",
+      "baseSpeed": 101,
+      "types": ["grass"],
+      "mega": false,
+      "abilities": ["Gluttony", "Overgrow"]
+    },
+    {
+      "id": "simisear",
+      "number": 514,
+      "name": "バオッキー",
+      "englishName": "Simisear",
+      "baseSpeed": 101,
+      "types": ["fire"],
+      "mega": false,
+      "abilities": ["Gluttony", "Blaze"]
+    },
+    {
+      "id": "simipour",
+      "number": 516,
+      "name": "ヒヤッキー",
+      "englishName": "Simipour",
+      "baseSpeed": 101,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Gluttony", "Torrent"]
+    },
+    {
+      "id": "musharna",
+      "number": 518,
+      "name": "ムシャーナ",
+      "englishName": "Musharna",
+      "baseSpeed": 29,
+      "types": ["psychic"],
+      "mega": false,
+      "abilities": ["Forewarn", "Synchronize", "Telepathy"]
+    },
+    {
+      "id": "excadrill",
+      "number": 530,
+      "name": "ドリュウズ",
+      "englishName": "Excadrill",
+      "baseSpeed": 88,
+      "types": ["ground", "steel"],
+      "mega": false,
+      "abilities": ["Sand Rush", "Sand Force", "Mold Breaker"]
+    },
+    {
+      "id": "excadrillmega",
+      "number": 530,
+      "name": "メガドリュウズ",
+      "englishName": "Excadrill-Mega",
+      "baseSpeed": 103,
+      "types": ["ground", "steel"],
+      "mega": true,
+      "abilities": ["Piercing Drill"]
+    },
+    {
+      "id": "audino",
+      "number": 531,
+      "name": "タブンネ",
+      "englishName": "Audino",
+      "baseSpeed": 50,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Healer", "Regenerator", "Klutz"]
+    },
+    {
+      "id": "audinomega",
+      "number": 531,
+      "name": "メガタブンネ",
+      "englishName": "Audino-Mega",
+      "baseSpeed": 50,
+      "types": ["normal", "fairy"],
+      "mega": true,
+      "abilities": ["Healer"]
+    },
+    {
+      "id": "conkeldurr",
+      "number": 534,
+      "name": "ローブシン",
+      "englishName": "Conkeldurr",
+      "baseSpeed": 45,
+      "types": ["fighting"],
+      "mega": false,
+      "abilities": ["Guts", "Sheer Force", "Iron Fist"]
+    },
+    {
+      "id": "scolipede",
+      "number": 545,
+      "name": "ペンドラー",
+      "englishName": "Scolipede",
+      "baseSpeed": 112,
+      "types": ["bug", "poison"],
+      "mega": false,
+      "abilities": ["Poison Point", "Swarm", "Speed Boost"]
+    },
+    {
+      "id": "scolipedemega",
+      "number": 545,
+      "name": "メガペンドラー",
+      "englishName": "Scolipede-Mega",
+      "baseSpeed": 62,
+      "types": ["bug", "poison"],
+      "mega": true,
+      "abilities": ["Shell Armor"]
+    },
+    {
+      "id": "whimsicott",
+      "number": 547,
+      "name": "エルフーン",
+      "englishName": "Whimsicott",
+      "baseSpeed": 116,
+      "types": ["grass", "fairy"],
+      "mega": false,
+      "abilities": ["Prankster", "Infiltrator", "Chlorophyll"]
+    },
+    {
+      "id": "krookodile",
+      "number": 553,
+      "name": "ワルビアル",
+      "englishName": "Krookodile",
+      "baseSpeed": 92,
+      "types": ["ground", "dark"],
+      "mega": false,
+      "abilities": ["Intimidate", "Moxie", "Anger Point"]
+    },
+    {
+      "id": "scrafty",
+      "number": 560,
+      "name": "ズルズキン",
+      "englishName": "Scrafty",
+      "baseSpeed": 58,
+      "types": ["dark", "fighting"],
+      "mega": false,
+      "abilities": ["Shed Skin", "Moxie", "Intimidate"]
+    },
+    {
+      "id": "scraftymega",
+      "number": 560,
+      "name": "メガズルズキン",
+      "englishName": "Scrafty-Mega",
+      "baseSpeed": 68,
+      "types": ["dark", "fighting"],
+      "mega": true,
+      "abilities": ["Intimidate"]
+    },
+    {
+      "id": "cofagrigus",
+      "number": 563,
+      "name": "デスカーン",
+      "englishName": "Cofagrigus",
+      "baseSpeed": 30,
+      "types": ["ghost"],
+      "mega": false,
+      "abilities": ["Mummy"]
+    },
+    {
+      "id": "garbodor",
+      "number": 569,
+      "name": "ダストダス",
+      "englishName": "Garbodor",
+      "baseSpeed": 75,
+      "types": ["poison"],
+      "mega": false,
+      "abilities": ["Stench", "Weak Armor", "Aftermath"]
+    },
+    {
+      "id": "zoroark",
+      "number": 571,
+      "name": "ゾロアーク",
+      "englishName": "Zoroark",
+      "baseSpeed": 105,
+      "types": ["dark"],
+      "mega": false,
+      "abilities": ["Illusion"]
+    },
+    {
+      "id": "zoroarkhisui",
+      "number": 571,
+      "name": "ゾロアーク（ヒスイ）",
+      "englishName": "Zoroark-Hisui",
+      "baseSpeed": 110,
+      "types": ["normal", "ghost"],
+      "mega": false,
+      "abilities": ["Illusion"]
+    },
+    {
+      "id": "reuniclus",
+      "number": 579,
+      "name": "ランクルス",
+      "englishName": "Reuniclus",
+      "baseSpeed": 30,
+      "types": ["psychic"],
+      "mega": false,
+      "abilities": ["Overcoat", "Magic Guard", "Regenerator"]
+    },
+    {
+      "id": "vanilluxe",
+      "number": 584,
+      "name": "バイバニラ",
+      "englishName": "Vanilluxe",
+      "baseSpeed": 79,
+      "types": ["ice"],
+      "mega": false,
+      "abilities": ["Ice Body", "Snow Warning", "Weak Armor"]
+    },
+    {
+      "id": "emolga",
+      "number": 587,
+      "name": "エモンガ",
+      "englishName": "Emolga",
+      "baseSpeed": 103,
+      "types": ["electric", "flying"],
+      "mega": false,
+      "abilities": ["Static", "Motor Drive"]
+    },
+    {
+      "id": "eelektross",
+      "number": 604,
+      "name": "シビルドン",
+      "englishName": "Eelektross",
+      "baseSpeed": 50,
+      "types": ["electric"],
+      "mega": false,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "eelektrossmega",
+      "number": 604,
+      "name": "メガシビルドン",
+      "englishName": "Eelektross-Mega",
+      "baseSpeed": 80,
+      "types": ["electric"],
+      "mega": true,
+      "abilities": ["Eelevate"]
+    },
+    {
+      "id": "chandelure",
+      "number": 609,
+      "name": "シャンデラ",
+      "englishName": "Chandelure",
+      "baseSpeed": 80,
+      "types": ["ghost", "fire"],
+      "mega": false,
+      "abilities": ["Flash Fire", "Flame Body", "Infiltrator"]
+    },
+    {
+      "id": "chandeluremega",
+      "number": 609,
+      "name": "メガシャンデラ",
+      "englishName": "Chandelure-Mega",
+      "baseSpeed": 90,
+      "types": ["ghost", "fire"],
+      "mega": true,
+      "abilities": ["Infiltrator"]
+    },
+    {
+      "id": "beartic",
+      "number": 614,
+      "name": "ツンベアー",
+      "englishName": "Beartic",
+      "baseSpeed": 50,
+      "types": ["ice"],
+      "mega": false,
+      "abilities": ["Snow Cloak", "Slush Rush", "Swift Swim"]
+    },
+    {
+      "id": "stunfisk",
+      "number": 618,
+      "name": "マッギョ",
+      "englishName": "Stunfisk",
+      "baseSpeed": 32,
+      "types": ["ground", "electric"],
+      "mega": false,
+      "abilities": ["Static", "Limber", "Sand Veil"]
+    },
+    {
+      "id": "stunfiskgalar",
+      "number": 618,
+      "name": "マッギョ（ガラル）",
+      "englishName": "Stunfisk-Galar",
+      "baseSpeed": 32,
+      "types": ["ground", "steel"],
+      "mega": false,
+      "abilities": ["Mimicry"]
+    },
+    {
+      "id": "golurk",
+      "number": 623,
+      "name": "ゴルーグ",
+      "englishName": "Golurk",
+      "baseSpeed": 55,
+      "types": ["ground", "ghost"],
+      "mega": false,
+      "abilities": ["Iron Fist", "Klutz", "No Guard"]
+    },
+    {
+      "id": "golurkmega",
+      "number": 623,
+      "name": "メガゴルーグ",
+      "englishName": "Golurk-Mega",
+      "baseSpeed": 55,
+      "types": ["ground", "ghost"],
+      "mega": true,
+      "abilities": ["Unseen Fist"]
+    },
+    {
+      "id": "hydreigon",
+      "number": 635,
+      "name": "サザンドラ",
+      "englishName": "Hydreigon",
+      "baseSpeed": 98,
+      "types": ["dark", "dragon"],
+      "mega": false,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "volcarona",
+      "number": 637,
+      "name": "ウルガモス",
+      "englishName": "Volcarona",
+      "baseSpeed": 100,
+      "types": ["bug", "fire"],
+      "mega": false,
+      "abilities": ["Flame Body", "Swarm"]
+    },
+    {
+      "id": "chesnaught",
+      "number": 652,
+      "name": "ブリガロン",
+      "englishName": "Chesnaught",
+      "baseSpeed": 64,
+      "types": ["grass", "fighting"],
+      "mega": false,
+      "abilities": ["Overgrow", "Bulletproof"]
+    },
+    {
+      "id": "chesnaughtmega",
+      "number": 652,
+      "name": "メガブリガロン",
+      "englishName": "Chesnaught-Mega",
+      "baseSpeed": 44,
+      "types": ["grass", "fighting"],
+      "mega": true,
+      "abilities": ["Bulletproof"]
+    },
+    {
+      "id": "delphox",
+      "number": 655,
+      "name": "マフォクシー",
+      "englishName": "Delphox",
+      "baseSpeed": 104,
+      "types": ["fire", "psychic"],
+      "mega": false,
+      "abilities": ["Blaze", "Magician"]
+    },
+    {
+      "id": "delphoxmega",
+      "number": 655,
+      "name": "メガマフォクシー",
+      "englishName": "Delphox-Mega",
+      "baseSpeed": 134,
+      "types": ["fire", "psychic"],
+      "mega": true,
+      "abilities": ["Levitate"]
+    },
+    {
+      "id": "greninja",
+      "number": 658,
+      "name": "ゲッコウガ",
+      "englishName": "Greninja",
+      "baseSpeed": 122,
+      "types": ["water", "dark"],
+      "mega": false,
+      "abilities": ["Torrent", "Protean", "Battle Bond"]
+    },
+    {
+      "id": "greninjamega",
+      "number": 658,
+      "name": "メガゲッコウガ",
+      "englishName": "Greninja-Mega",
+      "baseSpeed": 142,
+      "types": ["water", "dark"],
+      "mega": true,
+      "abilities": ["Protean"]
+    },
+    {
+      "id": "diggersby",
+      "number": 660,
+      "name": "ホルード",
+      "englishName": "Diggersby",
+      "baseSpeed": 78,
+      "types": ["normal", "ground"],
+      "mega": false,
+      "abilities": ["Pickup", "Cheek Pouch", "Huge Power"]
+    },
+    {
+      "id": "talonflame",
+      "number": 663,
+      "name": "ファイアロー",
+      "englishName": "Talonflame",
+      "baseSpeed": 126,
+      "types": ["fire", "flying"],
+      "mega": false,
+      "abilities": ["Flame Body", "Gale Wings"]
+    },
+    {
+      "id": "vivillon",
+      "number": 666,
+      "name": "ビビヨン",
+      "englishName": "Vivillon",
+      "baseSpeed": 89,
+      "types": ["bug", "flying"],
+      "mega": false,
+      "abilities": ["Shield Dust", "Compound Eyes", "Friend Guard"]
+    },
+    {
+      "id": "vivillonfancy",
+      "number": 666,
+      "name": "ビビヨン（ファンシー）",
+      "englishName": "Vivillon-Fancy",
+      "baseSpeed": 89,
+      "types": ["bug", "flying"],
+      "mega": false,
+      "abilities": ["Shield Dust", "Compound Eyes", "Friend Guard"]
+    },
+    {
+      "id": "vivillonpokeball",
+      "number": 666,
+      "name": "ビビヨン（ボール）",
+      "englishName": "Vivillon-Pokeball",
+      "baseSpeed": 89,
+      "types": ["bug", "flying"],
+      "mega": false,
+      "abilities": ["Shield Dust", "Compound Eyes", "Friend Guard"]
+    },
+    {
+      "id": "pyroar",
+      "number": 668,
+      "name": "カエンジシ",
+      "englishName": "Pyroar",
+      "baseSpeed": 106,
+      "types": ["fire", "normal"],
+      "mega": false,
+      "abilities": ["Rivalry", "Unnerve", "Moxie"]
+    },
+    {
+      "id": "pyroarmega",
+      "number": 668,
+      "name": "メガカエンジシ",
+      "englishName": "Pyroar-Mega",
+      "baseSpeed": 126,
+      "types": ["fire", "normal"],
+      "mega": true,
+      "abilities": ["Fire Mane"]
+    },
+    {
+      "id": "floetteeternal",
+      "number": 670,
+      "name": "フラエッテ（えいえんのはな）",
+      "englishName": "Floette-Eternal",
+      "baseSpeed": 92,
+      "types": ["fairy"],
+      "mega": false,
+      "abilities": ["Flower Veil", "Symbiosis"]
+    },
+    {
+      "id": "floettemega",
+      "number": 670,
+      "name": "メガフラエッテ",
+      "englishName": "Floette-Mega",
+      "baseSpeed": 102,
+      "types": ["fairy"],
+      "mega": true,
+      "abilities": ["Fairy Aura"]
+    },
+    {
+      "id": "florges",
+      "number": 671,
+      "name": "フラージェス",
+      "englishName": "Florges",
+      "baseSpeed": 75,
+      "types": ["fairy"],
+      "mega": false,
+      "abilities": ["Flower Veil", "Symbiosis"]
+    },
+    {
+      "id": "gogoat",
+      "number": 673,
+      "name": "ゴーゴート",
+      "englishName": "Gogoat",
+      "baseSpeed": 68,
+      "types": ["grass"],
+      "mega": false,
+      "abilities": ["Sap Sipper", "Grass Pelt"]
+    },
+    {
+      "id": "pangoro",
+      "number": 675,
+      "name": "ゴロンダ",
+      "englishName": "Pangoro",
+      "baseSpeed": 58,
+      "types": ["fighting", "dark"],
+      "mega": false,
+      "abilities": ["Iron Fist", "Mold Breaker", "Scrappy"]
+    },
+    {
+      "id": "furfrou",
+      "number": 676,
+      "name": "トリミアン",
+      "englishName": "Furfrou",
+      "baseSpeed": 102,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Fur Coat"]
+    },
+    {
+      "id": "meowstic",
+      "number": 678,
+      "name": "ニャオニクス",
+      "englishName": "Meowstic",
+      "baseSpeed": 104,
+      "types": ["psychic"],
+      "mega": false,
+      "abilities": ["Keen Eye", "Infiltrator", "Prankster"]
+    },
+    {
+      "id": "meowsticf",
+      "number": 678,
+      "name": "ニャオニクス（メス）",
+      "englishName": "Meowstic-F",
+      "baseSpeed": 104,
+      "types": ["psychic"],
+      "mega": false,
+      "abilities": ["Keen Eye", "Infiltrator", "Competitive"]
+    },
+    {
+      "id": "meowsticfmega",
+      "number": 678,
+      "name": "メガニャオニクス（メス）",
+      "englishName": "Meowstic-F-Mega",
+      "baseSpeed": 124,
+      "types": ["psychic"],
+      "mega": true,
+      "abilities": ["Trace"]
+    },
+    {
+      "id": "meowsticmmega",
+      "number": 678,
+      "name": "メガニャオニクス（オス）",
+      "englishName": "Meowstic-M-Mega",
+      "baseSpeed": 124,
+      "types": ["psychic"],
+      "mega": true,
+      "abilities": ["Trace"]
+    },
+    {
+      "id": "aegislash",
+      "number": 681,
+      "name": "ギルガルド",
+      "englishName": "Aegislash",
+      "baseSpeed": 60,
+      "types": ["steel", "ghost"],
+      "mega": false,
+      "abilities": ["Stance Change"]
+    },
+    {
+      "id": "aegislashblade",
+      "number": 681,
+      "name": "ギルガルド（ブレード）",
+      "englishName": "Aegislash-Blade",
+      "baseSpeed": 60,
+      "types": ["steel", "ghost"],
+      "mega": false,
+      "abilities": ["Stance Change"]
+    },
+    {
+      "id": "aromatisse",
+      "number": 683,
+      "name": "フレフワン",
+      "englishName": "Aromatisse",
+      "baseSpeed": 29,
+      "types": ["fairy"],
+      "mega": false,
+      "abilities": ["Healer", "Aroma Veil"]
+    },
+    {
+      "id": "slurpuff",
+      "number": 685,
+      "name": "ペロリーム",
+      "englishName": "Slurpuff",
+      "baseSpeed": 72,
+      "types": ["fairy"],
+      "mega": false,
+      "abilities": ["Sweet Veil", "Unburden"]
+    },
+    {
+      "id": "malamar",
+      "number": 687,
+      "name": "カラマネロ",
+      "englishName": "Malamar",
+      "baseSpeed": 73,
+      "types": ["dark", "psychic"],
+      "mega": false,
+      "abilities": ["Contrary", "Suction Cups", "Infiltrator"]
+    },
+    {
+      "id": "malamarmega",
+      "number": 687,
+      "name": "メガカラマネロ",
+      "englishName": "Malamar-Mega",
+      "baseSpeed": 88,
+      "types": ["dark", "psychic"],
+      "mega": true,
+      "abilities": ["Contrary"]
+    },
+    {
+      "id": "barbaracle",
+      "number": 689,
+      "name": "ガメノデス",
+      "englishName": "Barbaracle",
+      "baseSpeed": 68,
+      "types": ["rock", "water"],
+      "mega": false,
+      "abilities": ["Tough Claws", "Sniper", "Pickpocket"]
+    },
+    {
+      "id": "barbaraclemega",
+      "number": 689,
+      "name": "メガガメノデス",
+      "englishName": "Barbaracle-Mega",
+      "baseSpeed": 88,
+      "types": ["rock", "fighting"],
+      "mega": true,
+      "abilities": ["Tough Claws"]
+    },
+    {
+      "id": "dragalge",
+      "number": 691,
+      "name": "ドラミドロ",
+      "englishName": "Dragalge",
+      "baseSpeed": 44,
+      "types": ["poison", "dragon"],
+      "mega": false,
+      "abilities": ["Poison Point", "Poison Touch", "Adaptability"]
+    },
+    {
+      "id": "dragalgemega",
+      "number": 691,
+      "name": "メガドラミドロ",
+      "englishName": "Dragalge-Mega",
+      "baseSpeed": 44,
+      "types": ["poison", "dragon"],
+      "mega": true,
+      "abilities": ["Regenerator"]
+    },
+    {
+      "id": "clawitzer",
+      "number": 693,
+      "name": "ブロスター",
+      "englishName": "Clawitzer",
+      "baseSpeed": 59,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Mega Launcher"]
+    },
+    {
+      "id": "heliolisk",
+      "number": 695,
+      "name": "エレザード",
+      "englishName": "Heliolisk",
+      "baseSpeed": 109,
+      "types": ["electric", "normal"],
+      "mega": false,
+      "abilities": ["Dry Skin", "Sand Veil", "Solar Power"]
+    },
+    {
+      "id": "tyrantrum",
+      "number": 697,
+      "name": "ガチゴラス",
+      "englishName": "Tyrantrum",
+      "baseSpeed": 71,
+      "types": ["rock", "dragon"],
+      "mega": false,
+      "abilities": ["Strong Jaw", "Rock Head"]
+    },
+    {
+      "id": "aurorus",
+      "number": 699,
+      "name": "アマルルガ",
+      "englishName": "Aurorus",
+      "baseSpeed": 58,
+      "types": ["rock", "ice"],
+      "mega": false,
+      "abilities": ["Refrigerate", "Snow Warning"]
+    },
+    {
+      "id": "sylveon",
+      "number": 700,
+      "name": "ニンフィア",
+      "englishName": "Sylveon",
+      "baseSpeed": 60,
+      "types": ["fairy"],
+      "mega": false,
+      "abilities": ["Cute Charm", "Pixilate"]
+    },
+    {
+      "id": "hawlucha",
+      "number": 701,
+      "name": "ルチャブル",
+      "englishName": "Hawlucha",
+      "baseSpeed": 118,
+      "types": ["fighting", "flying"],
+      "mega": false,
+      "abilities": ["Limber", "Unburden", "Mold Breaker"]
+    },
+    {
+      "id": "hawluchamega",
+      "number": 701,
+      "name": "メガルチャブル",
+      "englishName": "Hawlucha-Mega",
+      "baseSpeed": 118,
+      "types": ["fighting", "flying"],
+      "mega": true,
+      "abilities": ["No Guard"]
+    },
+    {
+      "id": "dedenne",
+      "number": 702,
+      "name": "デデンネ",
+      "englishName": "Dedenne",
+      "baseSpeed": 101,
+      "types": ["electric", "fairy"],
+      "mega": false,
+      "abilities": ["Cheek Pouch", "Pickup", "Plus"]
+    },
+    {
+      "id": "goodra",
+      "number": 706,
+      "name": "ヌメルゴン",
+      "englishName": "Goodra",
+      "baseSpeed": 80,
+      "types": ["dragon"],
+      "mega": false,
+      "abilities": ["Sap Sipper", "Hydration", "Gooey"]
+    },
+    {
+      "id": "goodrahisui",
+      "number": 706,
+      "name": "ヌメルゴン（ヒスイ）",
+      "englishName": "Goodra-Hisui",
+      "baseSpeed": 60,
+      "types": ["steel", "dragon"],
+      "mega": false,
+      "abilities": ["Sap Sipper", "Shell Armor", "Gooey"]
+    },
+    {
+      "id": "klefki",
+      "number": 707,
+      "name": "クレッフィ",
+      "englishName": "Klefki",
+      "baseSpeed": 75,
+      "types": ["steel", "fairy"],
+      "mega": false,
+      "abilities": ["Prankster", "Magician"]
+    },
+    {
+      "id": "trevenant",
+      "number": 709,
+      "name": "オーロット",
+      "englishName": "Trevenant",
+      "baseSpeed": 56,
+      "types": ["ghost", "grass"],
+      "mega": false,
+      "abilities": ["Natural Cure", "Frisk", "Harvest"]
+    },
+    {
+      "id": "gourgeist",
+      "number": 711,
+      "name": "パンプジン",
+      "englishName": "Gourgeist",
+      "baseSpeed": 84,
+      "types": ["ghost", "grass"],
+      "mega": false,
+      "abilities": ["Pickup", "Frisk", "Insomnia"]
+    },
+    {
+      "id": "gourgeistlarge",
+      "number": 711,
+      "name": "パンプジン（おおきい）",
+      "englishName": "Gourgeist-Large",
+      "baseSpeed": 69,
+      "types": ["ghost", "grass"],
+      "mega": false,
+      "abilities": ["Pickup", "Frisk", "Insomnia"]
+    },
+    {
+      "id": "gourgeistsmall",
+      "number": 711,
+      "name": "パンプジン（ちいさい）",
+      "englishName": "Gourgeist-Small",
+      "baseSpeed": 99,
+      "types": ["ghost", "grass"],
+      "mega": false,
+      "abilities": ["Pickup", "Frisk", "Insomnia"]
+    },
+    {
+      "id": "gourgeistsuper",
+      "number": 711,
+      "name": "パンプジン（とくだい）",
+      "englishName": "Gourgeist-Super",
+      "baseSpeed": 54,
+      "types": ["ghost", "grass"],
+      "mega": false,
+      "abilities": ["Pickup", "Frisk", "Insomnia"]
+    },
+    {
+      "id": "avalugg",
+      "number": 713,
+      "name": "クレベース",
+      "englishName": "Avalugg",
+      "baseSpeed": 28,
+      "types": ["ice"],
+      "mega": false,
+      "abilities": ["Own Tempo", "Ice Body", "Sturdy"]
+    },
+    {
+      "id": "avalugghisui",
+      "number": 713,
+      "name": "クレベース（ヒスイ）",
+      "englishName": "Avalugg-Hisui",
+      "baseSpeed": 38,
+      "types": ["ice", "rock"],
+      "mega": false,
+      "abilities": ["Strong Jaw", "Ice Body", "Sturdy"]
+    },
+    {
+      "id": "noivern",
+      "number": 715,
+      "name": "オンバーン",
+      "englishName": "Noivern",
+      "baseSpeed": 123,
+      "types": ["flying", "dragon"],
+      "mega": false,
+      "abilities": ["Frisk", "Infiltrator", "Telepathy"]
+    },
+    {
+      "id": "decidueye",
+      "number": 724,
+      "name": "ジュナイパー",
+      "englishName": "Decidueye",
+      "baseSpeed": 70,
+      "types": ["grass", "ghost"],
+      "mega": false,
+      "abilities": ["Overgrow", "Long Reach"]
+    },
+    {
+      "id": "decidueyehisui",
+      "number": 724,
+      "name": "ジュナイパー（ヒスイ）",
+      "englishName": "Decidueye-Hisui",
+      "baseSpeed": 60,
+      "types": ["grass", "fighting"],
+      "mega": false,
+      "abilities": ["Overgrow", "Scrappy"]
+    },
+    {
+      "id": "incineroar",
+      "number": 727,
+      "name": "ガオガエン",
+      "englishName": "Incineroar",
+      "baseSpeed": 60,
+      "types": ["fire", "dark"],
+      "mega": false,
+      "abilities": ["Blaze", "Intimidate"]
+    },
+    {
+      "id": "primarina",
+      "number": 730,
+      "name": "アシレーヌ",
+      "englishName": "Primarina",
+      "baseSpeed": 60,
+      "types": ["water", "fairy"],
+      "mega": false,
+      "abilities": ["Torrent", "Liquid Voice"]
+    },
+    {
+      "id": "toucannon",
+      "number": 733,
+      "name": "ドデカバシ",
+      "englishName": "Toucannon",
+      "baseSpeed": 60,
+      "types": ["normal", "flying"],
+      "mega": false,
+      "abilities": ["Keen Eye", "Skill Link", "Sheer Force"]
+    },
+    {
+      "id": "crabominable",
+      "number": 740,
+      "name": "ケケンカニ",
+      "englishName": "Crabominable",
+      "baseSpeed": 43,
+      "types": ["fighting", "ice"],
+      "mega": false,
+      "abilities": ["Hyper Cutter", "Iron Fist", "Anger Point"]
+    },
+    {
+      "id": "crabominablemega",
+      "number": 740,
+      "name": "メガケケンカニ",
+      "englishName": "Crabominable-Mega",
+      "baseSpeed": 33,
+      "types": ["fighting", "ice"],
+      "mega": true,
+      "abilities": ["Iron Fist"]
+    },
+    {
+      "id": "lycanroc",
+      "number": 745,
+      "name": "ルガルガン",
+      "englishName": "Lycanroc",
+      "baseSpeed": 112,
+      "types": ["rock"],
+      "mega": false,
+      "abilities": ["Keen Eye", "Sand Rush", "Steadfast"]
+    },
+    {
+      "id": "lycanrocdusk",
+      "number": 745,
+      "name": "ルガルガン（たそがれ）",
+      "englishName": "Lycanroc-Dusk",
+      "baseSpeed": 110,
+      "types": ["rock"],
+      "mega": false,
+      "abilities": ["Tough Claws"]
+    },
+    {
+      "id": "lycanrocmidnight",
+      "number": 745,
+      "name": "ルガルガン（まよなか）",
+      "englishName": "Lycanroc-Midnight",
+      "baseSpeed": 82,
+      "types": ["rock"],
+      "mega": false,
+      "abilities": ["Keen Eye", "Vital Spirit", "No Guard"]
+    },
+    {
+      "id": "toxapex",
+      "number": 748,
+      "name": "ドヒドイデ",
+      "englishName": "Toxapex",
+      "baseSpeed": 35,
+      "types": ["poison", "water"],
+      "mega": false,
+      "abilities": ["Merciless", "Limber", "Regenerator"]
+    },
+    {
+      "id": "mudsdale",
+      "number": 750,
+      "name": "バンバドロ",
+      "englishName": "Mudsdale",
+      "baseSpeed": 35,
+      "types": ["ground"],
+      "mega": false,
+      "abilities": ["Own Tempo", "Stamina", "Inner Focus"]
+    },
+    {
+      "id": "araquanid",
+      "number": 752,
+      "name": "オニシズクモ",
+      "englishName": "Araquanid",
+      "baseSpeed": 42,
+      "types": ["water", "bug"],
+      "mega": false,
+      "abilities": ["Water Bubble", "Water Absorb"]
+    },
+    {
+      "id": "salazzle",
+      "number": 758,
+      "name": "エンニュート",
+      "englishName": "Salazzle",
+      "baseSpeed": 117,
+      "types": ["poison", "fire"],
+      "mega": false,
+      "abilities": ["Corrosion", "Oblivious"]
+    },
+    {
+      "id": "tsareena",
+      "number": 763,
+      "name": "アマージョ",
+      "englishName": "Tsareena",
+      "baseSpeed": 72,
+      "types": ["grass"],
+      "mega": false,
+      "abilities": ["Leaf Guard", "Queenly Majesty", "Sweet Veil"]
+    },
+    {
+      "id": "oranguru",
+      "number": 765,
+      "name": "ヤレユータン",
+      "englishName": "Oranguru",
+      "baseSpeed": 60,
+      "types": ["normal", "psychic"],
+      "mega": false,
+      "abilities": ["Inner Focus", "Telepathy", "Symbiosis"]
+    },
+    {
+      "id": "passimian",
+      "number": 766,
+      "name": "ナゲツケサル",
+      "englishName": "Passimian",
+      "baseSpeed": 80,
+      "types": ["fighting"],
+      "mega": false,
+      "abilities": ["Receiver", "Defiant"]
+    },
+    {
+      "id": "golisopod",
+      "number": 768,
+      "name": "グソクムシャ",
+      "englishName": "Golisopod",
+      "baseSpeed": 40,
+      "types": ["bug", "water"],
+      "mega": false,
+      "abilities": ["Emergency Exit"]
+    },
+    {
+      "id": "golisopodmega",
+      "number": 768,
+      "name": "メガグソクムシャ",
+      "englishName": "Golisopod-Mega",
+      "baseSpeed": 40,
+      "types": ["bug", "steel"],
+      "mega": true,
+      "abilities": ["Tough Claws"]
+    },
+    {
+      "id": "mimikyu",
+      "number": 778,
+      "name": "ミミッキュ",
+      "englishName": "Mimikyu",
+      "baseSpeed": 96,
+      "types": ["ghost", "fairy"],
+      "mega": false,
+      "abilities": ["Disguise"]
+    },
+    {
+      "id": "mimikyubusted",
+      "number": 778,
+      "name": "ミミッキュ（ばれたすがた）",
+      "englishName": "Mimikyu-Busted",
+      "baseSpeed": 96,
+      "types": ["ghost", "fairy"],
+      "mega": false,
+      "abilities": ["Disguise"]
+    },
+    {
+      "id": "drampa",
+      "number": 780,
+      "name": "ジジーロン",
+      "englishName": "Drampa",
+      "baseSpeed": 36,
+      "types": ["normal", "dragon"],
+      "mega": false,
+      "abilities": ["Berserk", "Sap Sipper", "Cloud Nine"]
+    },
+    {
+      "id": "drampamega",
+      "number": 780,
+      "name": "メガジジーロン",
+      "englishName": "Drampa-Mega",
+      "baseSpeed": 36,
+      "types": ["normal", "dragon"],
+      "mega": true,
+      "abilities": ["Berserk"]
+    },
+    {
+      "id": "kommoo",
+      "number": 784,
+      "name": "ジャラランガ",
+      "englishName": "Kommo-o",
+      "baseSpeed": 85,
+      "types": ["dragon", "fighting"],
+      "mega": false,
+      "abilities": ["Bulletproof", "Soundproof", "Overcoat"]
+    },
+    {
+      "id": "rillaboom",
+      "number": 812,
+      "name": "ゴリランダー",
+      "englishName": "Rillaboom",
+      "baseSpeed": 85,
+      "types": ["grass"],
+      "mega": false,
+      "abilities": ["Overgrow", "Grassy Surge"]
+    },
+    {
+      "id": "cinderace",
+      "number": 815,
+      "name": "エースバーン",
+      "englishName": "Cinderace",
+      "baseSpeed": 119,
+      "types": ["fire"],
+      "mega": false,
+      "abilities": ["Blaze", "Libero"]
+    },
+    {
+      "id": "inteleon",
+      "number": 818,
+      "name": "インテレオン",
+      "englishName": "Inteleon",
+      "baseSpeed": 120,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Torrent", "Sniper"]
+    },
+    {
+      "id": "corviknight",
+      "number": 823,
+      "name": "アーマーガア",
+      "englishName": "Corviknight",
+      "baseSpeed": 67,
+      "types": ["flying", "steel"],
+      "mega": false,
+      "abilities": ["Pressure", "Unnerve", "Mirror Armor"]
+    },
+    {
+      "id": "thievul",
+      "number": 828,
+      "name": "フォクスライ",
+      "englishName": "Thievul",
+      "baseSpeed": 90,
+      "types": ["dark"],
+      "mega": false,
+      "abilities": ["Run Away", "Unburden", "Stakeout"]
+    },
+    {
+      "id": "flapple",
+      "number": 841,
+      "name": "アップリュー",
+      "englishName": "Flapple",
+      "baseSpeed": 70,
+      "types": ["grass", "dragon"],
+      "mega": false,
+      "abilities": ["Ripen", "Gluttony", "Hustle"]
+    },
+    {
+      "id": "appletun",
+      "number": 842,
+      "name": "タルップル",
+      "englishName": "Appletun",
+      "baseSpeed": 30,
+      "types": ["grass", "dragon"],
+      "mega": false,
+      "abilities": ["Ripen", "Gluttony", "Thick Fat"]
+    },
+    {
+      "id": "sandaconda",
+      "number": 844,
+      "name": "サダイジャ",
+      "englishName": "Sandaconda",
+      "baseSpeed": 71,
+      "types": ["ground"],
+      "mega": false,
+      "abilities": ["Sand Spit", "Shed Skin", "Sand Veil"]
+    },
+    {
+      "id": "toxtricity",
+      "number": 849,
+      "name": "ストリンダー",
+      "englishName": "Toxtricity",
+      "baseSpeed": 75,
+      "types": ["electric", "poison"],
+      "mega": false,
+      "abilities": ["Punk Rock", "Plus", "Technician"]
+    },
+    {
+      "id": "toxtricitylowkey",
+      "number": 849,
+      "name": "ストリンダー（ロー）",
+      "englishName": "Toxtricity-Low-Key",
+      "baseSpeed": 75,
+      "types": ["electric", "poison"],
+      "mega": false,
+      "abilities": ["Punk Rock", "Minus", "Technician"]
+    },
+    {
+      "id": "grapploct",
+      "number": 853,
+      "name": "オトスパス",
+      "englishName": "Grapploct",
+      "baseSpeed": 42,
+      "types": ["fighting"],
+      "mega": false,
+      "abilities": ["Limber", "Technician"]
+    },
+    {
+      "id": "polteageist",
+      "number": 855,
+      "name": "ポットデス",
+      "englishName": "Polteageist",
+      "baseSpeed": 70,
+      "types": ["ghost"],
+      "mega": false,
+      "abilities": ["Weak Armor", "Cursed Body"]
+    },
+    {
+      "id": "polteageistantique",
+      "number": 855,
+      "name": "ポットデス（しんさく）",
+      "englishName": "Polteageist-Antique",
+      "baseSpeed": 70,
+      "types": ["ghost"],
+      "mega": false,
+      "abilities": ["Weak Armor", "Cursed Body"]
+    },
+    {
+      "id": "hatterene",
+      "number": 858,
+      "name": "ブリムオン",
+      "englishName": "Hatterene",
+      "baseSpeed": 29,
+      "types": ["psychic", "fairy"],
+      "mega": false,
+      "abilities": ["Healer", "Anticipation", "Magic Bounce"]
+    },
+    {
+      "id": "grimmsnarl",
+      "number": 861,
+      "name": "オーロンゲ",
+      "englishName": "Grimmsnarl",
+      "baseSpeed": 60,
+      "types": ["dark", "fairy"],
+      "mega": false,
+      "abilities": ["Prankster", "Frisk", "Pickpocket"]
+    },
+    {
+      "id": "perrserker",
+      "number": 863,
+      "name": "ニャイキング",
+      "englishName": "Perrserker",
+      "baseSpeed": 50,
+      "types": ["steel"],
+      "mega": false,
+      "abilities": ["Battle Armor", "Tough Claws", "Steely Spirit"]
+    },
+    {
+      "id": "sirfetchd",
+      "number": 865,
+      "name": "ネギガナイト",
+      "englishName": "Sirfetch’d",
+      "baseSpeed": 65,
+      "types": ["fighting"],
+      "mega": false,
+      "abilities": ["Steadfast", "Scrappy"]
+    },
+    {
+      "id": "mrrime",
+      "number": 866,
+      "name": "バリコオル",
+      "englishName": "Mr. Rime",
+      "baseSpeed": 70,
+      "types": ["ice", "psychic"],
+      "mega": false,
+      "abilities": ["Tangled Feet", "Screen Cleaner", "Ice Body"]
+    },
+    {
+      "id": "runerigus",
+      "number": 867,
+      "name": "デスバーン",
+      "englishName": "Runerigus",
+      "baseSpeed": 30,
+      "types": ["ground", "ghost"],
+      "mega": false,
+      "abilities": ["Wandering Spirit"]
+    },
+    {
+      "id": "alcremie",
+      "number": 869,
+      "name": "マホイップ",
+      "englishName": "Alcremie",
+      "baseSpeed": 64,
+      "types": ["fairy"],
+      "mega": false,
+      "abilities": ["Sweet Veil", "Aroma Veil"]
+    },
+    {
+      "id": "falinks",
+      "number": 870,
+      "name": "タイレーツ",
+      "englishName": "Falinks",
+      "baseSpeed": 75,
+      "types": ["fighting"],
+      "mega": false,
+      "abilities": ["Battle Armor", "Defiant"]
+    },
+    {
+      "id": "falinksmega",
+      "number": 870,
+      "name": "メガタイレーツ",
+      "englishName": "Falinks-Mega",
+      "baseSpeed": 100,
+      "types": ["fighting"],
+      "mega": true,
+      "abilities": ["Defiant"]
+    },
+    {
+      "id": "pincurchin",
+      "number": 871,
+      "name": "バチンウニ",
+      "englishName": "Pincurchin",
+      "baseSpeed": 15,
+      "types": ["electric"],
+      "mega": false,
+      "abilities": ["Lightning Rod", "Electric Surge"]
+    },
+    {
+      "id": "indeedee",
+      "number": 876,
+      "name": "イエッサン",
+      "englishName": "Indeedee",
+      "baseSpeed": 95,
+      "types": ["psychic", "normal"],
+      "mega": false,
+      "abilities": ["Inner Focus", "Synchronize", "Psychic Surge"]
+    },
+    {
+      "id": "indeedeef",
+      "number": 876,
+      "name": "イエッサン（メス）",
+      "englishName": "Indeedee-F",
+      "baseSpeed": 85,
+      "types": ["psychic", "normal"],
+      "mega": false,
+      "abilities": ["Own Tempo", "Synchronize", "Psychic Surge"]
+    },
+    {
+      "id": "morpeko",
+      "number": 877,
+      "name": "モルペコ",
+      "englishName": "Morpeko",
+      "baseSpeed": 97,
+      "types": ["electric", "dark"],
+      "mega": false,
+      "abilities": ["Hunger Switch"]
+    },
+    {
+      "id": "morpekohangry",
+      "number": 877,
+      "name": "モルペコ（はらぺこ）",
+      "englishName": "Morpeko-Hangry",
+      "baseSpeed": 97,
+      "types": ["electric", "dark"],
+      "mega": false,
+      "abilities": ["Hunger Switch"]
+    },
+    {
+      "id": "dragapult",
+      "number": 887,
+      "name": "ドラパルト",
+      "englishName": "Dragapult",
+      "baseSpeed": 142,
+      "types": ["dragon", "ghost"],
+      "mega": false,
+      "abilities": ["Clear Body", "Infiltrator", "Cursed Body"]
+    },
+    {
+      "id": "wyrdeer",
+      "number": 899,
+      "name": "アヤシシ",
+      "englishName": "Wyrdeer",
+      "baseSpeed": 65,
+      "types": ["normal", "psychic"],
+      "mega": false,
+      "abilities": ["Intimidate", "Frisk", "Sap Sipper"]
+    },
+    {
+      "id": "kleavor",
+      "number": 900,
+      "name": "バサギリ",
+      "englishName": "Kleavor",
+      "baseSpeed": 85,
+      "types": ["bug", "rock"],
+      "mega": false,
+      "abilities": ["Swarm", "Sheer Force", "Sharpness"]
+    },
+    {
+      "id": "basculegion",
+      "number": 902,
+      "name": "イダイトウ",
+      "englishName": "Basculegion",
+      "baseSpeed": 78,
+      "types": ["water", "ghost"],
+      "mega": false,
+      "abilities": ["Swift Swim", "Adaptability", "Mold Breaker"]
+    },
+    {
+      "id": "basculegionf",
+      "number": 902,
+      "name": "イダイトウ（メス）",
+      "englishName": "Basculegion-F",
+      "baseSpeed": 78,
+      "types": ["water", "ghost"],
+      "mega": false,
+      "abilities": ["Swift Swim", "Adaptability", "Mold Breaker"]
+    },
+    {
+      "id": "sneasler",
+      "number": 903,
+      "name": "オオニューラ",
+      "englishName": "Sneasler",
+      "baseSpeed": 120,
+      "types": ["fighting", "poison"],
+      "mega": false,
+      "abilities": ["Pressure", "Unburden", "Poison Touch"]
+    },
+    {
+      "id": "overqwil",
+      "number": 904,
+      "name": "ハリーマン",
+      "englishName": "Overqwil",
+      "baseSpeed": 85,
+      "types": ["dark", "poison"],
+      "mega": false,
+      "abilities": ["Poison Point", "Swift Swim", "Intimidate"]
+    },
+    {
+      "id": "meowscarada",
+      "number": 908,
+      "name": "マスカーニャ",
+      "englishName": "Meowscarada",
+      "baseSpeed": 123,
+      "types": ["grass", "dark"],
+      "mega": false,
+      "abilities": ["Overgrow", "Protean"]
+    },
+    {
+      "id": "skeledirge",
+      "number": 911,
+      "name": "ラウドボーン",
+      "englishName": "Skeledirge",
+      "baseSpeed": 66,
+      "types": ["fire", "ghost"],
+      "mega": false,
+      "abilities": ["Blaze", "Unaware"]
+    },
+    {
+      "id": "quaquaval",
+      "number": 914,
+      "name": "ウェーニバル",
+      "englishName": "Quaquaval",
+      "baseSpeed": 85,
+      "types": ["water", "fighting"],
+      "mega": false,
+      "abilities": ["Torrent", "Moxie"]
+    },
+    {
+      "id": "pawmot",
+      "number": 923,
+      "name": "パーモット",
+      "englishName": "Pawmot",
+      "baseSpeed": 105,
+      "types": ["electric", "fighting"],
+      "mega": false,
+      "abilities": ["Volt Absorb", "Natural Cure", "Iron Fist"]
+    },
+    {
+      "id": "maushold",
+      "number": 925,
+      "name": "イッカネズミ",
+      "englishName": "Maushold",
+      "baseSpeed": 111,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Friend Guard", "Cheek Pouch", "Technician"]
+    },
+    {
+      "id": "mausholdfour",
+      "number": 925,
+      "name": "イッカネズミ（４ひきかぞく）",
+      "englishName": "Maushold-Four",
+      "baseSpeed": 111,
+      "types": ["normal"],
+      "mega": false,
+      "abilities": ["Friend Guard", "Cheek Pouch", "Technician"]
+    },
+    {
+      "id": "arboliva",
+      "number": 930,
+      "name": "オリーヴァ",
+      "englishName": "Arboliva",
+      "baseSpeed": 39,
+      "types": ["grass", "normal"],
+      "mega": false,
+      "abilities": ["Seed Sower", "Harvest"]
+    },
+    {
+      "id": "squawkabilly",
+      "number": 931,
+      "name": "イキリンコ",
+      "englishName": "Squawkabilly",
+      "baseSpeed": 92,
+      "types": ["normal", "flying"],
+      "mega": false,
+      "abilities": ["Intimidate", "Hustle", "Guts"]
+    },
+    {
+      "id": "squawkabillyblue",
+      "number": 931,
+      "name": "イキリンコ（ブルー）",
+      "englishName": "Squawkabilly-Blue",
+      "baseSpeed": 92,
+      "types": ["normal", "flying"],
+      "mega": false,
+      "abilities": ["Intimidate", "Hustle", "Guts"]
+    },
+    {
+      "id": "squawkabillywhite",
+      "number": 931,
+      "name": "イキリンコ（ホワイト）",
+      "englishName": "Squawkabilly-White",
+      "baseSpeed": 92,
+      "types": ["normal", "flying"],
+      "mega": false,
+      "abilities": ["Intimidate", "Hustle", "Sheer Force"]
+    },
+    {
+      "id": "squawkabillyyellow",
+      "number": 931,
+      "name": "イキリンコ（イエロー）",
+      "englishName": "Squawkabilly-Yellow",
+      "baseSpeed": 92,
+      "types": ["normal", "flying"],
+      "mega": false,
+      "abilities": ["Intimidate", "Hustle", "Sheer Force"]
+    },
+    {
+      "id": "garganacl",
+      "number": 934,
+      "name": "キョジオーン",
+      "englishName": "Garganacl",
+      "baseSpeed": 35,
+      "types": ["rock"],
+      "mega": false,
+      "abilities": ["Purifying Salt", "Sturdy", "Clear Body"]
+    },
+    {
+      "id": "armarouge",
+      "number": 936,
+      "name": "グレンアルマ",
+      "englishName": "Armarouge",
+      "baseSpeed": 75,
+      "types": ["fire", "psychic"],
+      "mega": false,
+      "abilities": ["Flash Fire", "Weak Armor"]
+    },
+    {
+      "id": "ceruledge",
+      "number": 937,
+      "name": "ソウブレイズ",
+      "englishName": "Ceruledge",
+      "baseSpeed": 85,
+      "types": ["fire", "ghost"],
+      "mega": false,
+      "abilities": ["Flash Fire", "Weak Armor"]
+    },
+    {
+      "id": "bellibolt",
+      "number": 939,
+      "name": "ハラバリー",
+      "englishName": "Bellibolt",
+      "baseSpeed": 45,
+      "types": ["electric"],
+      "mega": false,
+      "abilities": ["Electromorphosis", "Static", "Damp"]
+    },
+    {
+      "id": "mabosstiff",
+      "number": 943,
+      "name": "マフィティフ",
+      "englishName": "Mabosstiff",
+      "baseSpeed": 85,
+      "types": ["dark"],
+      "mega": false,
+      "abilities": ["Intimidate", "Guard Dog", "Stakeout"]
+    },
+    {
+      "id": "scovillain",
+      "number": 952,
+      "name": "スコヴィラン",
+      "englishName": "Scovillain",
+      "baseSpeed": 75,
+      "types": ["grass", "fire"],
+      "mega": false,
+      "abilities": ["Chlorophyll", "Insomnia", "Moody"]
+    },
+    {
+      "id": "scovillainmega",
+      "number": 952,
+      "name": "メガスコヴィラン",
+      "englishName": "Scovillain-Mega",
+      "baseSpeed": 75,
+      "types": ["grass", "fire"],
+      "mega": true,
+      "abilities": ["Spicy Spray"]
+    },
+    {
+      "id": "espathra",
+      "number": 956,
+      "name": "クエスパトラ",
+      "englishName": "Espathra",
+      "baseSpeed": 105,
+      "types": ["psychic"],
+      "mega": false,
+      "abilities": ["Opportunist", "Frisk", "Speed Boost"]
+    },
+    {
+      "id": "tinkaton",
+      "number": 959,
+      "name": "デカヌチャン",
+      "englishName": "Tinkaton",
+      "baseSpeed": 94,
+      "types": ["fairy", "steel"],
+      "mega": false,
+      "abilities": ["Mold Breaker", "Own Tempo", "Pickpocket"]
+    },
+    {
+      "id": "palafin",
+      "number": 964,
+      "name": "イルカマン",
+      "englishName": "Palafin",
+      "baseSpeed": 100,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Zero to Hero"]
+    },
+    {
+      "id": "palafinhero",
+      "number": 964,
+      "name": "イルカマン（マイティ）",
+      "englishName": "Palafin-Hero",
+      "baseSpeed": 100,
+      "types": ["water"],
+      "mega": false,
+      "abilities": ["Zero to Hero"]
+    },
+    {
+      "id": "orthworm",
+      "number": 968,
+      "name": "ミミズズ",
+      "englishName": "Orthworm",
+      "baseSpeed": 65,
+      "types": ["steel"],
+      "mega": false,
+      "abilities": ["Earth Eater", "Sand Veil"]
+    },
+    {
+      "id": "glimmora",
+      "number": 970,
+      "name": "キラフロル",
+      "englishName": "Glimmora",
+      "baseSpeed": 86,
+      "types": ["rock", "poison"],
+      "mega": false,
+      "abilities": ["Toxic Debris", "Corrosion"]
+    },
+    {
+      "id": "glimmoramega",
+      "number": 970,
+      "name": "メガキラフロル",
+      "englishName": "Glimmora-Mega",
+      "baseSpeed": 101,
+      "types": ["rock", "poison"],
+      "mega": true,
+      "abilities": ["Adaptability"]
+    },
+    {
+      "id": "houndstone",
+      "number": 972,
+      "name": "ハカドッグ",
+      "englishName": "Houndstone",
+      "baseSpeed": 68,
+      "types": ["ghost"],
+      "mega": false,
+      "abilities": ["Sand Rush", "Fluffy"]
+    },
+    {
+      "id": "annihilape",
+      "number": 979,
+      "name": "コノヨザル",
+      "englishName": "Annihilape",
+      "baseSpeed": 90,
+      "types": ["fighting", "ghost"],
+      "mega": false,
+      "abilities": ["Vital Spirit", "Inner Focus", "Defiant"]
+    },
+    {
+      "id": "farigiraf",
+      "number": 981,
+      "name": "リキキリン",
+      "englishName": "Farigiraf",
+      "baseSpeed": 60,
+      "types": ["normal", "psychic"],
+      "mega": false,
+      "abilities": ["Cud Chew", "Armor Tail", "Sap Sipper"]
+    },
+    {
+      "id": "kingambit",
+      "number": 983,
+      "name": "ドドゲザン",
+      "englishName": "Kingambit",
+      "baseSpeed": 50,
+      "types": ["dark", "steel"],
+      "mega": false,
+      "abilities": ["Defiant", "Supreme Overlord", "Pressure"]
+    },
+    {
+      "id": "baxcalibur",
+      "number": 998,
+      "name": "セグレイブ",
+      "englishName": "Baxcalibur",
+      "baseSpeed": 87,
+      "types": ["dragon", "ice"],
+      "mega": false,
+      "abilities": ["Thermal Exchange", "Ice Body"]
+    },
+    {
+      "id": "baxcaliburmega",
+      "number": 998,
+      "name": "メガセグレイブ",
+      "englishName": "Baxcalibur-Mega",
+      "baseSpeed": 87,
+      "types": ["dragon", "ice"],
+      "mega": true,
+      "abilities": ["Thermal Exchange"]
+    },
+    {
+      "id": "gholdengo",
+      "number": 1000,
+      "name": "サーフゴー",
+      "englishName": "Gholdengo",
+      "baseSpeed": 84,
+      "types": ["steel", "ghost"],
+      "mega": false,
+      "abilities": ["Good as Gold"]
+    },
+    {
+      "id": "sinistcha",
+      "number": 1013,
+      "name": "ヤバソチャ",
+      "englishName": "Sinistcha",
+      "baseSpeed": 70,
+      "types": ["grass", "ghost"],
+      "mega": false,
+      "abilities": ["Hospitality", "Heatproof"]
+    },
+    {
+      "id": "sinistchamasterpiece",
+      "number": 1013,
+      "name": "ヤバソチャ（タカイモノ）",
+      "englishName": "Sinistcha-Masterpiece",
+      "baseSpeed": 70,
+      "types": ["grass", "ghost"],
+      "mega": false,
+      "abilities": ["Hospitality", "Heatproof"]
+    },
+    {
+      "id": "archaludon",
+      "number": 1018,
+      "name": "ブリジュラス",
+      "englishName": "Archaludon",
+      "baseSpeed": 85,
+      "types": ["steel", "dragon"],
+      "mega": false,
+      "abilities": ["Stamina", "Sturdy", "Stalwart"]
+    },
+    {
+      "id": "hydrapple",
+      "number": 1019,
+      "name": "カミツオロチ",
+      "englishName": "Hydrapple",
+      "baseSpeed": 44,
+      "types": ["grass", "dragon"],
+      "mega": false,
+      "abilities": ["Supersweet Syrup", "Regenerator", "Sticky Hold"]
+    }
+  ]
+}

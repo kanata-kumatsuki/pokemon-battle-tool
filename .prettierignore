@@ -1,0 +1,5 @@
+node_modules
+dist
+public/pokemon
+artifacts
+package-lock.json
