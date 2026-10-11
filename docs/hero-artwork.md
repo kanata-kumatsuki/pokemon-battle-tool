@@ -1,29 +1,29 @@
 # トップ画像の採用仕様と検証
 
-2026-10-11。採用版はPC v05、モバイル v04。太い青灰色の輪郭、flatな色面、丸い形と簡素な影で、自然光の私室を描く。短髪の中性的な若い成人が青ラグでノートを開き、ルカリオ、ピカチュウ、エルフーン、ゲンガー、ブラッキー、ロトムの6体と過ごす。PCは16:9、モバイルは同じ場面を再構成した4:5。整数ピクセルへの丸めによる比率差は1px以内。
+2026-10-11。採用版はPC v06、モバイル v05。太い青灰色の輪郭、flatな色面、丸い形と簡素な影で、自然光の私室を描く。短髪の中性的な若い成人が青ラグでノートを開き、ルカリオ、ピカチュウ、エルフーン、ゲンガー、ブラッキー、ロトムの6体と過ごす。PCは16:9、モバイルは同じ場面を再構成した4:5。整数ピクセルへの丸めによる比率差は1px以内。
 
 ## 採用ファイル
 
 | 用途         | ファイル                                                                                      | 実寸      | SHA-256                                                            |
 | ------------ | --------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------ |
-| PC v05       | [battle-note-hero-cartoon-desktop.png](../public/images/battle-note-hero-cartoon-desktop.png) | 1672×941  | `bc27f52842931802878832274fa566337fa97d975dc2e49369b9f60cc8319ba9` |
-| モバイル v04 | [battle-note-hero-cartoon-mobile.png](../public/images/battle-note-hero-cartoon-mobile.png)   | 1122×1402 | `5bbdc62377635ce7455656f7864ce4d0e503f958bdbfbe6fc85a488db44617e7` |
+| PC v06       | [battle-note-hero-cartoon-desktop.png](../public/images/battle-note-hero-cartoon-desktop.png) | 1672×941  | `c87b7e1d4d977c3b40db5c22d16e7ad3f0ddeab3e4ae533e33926a93bab92bd5` |
+| モバイル v05 | [battle-note-hero-cartoon-mobile.png](../public/images/battle-note-hero-cartoon-mobile.png)   | 1122×1402 | `d2a70a83820fdf3aa003350c58461859027c924387320e489dab6ae86ace4418` |
 
-初期画像はbuilt-in画像生成で制作。最終の局所修正はPillowによる直接レタッチで、追加の画像生成は行っていない。エルフーンの目はorange虹彩とwhite瞳孔で、black/navyの内部を残さない。ロトムの画面右の青い稲妻は中心4点・3直線・折れ2回とし、枝や余分な棘を付けない。
+初期画像はbuilt-in画像生成で制作。最終の局所修正はPillowによる直接レタッチで、追加の画像生成は行っていない。エルフーンの目はorange虹彩とwhite瞳孔で、目の内部から外縁までblack/navyと暗いAA haloを残さず、orangeを顔の茶色へ直接接続する。ロトムの画面右の青い稲妻は中心4点・3直線・折れ2回とし、枝や余分な棘を付けない。
 
-直前の採用画像との変更はPC2247pixel、モバイル1724pixel。独立した固定小領域の外は差分0で、他の場面・構図・余白を保持した。原寸を維持し、位置指示の赤印を完成画像に含めていない。
+今回の修正は目だけ。直前の採用画像との変更はPC537pixel、モバイル513pixel。独立した目の固定小領域の外は差分0で、ロトムを含む他のpixel・場面・構図・余白を保持した。原寸を維持し、位置指示の赤印を完成画像に含めていない。
 
 ## 表示と受入確認
 
 [HomePage.tsx](../src/HomePage.tsx)のpictureは700px以下でモバイル、それより広い画面でPCを選択する。[home.css](../src/home.css)で自然比率を維持して画像全体を表示する。既存の見出し・説明・badgeと濃紺テーマを保持し、文字用余白をPC左下・モバイル下部に設ける。旧 `public/images/battle-note-hero.png` も保全する。
 
 - [x] 親レビューで両画像を採用。6体・仕草、orange虹彩/white瞳孔、稲妻2折れ、指示の赤印なしを確認。
-- [x] 公開2画像のSHA-256が採用版と一致。
-- [x] Browser Useの正式viewport機能で390 / 700 / 701 / 1366pxを確認。390/700はモバイル、701/1366はPC。
-- [x] 全4幅でcomplete=true、natural寸法維持、自然比率、横overflow0、console error/warn 0。
-- [x] 画像全体、6体と場面、コピーの可読性・重要部分との重なりなしを目視確認。
+- [x] 最新採用版の公開配置・SHA一致確認。
+- [x] 最新採用版をBrowser Use正式viewport機能で390 / 1366px再確認。サイズ・切替コード不変のため700/701境界の再確認は不要。
+- [x] 最新版の2幅でcomplete=true、natural寸法維持、自然比率、横overflow0、console error/warn 0。
+- [x] 最新版の画像全体、目外縁、6体と場面、コピーの可読性・重要部分との重なりなしを画面で確認。親の10倍/12倍拡大目視でも黒外縁・暗haloなしを確認。
 - [x] 独立pixel検算で指定領域外の差分0を確認。
 
-画面QAではHTTP転送量・resource timing・キャッシュ詳細とコントラスト数値は未測定。読み込みはcomplete/natural寸法と描画、可読性は目視で確認した範囲。公開前の再検証では `npm test` が132/132件成功（exit 0）、`npm run build` が成功（exit 0）。buildに含まれる `tsc --noEmit` で型チェックも成功した。Viteは109 modulesを処理し、JSは1,436.07kB（gzip 323.56kB）。既知の500kB超chunk警告は残るが、ビルドは完了している。
+以前の採用版では390/700/701/1366pxの4幅QAに合格。今回最新版は390/1366pxの2幅再QAに合格し、旧結果と区別する。画面QAではHTTP転送量・resource timing・キャッシュ詳細とコントラスト数値は未測定。読み込みはcomplete/natural寸法と描画、可読性は目視で確認した範囲。前回GitHub反映時点の再検証では `npm test` が132/132件成功（exit 0）、`npm run build` が成功（exit 0）。buildに含まれる `tsc --noEmit` で型チェックも成功した。Viteは109 modulesを処理し、JSは1,436.07kB（gzip 323.56kB）。既知の500kB超chunk警告は残るが、ビルドは完了した。今回は画像のみの変更で計算test/buildを再実行せず、独立pixel検算とBrowser Use2幅再確認で合格した。
 
 制作途中の原本・局所編集の証拠・画面証拠はローカルで保全し、この公開記録には採用版と受入結果を記載する。
