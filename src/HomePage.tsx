@@ -67,14 +67,22 @@ export function HomePage({
   return (
     <>
       <section className="home-hero" aria-labelledby="home-title">
-        <img
-          className="home-hero-image"
-          src="/images/battle-note-hero.png"
-          width="1672"
-          height="941"
-          fetchPriority="high"
-          alt="青と紫に輝くスタジアムで、空中のメガガブリアスZを、はどうだんを構えたメガルカリオZが迎え撃つ"
-        />
+        <picture className="home-hero-picture">
+          <source
+            media="(max-width: 700px)"
+            srcSet="/images/battle-note-hero-cartoon-mobile.png"
+            width="1122"
+            height="1402"
+          />
+          <img
+            className="home-hero-image"
+            src="/images/battle-note-hero-cartoon-desktop.png"
+            width="1672"
+            height="941"
+            fetchPriority="high"
+            alt="自然光の入る部屋で、ラグに座ってノートを見る人物とルカリオ、袖を引くピカチュウ、ボールで遊ぶエルフーンと、ボールを背中に隠してからかうゲンガー、クッションで眠るブラッキー、タブレットを見るロトム"
+          />
+        </picture>
         <div className="home-hero-copy">
           <h1 id="home-title">
             次の一手に、

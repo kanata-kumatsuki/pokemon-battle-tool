@@ -22,7 +22,7 @@ npm run build
 
 ## 実装した機能
 
-- 青・紫のスタジアムを基調としたトップページ。各ツールと使い方へ移動でき、ロゴまたは「ホーム」で戻れます
+- 自然光の入る部屋で人物と6体のポケモンが過ごすカートゥーン画像のトップページ。PCは16:9、700px以下は同じ場面を再構成したモバイル4:5画像へ切り替え、画像全体を表示します。各ツールと使い方へ移動でき、ロゴまたは「ホーム」で戻れます
 
 - 358フォームの検索・選択。APIで確認した現シーズンまたは直前シーズンの採用統計があれば、合法な採用上位設定を初期型に反映し、特性・持ち物・性格・配分・技を編集
 - `@smogon/calc@0.12.0` のChampionsモードによるダメージ幅・HP割合・一撃撃破率、同じ条件を反復した撃破回数の目安
@@ -66,7 +66,7 @@ node scripts/generate-artwork.mjs
 
 ## 構成
 
-- `src/HomePage.tsx` / `src/home.css`：トップページ。指定の画像を `public/images/battle-note-hero.png` に配置
+- `src/HomePage.tsx` / `src/home.css`：トップページ。`public/images/battle-note-hero-cartoon-desktop.png` と `battle-note-hero-cartoon-mobile.png` をpictureで700px以下に切替。旧 `public/images/battle-note-hero.png` は保持。採用仕様・検証結果は [トップ画像の記録](docs/hero-artwork.md)
 - `src/App.tsx`：画面・ナビゲーション・パーティ・バックアップ
 - `src/BattleFeatures.tsx` / `src/battle.css`：実計算、相手情報、型比較、採用データの画面
 - `src/battle.ts`：Champions計算ライブラリの変換と行動順
